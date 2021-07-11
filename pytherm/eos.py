@@ -27,7 +27,7 @@ class EOS(ABC):
         elif P is not None and T is not None and v is None:
             return self.z_from_PT(P, T)
         else:
-            raise ValueError('z() requires exactly two of P, T, V')
+            raise ValueError('z() requires exactly two of P, T, v')
 
     @abstractmethod
     def z_from_Tv(self, T: float, v: float):
@@ -97,12 +97,21 @@ class EOSVirial2ndOrder(EOS):
             raise ValueError('P and T must be greater than zero')
 
     def z_from_Tv(self, T: float, v: float):
-        return 1 + self._B(T) / v
+        if T > 0 and v > 0:
+            return 1 + self._B(T) / v
+        else:
+            raise ValueError('T and v must be greater than zero')
 
     def z_from_Pv(self, P: float, v: float):
-        return 1 + self._B(self.T(P, v)) / v
+        if P > 0 and v > 0:
+            return 1 + self._B(self.T(P, v)) / v
+        else:
+            raise ValueError('P and v must be greater than zero')
 
     def z_from_PT(self, P: float, T: float):
-        def func(z: float):
-            return z - 1 - self._B(T) / (z * R * T / P)
-        return root_scalar(func, x0=1.0, x1=1.05).root
+        if P > 0 and T > 0:
+            def func(z: float):
+                return z - 1 - self._B(T) / (z * R * T / P)
+            return root_scalar(func, x0=1.0, x1=1.05).root
+        else:
+            raise ValueError('P and T must be greater than zero')

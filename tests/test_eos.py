@@ -113,7 +113,7 @@ class TestEOSVirial2ndOrder:
     def test_P_examples(self, test_eos, P, T, v):
         assert test_eos.P(T, v) == pytest.approx(P)
 
-    def test_P_fundamental_equation(self, test_eos):
+    def test_P_real_gas_law(self, test_eos):
         T = 500.0
         v = 0.008
         z = test_eos.z_from_Tv(T=T, v=v)
@@ -138,7 +138,7 @@ class TestEOSVirial2ndOrder:
     def test_T_examples(self, test_eos, P, T, v):
         assert test_eos.T(P, v) == pytest.approx(T)
 
-    def test_T_fundamental_equation(self, test_eos):
+    def test_T_real_gas_law(self, test_eos):
         P = 1e7
         v = 0.008
         z = test_eos.z_from_Pv(P=P, v=v)
@@ -163,7 +163,7 @@ class TestEOSVirial2ndOrder:
     def test_v_examples(self, test_eos, P, T, v):
         assert test_eos.v(P, T) == pytest.approx(v)
 
-    def test_v_fundamental_equation(self, test_eos):
+    def test_v_real_gas_law(self, test_eos):
         P = 1e7
         T = 2000.0
         z = test_eos.z_from_PT(P=P, T=T)
@@ -201,24 +201,54 @@ class TestEOSVirial2ndOrder:
     def test_z_from_Tv_example(self, test_eos):
         assert test_eos.z_from_Tv(13363.595676832967, 0.001) == pytest.approx(0.9)
 
-    def test_z_from_Tv_fundamental_equation(self, test_eos):
+    def test_z_from_Tv_virial_eqn(self, test_eos):
         T = 500.0
         v = 0.002
         assert test_eos.z_from_Tv(T=T, v=v) == pytest.approx(1 + B_val / v)
 
+    @pytest.mark.parametrize('T, v', [
+        (0.0, 0.01),
+        (-5.0, 0.01),
+        (100.0, 0.0),
+        (100.0, -0.5),
+    ])
+    def test_z_from_Tv_fails_with_nonpositive_args(self, test_eos, T, v):
+        with pytest.raises(ValueError):
+            test_eos.z_from_Tv(T, v)
+
     def test_z_from_Pv_example(self, test_eos):
         assert test_eos.z_from_Pv(1e5, 0.008) == pytest.approx(0.9875)
 
-    def test_z_from_Pv_fundamental_equation(self, test_eos):
+    def test_z_from_Pv_virial_eqn(self, test_eos):
         P = 1e6
         v = 0.002
         assert test_eos.z_from_Pv(P=P, v=v) == pytest.approx(1 + B_val / v)
 
+    @pytest.mark.parametrize('P, v', [
+        (0.0, 0.01),
+        (-5.0, 0.01),
+        (100.0, 0.0),
+        (100.0, -0.5),
+    ])
+    def test_z_from_Pv_fails_with_nonpositive_args(self, test_eos, P, v):
+        with pytest.raises(ValueError):
+            test_eos.z_from_Pv(P, v)
+
     def test_z_from_PT_example(self, test_eos):
         assert test_eos.z_from_PT(1e7, 2532.049707189404) == pytest.approx(0.95)
 
-    def test_z_from_PT_fundamental_equation(self, test_eos):
+    def test_z_from_PT_virial_eqn(self, test_eos):
         P = 1e6
         T = 500.0
         z = test_eos.z_from_PT(P=P, T=T)
         assert z == pytest.approx(1 + B_val / (z * R * T / P))
+
+    @pytest.mark.parametrize('P, T', [
+        (0.0, 100.0),
+        (-5.0, 500.0),
+        (100.0, 0.0),
+        (100.0, -5.0),
+    ])
+    def test_z_from_PT_fails_with_nonpositive_args(self, test_eos, P, T):
+        with pytest.raises(ValueError):
+            test_eos.z_from_PT(P, T)
