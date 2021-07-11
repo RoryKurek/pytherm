@@ -122,3 +122,39 @@ class EOSVirial2ndOrder(EOS):
             return root_scalar(func, x0=1.0, x1=1.05).root
         else:
             raise ValueError('P and T must be greater than zero')
+
+
+class EOSPurePR(ABC):
+    def __init__(self, Pc: float, Tc: float, omega: float):
+        self._Pc = Pc
+        self._Tc = Tc
+        self._omega = omega
+
+        self._alpha_coeff = 0.37464 + 1.54226*omega - 0.26992*omega**2
+        self._a_coeff = 0.45724 * R**2 * Tc**2 / Pc
+        self._b = 0.0778 * R * Tc / Pc
+
+    def _a(self, T: float):
+        Tr = T / self._Tc
+        return self._a_coeff * (1 + self._alpha_coeff * (1 - Tr**0.5)) ** 2
+
+    def P(self, T: float, v: float) -> float:
+        return R*T/(v-self._b) - self._a(T)/(v*(v+self._b) + self._b*(v-self._b))
+
+    def T(self, P: float, v: float) -> float:
+        raise NotImplemented
+
+    def v(self, P: float, T: float) -> float:
+        raise NotImplemented
+
+    def z(self, P: Optional[float] = None, T: Optional[float] = None, v: Optional[float] = None) -> float:
+        raise NotImplemented
+
+    def z_from_Tv(self, T: float, v: float) -> float:
+        return v/(v-self._b) - self._a(T)*v/R/T/(v*(v+self._b) + self._b*(v-self._b))
+
+    def z_from_Pv(self, P: float, v: float) -> float:
+        raise NotImplemented
+
+    def z_from_PT(self, P: float, T: float) -> float:
+        raise NotImplemented

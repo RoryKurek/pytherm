@@ -55,7 +55,6 @@ class TestEOSIdeal:
     def test_v_examples(self, test_eos, P, T):
         assert P * test_eos.v(P, T) == pytest.approx(R * T)
 
-
     @pytest.mark.parametrize('P, T', [
         (0.0, 100.0),
         (-5.0, 500.0),
@@ -73,17 +72,6 @@ class TestEOSIdeal:
     ])
     def test_z_examples(self, test_eos, P, T, v):
         assert test_eos.z(P=P, T=T, v=v) == 1.0
-
-    @pytest.mark.parametrize('P, T, v', [
-        (100.0, None, None),
-        (None, None, 0.008),
-        (None, 100.0, None),
-        (None, None, None),
-        (100.0, 100.0, 0.008),
-    ])
-    def test_z_fails_with_invalid_num_args(self, test_eos, P, T, v):
-        with pytest.raises(ValueError):
-            test_eos.z(P=P, T=T, v=v)
 
     def test_z_from_Tv_example(self, test_eos):
         assert test_eos.z_from_Tv(100.0, 0.008) == 1.0
@@ -252,3 +240,31 @@ class TestEOSVirial2ndOrder:
     def test_z_from_PT_fails_with_nonpositive_args(self, test_eos, P, T):
         with pytest.raises(ValueError):
             test_eos.z_from_PT(P, T)
+
+
+Tc = 647.096
+Pc = 2.2064e7
+omega = 0.3443
+
+
+class TestEOSPurePR:
+    @pytest.fixture
+    def test_eos(self):
+        return eos.EOSPurePR(Pc=Pc, Tc=Tc, omega=omega)
+
+    @pytest.mark.parametrize('P, T, v', [
+        (2076800.6734812967, 493.15, 0.0018015),
+    ])
+    def test_P_examples(self, test_eos, P, T, v):
+        assert test_eos.P(T, v) == pytest.approx(P)
+
+    @pytest.mark.parametrize('P, T, v, z', [
+        (None, 493.15, 0.0018015, 0.912464299928186),
+        (2076800.6734812967, None, 0.0018015, 0.912464299928186),
+        (2076800.6734812967, 493.15, None, 0.912464299928186),
+    ])
+    def test_z_examples(self, test_eos, P, T, v, z):
+        assert test_eos.z(P, T, v) == pytest.approx(z)
+
+    def test_z_from_Tv_example(self, test_eos):
+        assert test_eos.z_from_Tv(493.15, 0.0018015) == pytest.approx(0.912464299928186)
