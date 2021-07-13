@@ -61,7 +61,7 @@ class EOSVirial2ndOrder(EOS):
         return 1 + self._B(T) / v
 
 
-class EOSPurePR(ABC):
+class EOSPurePR(EOS):
     def __init__(self, Pc: float, Tc: float, omega: float):
         self._Pc = Pc
         self._Tc = Tc
@@ -79,10 +79,16 @@ class EOSPurePR(ABC):
         return R*T/(v-self._b) - self._a(T)/(v*(v+self._b) + self._b*(v-self._b))
 
     def T(self, P: float, v: float) -> float:
-        raise NotImplemented
+        def func(T):
+            return P - R * T / (v - self._b) - self._a(T) / (v * (v + self._b) + self._b * (v - self._b))
+        T0 = P * v / R
+        return root_scalar(func, x0=T0, x1=T0+1.0).root
 
     def v(self, P: float, T: float) -> float:
-        raise NotImplemented
+        def func(v):
+            return P - R * T / (v - self._b) - self._a(T) / (v * (v + self._b) + self._b * (v - self._b))
+        v0 = R * T / P
+        return root_scalar(func, x0=v0, x1=v0*1.1).root
 
     def z(self, P: float, T: float, v: float) -> float:
         return v/(v-self._b) - self._a(T)*v/R/T/(v*(v+self._b) + self._b*(v-self._b))
