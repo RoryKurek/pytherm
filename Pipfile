@@ -12,6 +12,8 @@ mypy = "*"
 pytest = "*"
 yapf = "*"
 sphinx = "*"
+sphinx-rtd-theme = "*"
+sphinx-autodoc-typehints = "*"
 
 [requires]
 python_version = "3.9"
