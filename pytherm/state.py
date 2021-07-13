@@ -7,6 +7,9 @@ class FluidState:
     def __init__(self, eos: EOS, P: Optional[float] = None, T: Optional[float] = None, v: Optional[float] = None):
         self.eos = eos
 
+        if [P, T, v].count(None) > 1:
+            raise ValueError('At least two of P, T, v are required to specify a state')
+
         if P is not None:
             if P > 0:
                 self.P = P
