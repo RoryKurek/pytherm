@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Callable
 from functools import cached_property
 from .eos import EOS
 
@@ -6,6 +6,9 @@ from .eos import EOS
 class FluidState:
     def __init__(self, eos: EOS, P: Optional[float] = None, T: Optional[float] = None, v: Optional[float] = None):
         self.eos = eos
+
+        if [P, T, v].count(None) > 1:
+            raise ValueError('At least two of P, T, v must be specified')
 
         if P is not None:
             if P > 0:

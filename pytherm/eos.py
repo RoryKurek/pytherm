@@ -52,10 +52,10 @@ class EOSVirial2ndOrder(EOS):
         return root_scalar(func, x0=x0, x1=x0+1.0).root
 
     def v(self, P: float, T: float) -> float:
-        def func(z: float):
-            return z - 1 - self._B(T) / (z * R * T / P)
-        z = root_scalar(func, x0=1.0, x1=1.05).root
-        return z * R * T / P
+        def func(v: float):
+            return v - R * T / P * (1 + self._B(T) / v)
+        v0 = R * T / P
+        return root_scalar(func, x0=v0, x1=v0*1.1).root
 
     def z(self, P: float, T: float, v: float) -> float:
         return 1 + self._B(T) / v
