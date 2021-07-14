@@ -86,6 +86,62 @@ class EOS(ABC):
         """
         return P * v / R / T
 
+    def du_dv_T(self, P: float, T: float, v: float) -> float:
+        """
+        First derivative of molar internal energy with respect to volume at
+        constant pressure.
+
+        General form based on equation (C.15) from [GKKR2019]_:
+
+        .. math:: \\left( \\frac{∂u}{∂v} \\right)_T = T \\left( \\frac{∂P}{∂T} \\right)_v - P
+
+        Args:
+            P: Pressure [Pa]
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂u/∂v at constant pressure [Pa]
+        """
+        return T * self.dP_dT_v(P, T, v) - P
+
+    def ds_dv_T(self, P: float, T: float, v: float) -> float:
+        """
+        First derivative of molar entropy with respect to volume at
+        constant temperature.
+
+        General form based on equation (C.16) from [GKKR2019]_:
+
+        .. math:: \\left( \\frac{∂s}{∂v} \\right)_T = \\left( \\frac{∂P}{∂T} \\right)_v
+
+        Args:
+            P: Pressure [Pa]
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂s/∂v at constant temperature [Pa/K]
+        """
+        return self.dP_dT_v(P, T, v)
+
+    @abstractmethod
+    def dP_dT_v(self, P: float, T: float, v: float) -> float:
+        """
+        First derivative of pressure with respect to temperature at
+        constant volume.
+
+        Should be derived from the equation of state itself.
+
+        Args:
+            P: Pressure [Pa]
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂P/∂T at constant volume [Pa/K]
+        """
+        ...
+
 
 class EOSIdeal(EOS):
     """
@@ -96,6 +152,7 @@ class EOSIdeal(EOS):
     By definition, the compressibility factor (z) for an ideal gas is
     always one.
     """
+
     def P(self, T: float, v: float) -> float:
         return R * T / v
 
@@ -107,6 +164,9 @@ class EOSIdeal(EOS):
 
     def z(self, P: float, T: float, v: float) -> float:
         return 1.0
+
+    def dP_dT_v(self, P: float, T: float, v: float) -> float:
+        return R / v
 
 
 class EOSVirial2ndOrder(EOS):
@@ -147,6 +207,9 @@ class EOSVirial2ndOrder(EOS):
         v0 = R * T / P
         return root_scalar(func, x0=v0, x1=v0*1.1).root
 
+    def dP_dT_v(self, P: float, T: float, v: float) -> float:
+        return NotImplemented
+
 
 class EOSPurePR(EOS):
     """
@@ -160,11 +223,13 @@ class EOSPurePR(EOS):
         P = \\frac{RT}{v - b} - \\frac{a \\left( T \\right)}
             {v \\left( v + b \\right) + b \\left( v - b \\right)}
 
-        a \\left( T \\right) = 0.45724 \\frac{R^2 T_c^2}{P_c} α \\left( T \\right)
+        a \\left( T \\right) = C_a α \\left( T \\right)
 
-        α \\left( T \\right) = \\left[ 1 +
-            \\left( 0.37464 + 1.54226 ω - 0.26992 ω^2 \\right)
-            \\left( 1 - T_r^0.5 \\right) \\right]^2
+        α \\left( T \\right) = \\left[1 + C_α \\left( 1 - T_r^0.5 \\right) \\right]^2
+
+        C_a = 0.45724 \\frac{R^2 T_c^2}{P_c}
+
+        C_α = \\left( 0.37464 + 1.54226 ω - 0.26992 ω^2 \\right)
 
         b = 0.0778 \\frac{R T_c}{P_c}
     """
@@ -181,13 +246,13 @@ class EOSPurePR(EOS):
         self._Tc = Tc
         self._omega = omega
 
-        self._alpha_coeff = 0.37464 + 1.54226*omega - 0.26992*omega**2
-        self._a_coeff = 0.45724 * R**2 * Tc**2 / Pc
+        self._C_alpha = 0.37464 + 1.54226 * omega - 0.26992 * omega ** 2
+        self._C_a = 0.45724 * R ** 2 * Tc ** 2 / Pc
         self._b = 0.0778 * R * Tc / Pc
 
     def _a(self, T: float):
         Tr = T / self._Tc
-        return self._a_coeff * (1 + self._alpha_coeff * (1 - Tr**0.5)) ** 2
+        return self._C_a * (1 + self._C_alpha * (1 - Tr ** 0.5)) ** 2
 
     def P(self, T: float, v: float) -> float:
         return R*T/(v-self._b) - self._a(T)/(v*(v+self._b) + self._b*(v-self._b))
@@ -203,3 +268,27 @@ class EOSPurePR(EOS):
             return P - R * T / (v - self._b) - self._a(T) / (v * (v + self._b) + self._b * (v - self._b))
         v0 = R * T / P
         return root_scalar(func, x0=v0, x1=v0*1.1).root
+
+    def dP_dT_v(self, P: float, T: float, v: float) -> float:
+        """
+        First derivative of pressure with respect to temperature at
+        constant volume.
+
+        .. math::
+            \\left(\\frac{∂P}{∂T}\\right)_v = \\frac{R}{v-b} -
+            \\frac{\\left(∂a(T)/∂T\\right)_v}{v \\left( v + b \\right) + b \\left( v - b \\right)}
+
+            \\left(∂a(T)/∂T\\right)_v =
+            \\frac{C_a C_α T_r^0.5 \\left[1 + C_α \\left(1+T_r^0.5\\right) \\right]}{T}
+
+        Args:
+            P: Pressure [Pa]
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂P/∂T at constant volume [Pa/K]
+        """
+        sqrt_Tr = (T / self._Tc) ** 0.5
+        return R * T / (v - self._b) - self._C_a * self._C_alpha * sqrt_Tr * \
+               (1 + self._C_alpha * (1 + sqrt_Tr)) / T / (v * (v + self._b) + self._b * (v - self._b))
