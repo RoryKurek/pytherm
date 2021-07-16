@@ -208,7 +208,7 @@ class EOSVirial2ndOrder(EOS):
         return root_scalar(func, x0=v0, x1=v0*1.1).root
 
     def dP_dT_v(self, P: float, T: float, v: float) -> float:
-        return NotImplemented
+        return R * T
 
 
 class EOSPurePR(EOS):
@@ -254,6 +254,10 @@ class EOSPurePR(EOS):
         Tr = T / self._Tc
         return self._C_a * (1 + self._C_alpha * (1 - Tr ** 0.5)) ** 2
 
+    def _da_dT(self, T: float):
+        sqrt_Tr = (T / self._Tc) ** 0.5
+        return self._C_a * self._C_alpha * sqrt_Tr * (1 + self._C_alpha * (1 - sqrt_Tr)) / T
+
     def P(self, T: float, v: float) -> float:
         return R*T/(v-self._b) - self._a(T)/(v*(v+self._b) + self._b*(v-self._b))
 
@@ -275,11 +279,11 @@ class EOSPurePR(EOS):
         constant volume.
 
         .. math::
-            \\left(\\frac{∂P}{∂T}\\right)_v = \\frac{R}{v-b} -
-            \\frac{\\left(∂a(T)/∂T\\right)_v}{v \\left( v + b \\right) + b \\left( v - b \\right)}
+            \\left(\\frac{∂P}{∂v}\\right)_T = - \\frac{RT}{(v-b)^2} +
+            \\frac{2a(T) (v+b)}{b \\left( v + b \\right) + b \\left( v - b \\right)}
 
             \\left(∂a(T)/∂T\\right)_v =
-            \\frac{C_a C_α T_r^0.5 \\left[1 + C_α \\left(1+T_r^0.5\\right) \\right]}{T}
+            \\frac{C_a C_α T_r^0.5 \\left[1 + C_α \\left(1-T_r^0.5\\right) \\right]}{T}
 
         Args:
             P: Pressure [Pa]
@@ -289,6 +293,24 @@ class EOSPurePR(EOS):
         Returns:
             ∂P/∂T at constant volume [Pa/K]
         """
-        sqrt_Tr = (T / self._Tc) ** 0.5
-        return R * T / (v - self._b) - self._C_a * self._C_alpha * sqrt_Tr * \
-               (1 + self._C_alpha * (1 + sqrt_Tr)) / T / (v * (v + self._b) + self._b * (v - self._b))
+        return R * T / (v - self._b) - self._da_dT(T) / (v * (v + self._b) + self._b * (v - self._b))
+
+    def dP_dv_T(self, P: float, T: float, v: float) -> float:
+        """
+        First derivative of pressure with respect to specific volume at
+        constant temperature.
+
+        .. math::
+            \\left(\\frac{∂P}{∂T}\\right)_v = \\frac{R}{v-b} -
+            \\frac{\\left(∂a(T)/∂T\\right)_v}{\\left[ v \\left( v + b \\right) + b \\left( v - b \\right) \\right]^2}
+
+        Args:
+            P: Pressure [Pa]
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂P/∂v at constant temperature [Pa*mol/m^3]
+        """
+        return -R * T / (v - self._b) ** 2 + \
+            2 * self._a(T) * (v+self._b) / (v*(v+self._b) + self._b*(v-self._b)) ** 2
