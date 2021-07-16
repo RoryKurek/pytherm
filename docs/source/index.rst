@@ -10,6 +10,8 @@ Welcome to pytherm's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   symbols
+   eos-math
    pytherm
 
 
