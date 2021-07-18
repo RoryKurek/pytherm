@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Callable
 from scipy.optimize import root_scalar
+from scipy.integrate import quad
 
 
 R = 8.3144622
@@ -201,11 +202,12 @@ class PExplicitEOS(EOS):
         """
         return T * self.dP_dT_v(T, v) - self.P(T, v)
 
-    @abstractmethod
     def integrate_du_dv_T(self, T: float, v1: float, v2: float) -> float:
         """
         Integral of :math:`(\\frac{du}{dv})_T` between initial and final
-        specific volumes.
+        specific volumes. Default implementation uses `scipy.integrate`,
+        but can can be overridden with an analytical calculation for
+        the integral if desired/practical.
 
         .. math::
             \\int_{v_1}^{v_2}\\left( \\frac{∂u}{∂v} \\right)_T \\text{d}v =
@@ -216,10 +218,48 @@ class PExplicitEOS(EOS):
             v1: Specific volume at initial state [m^3/mol]
             v2: Specific volume at final state [m^3/mol]
         Returns:
-            Change in internal energy [J]
+            Change in internal energy [J/mol]
         """
-        ...
+        return quad(lambda v: self.du_dv_T(T, v), v1, v2)[0]
 
+    def dh_dP_T(self, T: float, v: float) -> float:
+        """
+        First derivative of enthalpy with respect to pressure at
+        constant temperature. This should be derivable from just the
+        equation of state (whereas :math:`(\\frac{dh}{dT})_P` requries
+        heat capacity data.)
+
+        .. math::
+            \\left( \\frac{∂h}{∂P} \\right)_T = v - T \\left( \\frac{∂v}{∂T} \\right)_P
+
+        Args:
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂h/∂P at constant temperature [J/mol/Pa]
+        """
+        return v - T * self.dv_dT_P(T, v)
+
+    def integrate_dh_dP_T(self, T: float, v1: float, v2: float) -> float:
+        """
+        Integral of :math:`(\\frac{dh}{dP})_T` between initial and final
+        specific volumes. Default implementation uses `scipy.integrate`,
+        but can can be overridden with an analytical calculation for
+        the integral if desired/practical.
+
+        .. math::
+            \\int_{v_1}^{v_2}\\left( \\frac{∂h}{∂P} \\right)_T \\text{d}v =
+            \\int_{v_1}^{v_2}\\left[ v - T \\left( \\frac{∂v}{∂T} \\right)_P \\right] \\text{d}v
+
+        Args:
+            T: Temperature [K]
+            v1: Specific volume at initial state [m^3/mol]
+            v2: Specific volume at final state [m^3/mol]
+        Returns:
+            Change in enthalpy [J/mol]
+        """
+        return quad(lambda v: self.dh_dP_T(T, v), v1, v2)[0]
 
 class EOSIdeal(EOS):
     """
@@ -358,8 +398,8 @@ class PurePREOS(PExplicitEOS):
         constant volume.
 
         .. math::
-            \\left(\\frac{∂P}{∂v}\\right)_T = - \\frac{RT}{(v-b)^2} +
-            \\frac{2a(T) (v+b)}{b \\left( v + b \\right) + b \\left( v - b \\right)}
+            \\left(\\frac{∂P}{∂T}\\right)_v = \\frac{R}{v-b} -
+            \\frac{\\left(∂a(T)/∂T\\right)_v}{\\left[ v \\left( v + b \\right) + b \\left( v - b \\right) \\right]^2}
 
             \\left(∂a(T)/∂T\\right)_v =
             \\frac{C_a C_α T_r^0.5 \\left[1 + C_α \\left(1-T_r^0.5\\right) \\right]}{T}
@@ -379,8 +419,8 @@ class PurePREOS(PExplicitEOS):
         constant temperature.
 
         .. math::
-            \\left(\\frac{∂P}{∂T}\\right)_v = \\frac{R}{v-b} -
-            \\frac{\\left(∂a(T)/∂T\\right)_v}{\\left[ v \\left( v + b \\right) + b \\left( v - b \\right) \\right]^2}
+            \\left(\\frac{∂P}{∂v}\\right)_T = - \\frac{RT}{(v-b)^2} +
+            \\frac{2a(T) (v+b)}{b \\left( v + b \\right) + b \\left( v - b \\right)}
 
         Args:
             T: Temperature [K]
@@ -392,5 +432,3 @@ class PurePREOS(PExplicitEOS):
         return -R * T / (v - self._b) ** 2 + \
             2 * self._a(T) * (v+self._b) / (v*(v+self._b) + self._b*(v-self._b)) ** 2
 
-    def integrate_du_dv_T(self, T: float, v1: float, v2: float) -> float:
-        pass
