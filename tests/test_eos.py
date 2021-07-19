@@ -129,7 +129,7 @@ omega = 0.3443
 class TestEOSPurePR:
     @pytest.fixture
     def test_eos(self):
-        return eos.EOSPurePR(Pc=Pc, Tc=Tc, omega=omega)
+        return eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
 
     @pytest.mark.parametrize('P, T, v', [
         (2076800.6734812967, 493.15, 0.0018015),

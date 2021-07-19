@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Callable
 from scipy.optimize import root_scalar
+from scipy.integrate import quad
 
 
 R = 8.3144622
@@ -71,61 +72,26 @@ class EOS(ABC):
         """
         ...
 
-    def z(self, P: float, T: float, v: float) -> float:
+
+class PExplicitEOS(EOS):
+    def z(self, T: float, v: float) -> float:
         """
         Calculate the compressibility factor of a fluid at the given
         conditions.
 
         Args:
-            P: Pressure [Pa]
             T: Temperature [K]
             v: Specific Volume [m^3/mol]
 
         Returns:
             Compressibility Factor [dimensionless]
         """
-        return P * v / R / T
+        return self.P(T, v) * v / R / T
 
-    def du_dv_T(self, P: float, T: float, v: float) -> float:
-        """
-        First derivative of molar internal energy with respect to volume at
-        constant pressure.
-
-        General form based on equation (C.15) from [GKKR2019]_:
-
-        .. math:: \\left( \\frac{∂u}{∂v} \\right)_T = T \\left( \\frac{∂P}{∂T} \\right)_v - P
-
-        Args:
-            P: Pressure [Pa]
-            T: Temperature [K]
-            v: Specific Volume [m^3/mol]
-
-        Returns:
-            ∂u/∂v at constant pressure [Pa]
-        """
-        return T * self.dP_dT_v(P, T, v) - P
-
-    def ds_dv_T(self, P: float, T: float, v: float) -> float:
-        """
-        First derivative of molar entropy with respect to volume at
-        constant temperature.
-
-        General form based on equation (C.16) from [GKKR2019]_:
-
-        .. math:: \\left( \\frac{∂s}{∂v} \\right)_T = \\left( \\frac{∂P}{∂T} \\right)_v
-
-        Args:
-            P: Pressure [Pa]
-            T: Temperature [K]
-            v: Specific Volume [m^3/mol]
-
-        Returns:
-            ∂s/∂v at constant temperature [Pa/K]
-        """
-        return self.dP_dT_v(P, T, v)
+    # First-order P-v-T derivatives
 
     @abstractmethod
-    def dP_dT_v(self, P: float, T: float, v: float) -> float:
+    def dP_dT_v(self, T: float, v: float) -> float:
         """
         First derivative of pressure with respect to temperature at
         constant volume.
@@ -133,7 +99,6 @@ class EOS(ABC):
         Should be derived from the equation of state itself.
 
         Args:
-            P: Pressure [Pa]
             T: Temperature [K]
             v: Specific Volume [m^3/mol]
 
@@ -141,6 +106,159 @@ class EOS(ABC):
             ∂P/∂T at constant volume [Pa/K]
         """
         ...
+
+    @abstractmethod
+    def dP_dv_T(self, T: float, v: float) -> float:
+        """
+        First derivative of pressure with respect to volume at
+        constant temperature.
+
+        Should be derived from the equation of state itself.
+
+        Args:
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂P/∂v at constant temperature [Pa*mol/m^3]
+        """
+        ...
+
+    def dT_dP_v(self, T: float, v: float) -> float:
+        """
+        First derivative of temperature with respect to pressure at
+        constant volume.
+
+        Args:
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂T/∂P at constant volume [K/Pa]
+        """
+        return 1.0 / self.dP_dT_v(T, v)
+
+    def dT_dv_P(self, T: float, v: float) -> float:
+        """
+        First derivative of temperature with respect to volume at
+        constant pressure.
+
+        Args:
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂T/∂v at constant pressure [K*mol/m^3]
+        """
+        return 1.0 / self.dv_dT_P(T, v)
+
+    def dv_dP_T(self, T: float, v: float) -> float:
+        """
+        First derivative of volume with respect to pressure at
+        constant temperature.
+
+        Args:
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂v/∂P at constant temperature [m^3/mol/Pa]
+        """
+        return 1.0 / self.dP_dv_T(T, v)
+
+    def dv_dT_P(self, T: float, v: float) -> float:
+        """
+        First derivative of volume with respect to temperature at
+        constant pressure.
+
+        Args:
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂v/∂T at constant pressure [m^3/mol/K]
+        """
+        return - self.dP_dT_v(T, v) / self.dP_dv_T(T, v)
+
+    # Additional first-order derivatives
+
+    def du_dv_T(self, T: float, v: float) -> float:
+        """
+        First derivative of internal energy with respect to volume at
+        constant temperature. This should be derivable from just the
+        equation of state (whereas :math:`(\\frac{du}{dT})_v` requries
+        heat capacity data.)
+
+        .. math::
+            \\left( \\frac{∂u}{∂v} \\right)_T = T \\left( \\frac{∂P}{∂T} \\right)_v - P
+
+        Args:
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂u/∂v at constant temperature [J/m^3]
+        """
+        return T * self.dP_dT_v(T, v) - self.P(T, v)
+
+    def integrate_du_dv_T(self, T: float, v1: float, v2: float) -> float:
+        """
+        Integral of :math:`(\\frac{du}{dv})_T` between initial and final
+        specific volumes. Default implementation uses `scipy.integrate`,
+        but can can be overridden with an analytical calculation for
+        the integral if desired/practical.
+
+        .. math::
+            \\int_{v_1}^{v_2}\\left( \\frac{∂u}{∂v} \\right)_T \\text{d}v =
+            \\int_{v_1}^{v_2}\\left[ T \\left( \\frac{∂P}{∂T} \\right)_v - P \\right] \\text{d}v
+
+        Args:
+            T: Temperature [K]
+            v1: Specific volume at initial state [m^3/mol]
+            v2: Specific volume at final state [m^3/mol]
+        Returns:
+            Change in internal energy [J/mol]
+        """
+        return quad(lambda v: self.du_dv_T(T, v), v1, v2)[0]
+
+    def dh_dP_T(self, T: float, v: float) -> float:
+        """
+        First derivative of enthalpy with respect to pressure at
+        constant temperature. This should be derivable from just the
+        equation of state (whereas :math:`(\\frac{dh}{dT})_P` requries
+        heat capacity data.)
+
+        .. math::
+            \\left( \\frac{∂h}{∂P} \\right)_T = v - T \\left( \\frac{∂v}{∂T} \\right)_P
+
+        Args:
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂h/∂P at constant temperature [J/mol/Pa]
+        """
+        return v - T * self.dv_dT_P(T, v)
+
+    def integrate_dh_dP_T(self, T: float, v1: float, v2: float) -> float:
+        """
+        Integral of :math:`(\\frac{dh}{dP})_T` between initial and final
+        specific volumes. Default implementation uses `scipy.integrate`,
+        but can can be overridden with an analytical calculation for
+        the integral if desired/practical.
+
+        .. math::
+            \\int_{v_1}^{v_2}\\left( \\frac{∂h}{∂P} \\right)_T \\text{d}v =
+            \\int_{v_1}^{v_2}\\left[ v - T \\left( \\frac{∂v}{∂T} \\right)_P \\right] \\text{d}v
+
+        Args:
+            T: Temperature [K]
+            v1: Specific volume at initial state [m^3/mol]
+            v2: Specific volume at final state [m^3/mol]
+        Returns:
+            Change in enthalpy [J/mol]
+        """
+        return quad(lambda v: self.dh_dP_T(T, v), v1, v2)[0]
 
 
 class EOSIdeal(EOS):
@@ -211,7 +329,7 @@ class EOSVirial2ndOrder(EOS):
         return R * T
 
 
-class EOSPurePR(EOS):
+class PurePREOS(PExplicitEOS):
     """
     Class modeling the Peng-Robinson equation of state for a pure
     (single-component) fluid.
@@ -233,6 +351,7 @@ class EOSPurePR(EOS):
 
         b = 0.0778 \\frac{R T_c}{P_c}
     """
+
     def __init__(self, Pc: float, Tc: float, omega: float):
         """
         Initialize the EOS with the desired parameters.
@@ -273,20 +392,19 @@ class EOSPurePR(EOS):
         v0 = R * T / P
         return root_scalar(func, x0=v0, x1=v0*1.1).root
 
-    def dP_dT_v(self, P: float, T: float, v: float) -> float:
+    def dP_dT_v(self, T: float, v: float) -> float:
         """
         First derivative of pressure with respect to temperature at
         constant volume.
 
         .. math::
-            \\left(\\frac{∂P}{∂v}\\right)_T = - \\frac{RT}{(v-b)^2} +
-            \\frac{2a(T) (v+b)}{b \\left( v + b \\right) + b \\left( v - b \\right)}
+            \\left(\\frac{∂P}{∂T}\\right)_v = \\frac{R}{v-b} -
+            \\frac{\\left(∂a(T)/∂T\\right)_v}{\\left[ v \\left( v + b \\right) + b \\left( v - b \\right) \\right]^2}
 
             \\left(∂a(T)/∂T\\right)_v =
             \\frac{C_a C_α T_r^0.5 \\left[1 + C_α \\left(1-T_r^0.5\\right) \\right]}{T}
 
         Args:
-            P: Pressure [Pa]
             T: Temperature [K]
             v: Specific Volume [m^3/mol]
 
@@ -295,17 +413,16 @@ class EOSPurePR(EOS):
         """
         return R * T / (v - self._b) - self._da_dT(T) / (v * (v + self._b) + self._b * (v - self._b))
 
-    def dP_dv_T(self, P: float, T: float, v: float) -> float:
+    def dP_dv_T(self, T: float, v: float) -> float:
         """
         First derivative of pressure with respect to specific volume at
         constant temperature.
 
         .. math::
-            \\left(\\frac{∂P}{∂T}\\right)_v = \\frac{R}{v-b} -
-            \\frac{\\left(∂a(T)/∂T\\right)_v}{\\left[ v \\left( v + b \\right) + b \\left( v - b \\right) \\right]^2}
+            \\left(\\frac{∂P}{∂v}\\right)_T = - \\frac{RT}{(v-b)^2} +
+            \\frac{2a(T) (v+b)}{b \\left( v + b \\right) + b \\left( v - b \\right)}
 
         Args:
-            P: Pressure [Pa]
             T: Temperature [K]
             v: Specific Volume [m^3/mol]
 
@@ -314,3 +431,4 @@ class EOSPurePR(EOS):
         """
         return -R * T / (v - self._b) ** 2 + \
             2 * self._a(T) * (v+self._b) / (v*(v+self._b) + self._b*(v-self._b)) ** 2
+
