@@ -72,23 +72,22 @@ class EOS(ABC):
         """
         ...
 
-    def z(self, P: float, T: float, v: float) -> float:
+
+class PExplicitEOS(EOS):
+    def z(self, T: float, v: float) -> float:
         """
         Calculate the compressibility factor of a fluid at the given
         conditions.
 
         Args:
-            P: Pressure [Pa]
             T: Temperature [K]
             v: Specific Volume [m^3/mol]
 
         Returns:
             Compressibility Factor [dimensionless]
         """
-        return P * v / R / T
+        return self.P(T, v) * v / R / T
 
-
-class PExplicitEOS(EOS):
     # First-order P-v-T derivatives
 
     @abstractmethod
@@ -260,6 +259,7 @@ class PExplicitEOS(EOS):
             Change in enthalpy [J/mol]
         """
         return quad(lambda v: self.dh_dP_T(T, v), v1, v2)[0]
+
 
 class EOSIdeal(EOS):
     """
