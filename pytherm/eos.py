@@ -74,6 +74,14 @@ class EOS(ABC):
 
 
 class PExplicitEOS(EOS):
+    def T(self, P: float, v: float) -> float:
+        T0 = P * v / R
+        return root_scalar(lambda T: self.P(T, v) - P, x0=T0, x1=T0 + 1.0).root
+
+    def v(self, P: float, T: float) -> float:
+        v0 = R * T / P
+        return root_scalar(lambda v: self.P(T, v) - P, x0=v0, x1=v0 * 1.1).root
+
     def z(self, T: float, v: float) -> float:
         """
         Calculate the compressibility factor of a fluid at the given
@@ -343,11 +351,11 @@ class PurePREOS(PExplicitEOS):
 
         a \\left( T \\right) = C_a α \\left( T \\right)
 
-        α \\left( T \\right) = \\left[1 + C_α \\left( 1 - T_r^0.5 \\right) \\right]^2
+        α \\left( T \\right) = \\left[1 + C_α \\left( 1 - T_r^{0.5} \\right) \\right]^2
 
         C_a = 0.45724 \\frac{R^2 T_c^2}{P_c}
 
-        C_α = \\left( 0.37464 + 1.54226 ω - 0.26992 ω^2 \\right)
+        C_α = 0.37464 + 1.54226 ω - 0.26992 ω^2
 
         b = 0.0778 \\frac{R T_c}{P_c}
     """
@@ -375,22 +383,10 @@ class PurePREOS(PExplicitEOS):
 
     def _da_dT(self, T: float):
         sqrt_Tr = (T / self._Tc) ** 0.5
-        return self._C_a * self._C_alpha * sqrt_Tr * (1 + self._C_alpha * (1 - sqrt_Tr)) / T
+        return -self._C_a * self._C_alpha * sqrt_Tr * (1 + self._C_alpha * (1 - sqrt_Tr)) / T
 
     def P(self, T: float, v: float) -> float:
         return R*T/(v-self._b) - self._a(T)/(v*(v+self._b) + self._b*(v-self._b))
-
-    def T(self, P: float, v: float) -> float:
-        def func(T):
-            return P - R * T / (v - self._b) - self._a(T) / (v * (v + self._b) + self._b * (v - self._b))
-        T0 = P * v / R
-        return root_scalar(func, x0=T0, x1=T0+1.0).root
-
-    def v(self, P: float, T: float) -> float:
-        def func(v):
-            return P - R * T / (v - self._b) - self._a(T) / (v * (v + self._b) + self._b * (v - self._b))
-        v0 = R * T / P
-        return root_scalar(func, x0=v0, x1=v0*1.1).root
 
     def dP_dT_v(self, T: float, v: float) -> float:
         """
@@ -411,7 +407,7 @@ class PurePREOS(PExplicitEOS):
         Returns:
             ∂P/∂T at constant volume [Pa/K]
         """
-        return R * T / (v - self._b) - self._da_dT(T) / (v * (v + self._b) + self._b * (v - self._b))
+        return R / (v - self._b) - self._da_dT(T) / (v * (v + self._b) + self._b * (v - self._b))
 
     def dP_dv_T(self, T: float, v: float) -> float:
         """
