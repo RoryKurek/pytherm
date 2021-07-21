@@ -1,5 +1,6 @@
 import pytest
 from scipy.misc import derivative
+from scipy import integrate
 from pytherm import eos
 from pytherm.eos import R
 #
@@ -267,3 +268,29 @@ class TestEOSPurePR:
         example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
         assert example_eos.dv_dP_T(T=T, v=v) == \
                pytest.approx(derivative(lambda P_est: example_eos.v(P=P_est, T=T), x0=P, dx=P*1e-6))
+
+    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
+        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
+        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
+        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
+        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
+        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
+        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
+    ])
+    def test_du_dv_T_examples_against_derivation(self, Pc, Tc, omega, P, T, v):
+        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+        assert example_eos.du_dv_T(T=T, v=v) == \
+               pytest.approx(T * example_eos.dP_dT_v(T=T, v=v) - P)
+
+    @pytest.mark.parametrize('Pc, Tc, omega, T, v1, v2', [
+        (22064000.0, 647.096, 0.3443, 493.15, 0.0018015, 0.003),
+        (22064000.0, 647.096, 0.3443, 493.15, 0.0015, 0.001),
+        (22064000.0, 647.096, 0.3443, 400.0, 0.0015, 0.0012),
+        (22064000.0, 647.096, 0.3, 400.0, 0.0015, 0.0025),
+        (22064000.0, 700.0, 0.3, 400.0, 0.0015, 0.005),
+        (25000000.0, 700.0, 0.3, 400.0, 0.0015, 0.001),
+    ])
+    def test_integrate_du_dv_T_examples(self, Pc, Tc, omega, T, v1, v2):
+        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+        assert example_eos.integrate_du_dv_T(T=T, v1=v1, v2=v2) == \
+               pytest.approx(integrate.quad(lambda v_est: example_eos.du_dv_T(T=T, v=v_est), a=v1, b=v2)[0])

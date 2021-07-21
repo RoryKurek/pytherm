@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from typing import Callable
 from scipy.optimize import root_scalar
 from scipy.integrate import quad
 
@@ -269,72 +268,72 @@ class PExplicitEOS(EOS):
         return quad(lambda v: self.dh_dP_T(T, v), v1, v2)[0]
 
 
-class EOSIdeal(EOS):
-    """
-    Class modeling the ideal gas law.
-
-    .. math:: Pv = RT
-
-    By definition, the compressibility factor (z) for an ideal gas is
-    always one.
-    """
-
-    def P(self, T: float, v: float) -> float:
-        return R * T / v
-
-    def T(self, P: float, v: float) -> float:
-        return P * v / R
-
-    def v(self, P: float, T: float) -> float:
-        return R * T / P
-
-    def z(self, P: float, T: float, v: float) -> float:
-        return 1.0
-
-    def dP_dT_v(self, P: float, T: float, v: float) -> float:
-        return R / v
-
-
-class EOSVirial2ndOrder(EOS):
-    """
-    Class modeling the virial equation of state, truncated after the
-    second term.
-
-    Calculations are based on the Leiden form of the equation:
-
-    .. math::
-        PV = zRT
-
-        z = 1 + \\frac{B \\left( T \\right)}{v}
-    """
-    def __init__(self, B: Callable[[float], float]):
-        """
-        Initialize the EOS with the desired parameters.
-
-        Args:
-            B: A function representing the second virial "coefficient",
-                B(T). Takes in a temperature [K] and returns a
-                coefficient [dimensionless].
-        """
-        self._B = B
-
-    def P(self, T: float, v: float) -> float:
-        return (1 + self._B(T) / v)* R * T / v
-
-    def T(self, P: float, v: float) -> float:
-        def func(T: float):
-            return T - P * v / R / (1 + self._B(T) / v)
-        x0 = P * v / R
-        return root_scalar(func, x0=x0, x1=x0+1.0).root
-
-    def v(self, P: float, T: float) -> float:
-        def func(v: float):
-            return v - R * T / P * (1 + self._B(T) / v)
-        v0 = R * T / P
-        return root_scalar(func, x0=v0, x1=v0*1.1).root
-
-    def dP_dT_v(self, P: float, T: float, v: float) -> float:
-        return R * T
+# class EOSIdeal(EOS):
+#     """
+#     Class modeling the ideal gas law.
+#
+#     .. math:: Pv = RT
+#
+#     By definition, the compressibility factor (z) for an ideal gas is
+#     always one.
+#     """
+#
+#     def P(self, T: float, v: float) -> float:
+#         return R * T / v
+#
+#     def T(self, P: float, v: float) -> float:
+#         return P * v / R
+#
+#     def v(self, P: float, T: float) -> float:
+#         return R * T / P
+#
+#     def z(self, P: float, T: float, v: float) -> float:
+#         return 1.0
+#
+#     def dP_dT_v(self, P: float, T: float, v: float) -> float:
+#         return R / v
+#
+#
+# class EOSVirial2ndOrder(EOS):
+#     """
+#     Class modeling the virial equation of state, truncated after the
+#     second term.
+#
+#     Calculations are based on the Leiden form of the equation:
+#
+#     .. math::
+#         PV = zRT
+#
+#         z = 1 + \\frac{B \\left( T \\right)}{v}
+#     """
+#     def __init__(self, B: Callable[[float], float]):
+#         """
+#         Initialize the EOS with the desired parameters.
+#
+#         Args:
+#             B: A function representing the second virial "coefficient",
+#                 B(T). Takes in a temperature [K] and returns a
+#                 coefficient [dimensionless].
+#         """
+#         self._B = B
+#
+#     def P(self, T: float, v: float) -> float:
+#         return (1 + self._B(T) / v)* R * T / v
+#
+#     def T(self, P: float, v: float) -> float:
+#         def func(T: float):
+#             return T - P * v / R / (1 + self._B(T) / v)
+#         x0 = P * v / R
+#         return root_scalar(func, x0=x0, x1=x0+1.0).root
+#
+#     def v(self, P: float, T: float) -> float:
+#         def func(v: float):
+#             return v - R * T / P * (1 + self._B(T) / v)
+#         v0 = R * T / P
+#         return root_scalar(func, x0=v0, x1=v0*1.1).root
+#
+#     def dP_dT_v(self, P: float, T: float, v: float) -> float:
+#         return R * T
 
 
 class PurePREOS(PExplicitEOS):
@@ -427,4 +426,3 @@ class PurePREOS(PExplicitEOS):
         """
         return -R * T / (v - self._b) ** 2 + \
             2 * self._a(T) * (v+self._b) / (v*(v+self._b) + self._b*(v-self._b)) ** 2
-
