@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from scipy.optimize import root_scalar
 from scipy.integrate import quad
-from . import R
+from .const import R
 
 
 class EOS(ABC):
