@@ -143,154 +143,76 @@ class TestEOSPurePR:
         example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
         assert example_eos._b == pytest.approx(b)
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_P_examples(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    PTv_test_cases = 'example_eos, P, T, v', [
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3443), 2076800.6734812967, 493.15, 0.0018015),
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3443), 2447532.764830227, 493.15, 0.0015),
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3443), 1879295.7426579897, 400.0, 0.0015),
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3), 1887251.502133773, 400.0, 0.0015),
+        (eos.PurePREOS(Pc=22064000.0, Tc=700.0, omega=0.3), 1811704.2117260671, 400.0, 0.0015),
+        (eos.PurePREOS(Pc=25000000.0, Tc=700.0, omega=0.3), 1858087.6312887536, 400.0, 0.0015),
+    ]
+
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_P_examples(self, example_eos, P, T, v):
         assert example_eos.P(T, v) == pytest.approx(P), 'P(T, v) should match specified P'
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_v_examples(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_v_examples(self, example_eos, P, T, v):
         assert example_eos.v(P, T) == pytest.approx(v), 'v(P, T) should match specified v'
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_T_examples(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_T_examples(self, example_eos, P, T, v):
         assert example_eos.T(P, v) == pytest.approx(T), 'T(P, v) should match specified T'
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_z_examples(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_z_examples(self, example_eos, P, T, v):
         assert example_eos.z(T, v) == pytest.approx(P*v/R/T), 'z(T, v) should equal Pv/RT'
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_dP_dT_v_examples(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_dP_dT_v_examples(self, example_eos, P, T, v):
         assert example_eos.dP_dT_v(T=T, v=v) == \
                pytest.approx(derivative(lambda T_est: example_eos.P(T=T_est, v=v), x0=T, dx=T*1e-6))
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_dP_dv_T_examples(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_dP_dv_T_examples(self, example_eos, P, T, v):
         assert example_eos.dP_dv_T(T=T, v=v) == \
                pytest.approx(derivative(lambda v_est: example_eos.P(T=T, v=v_est), x0=v, dx=v*1e-6))
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_dT_dP_v_examples(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_dT_dP_v_examples(self, example_eos, P, T, v):
         assert example_eos.dT_dP_v(T=T, v=v) == \
                pytest.approx(derivative(lambda P_est: example_eos.T(P=P_est, v=v), x0=P, dx=P*1e-6))
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_dT_dv_P_examples(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_dT_dv_P_examples(self, example_eos, P, T, v):
         assert example_eos.dT_dv_P(T=T, v=v) == \
                pytest.approx(derivative(lambda v_est: example_eos.T(P=P, v=v_est), x0=v, dx=v*1e-6))
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_dv_dT_P_examples(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_dv_dT_P_examples(self, example_eos, P, T, v):
         assert example_eos.dv_dT_P(T=T, v=v) == \
                pytest.approx(derivative(lambda T_est: example_eos.v(P=P, T=T_est), x0=T, dx=T*1e-6))
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_dv_dP_T_examples(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_dv_dP_T_examples(self, example_eos, P, T, v):
         assert example_eos.dv_dP_T(T=T, v=v) == \
                pytest.approx(derivative(lambda P_est: example_eos.v(P=P_est, T=T), x0=P, dx=P*1e-6))
 
-    @pytest.mark.parametrize('Pc, Tc, omega, P, T, v', [
-        (22064000.0, 647.096, 0.3443, 2076800.6734812967, 493.15, 0.0018015),
-        (22064000.0, 647.096, 0.3443, 2447532.764830227, 493.15, 0.0015),
-        (22064000.0, 647.096, 0.3443, 1879295.7426579897, 400.0, 0.0015),
-        (22064000.0, 647.096, 0.3, 1887251.502133773, 400.0, 0.0015),
-        (22064000.0, 700.0, 0.3, 1811704.2117260671, 400.0, 0.0015),
-        (25000000.0, 700.0, 0.3, 1858087.6312887536, 400.0, 0.0015),
-    ])
-    def test_du_dv_T_examples_against_derivation(self, Pc, Tc, omega, P, T, v):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_du_dv_T_examples_against_derivation(self, example_eos, P, T, v):
         assert example_eos.du_dv_T(T=T, v=v) == \
                pytest.approx(T * example_eos.dP_dT_v(T=T, v=v) - P)
 
-    @pytest.mark.parametrize('Pc, Tc, omega, T, v1, v2', [
-        (22064000.0, 647.096, 0.3443, 493.15, 0.0018015, 0.003),
-        (22064000.0, 647.096, 0.3443, 493.15, 0.0015, 0.001),
-        (22064000.0, 647.096, 0.3443, 400.0, 0.0015, 0.0012),
-        (22064000.0, 647.096, 0.3, 400.0, 0.0015, 0.0025),
-        (22064000.0, 700.0, 0.3, 400.0, 0.0015, 0.005),
-        (25000000.0, 700.0, 0.3, 400.0, 0.0015, 0.001),
-    ])
-    def test_integrate_du_dv_T_examples(self, Pc, Tc, omega, T, v1, v2):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    v_integral_test_cases = 'example_eos, T, v1, v2', [
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3443), 493.15, 0.0018015, 0.003),
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3443), 493.15, 0.0015, 0.001),
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3443), 400.0, 0.0015, 0.0012),
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3), 400.0, 0.0015, 0.0025),
+        (eos.PurePREOS(Pc=22064000.0, Tc=700.0, omega=0.3), 400.0, 0.0015, 0.005),
+        (eos.PurePREOS(Pc=25000000.0, Tc=700.0, omega=0.3), 400.0, 0.0015, 0.001),
+    ]
+
+    @pytest.mark.parametrize(*v_integral_test_cases)
+    def test_integrate_du_dv_T_examples(self, example_eos, T, v1, v2):
         assert example_eos.integrate_du_dv_T(T=T, v1=v1, v2=v2) == \
                pytest.approx(integrate.quad(lambda v_est: example_eos.du_dv_T(T=T, v=v_est), a=v1, b=v2)[0])
