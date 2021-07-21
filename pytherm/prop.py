@@ -1,6 +1,6 @@
 from math import exp, sinh, cosh
 from typing import Callable
-from .eos import R
+from . import R
 
 TDepCorrelation = Callable[[float], float]
 

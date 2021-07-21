@@ -123,7 +123,7 @@ from pytherm.eos import R
 #         assert test_eos.z(P=P, T=T, v=v) == pytest.approx(1 + B_val / v)
 
 
-class TestEOSPurePR:
+class TestPurePREOS:
     @pytest.mark.parametrize('Pc, Tc, omega, T, a', [
         (22064000.0, 647.096, 0.3443, 493.15, 0.740404951803127),
         (22064000.0, 647.096, 0.3443, 300.0, 0.9809878826615795),

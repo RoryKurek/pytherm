@@ -1,12 +1,23 @@
 from .eos import PExplicitEOS
 from typing import Optional
 from .prop import TDepCorrelation
+from . import R
 
 
 class FluidModel:
-    def __init__(self, eos: PExplicitEOS, Cp_ideal: Optional[TDepCorrelation] = None):
+    def __init__(self, eos: PExplicitEOS,
+                 cp_ideal: Optional[TDepCorrelation] = None,
+                 cv_ideal: Optional[TDepCorrelation] = None):
         self._eos = eos
-        self._Cp_ideal = Cp_ideal
+
+        if cp_ideal is not None and cv_ideal is None:
+            self._cp_ideal = cp_ideal
+            self._cv_ideal = lambda T: self._cp_ideal(T) - R
+        elif cv_ideal is not None and cp_ideal is None:
+            self._cv_ideal = cv_ideal
+            self._cp_ideal = lambda T: self._cv_ideal(T) + R
+        else:
+            raise ValueError('FluidModel requires exactly one of cp_ideal or cv_ideal')
 
     def P(self, T: float, v: float) -> float:
         return self._eos.P(T, v)
@@ -20,8 +31,8 @@ class FluidModel:
     def z(self, T: float, v: float) -> float:
         return self._eos.z(T, v)
 
-    def Cp_ideal(self, T: float) -> Optional[float]:
-        if self._Cp_ideal is not None:
-            return self._Cp_ideal(T)
-        else:
-            return None
+    def cp_ideal(self, T: float) -> float:
+        return self._cp_ideal(T)
+
+    def cv_ideal(self, T: float) -> float:
+        return self._cv_ideal(T)
