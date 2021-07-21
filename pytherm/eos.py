@@ -185,6 +185,25 @@ class PExplicitEOS(EOS):
         """
         return - self.dP_dT_v(T, v) / self.dP_dv_T(T, v)
 
+    # Second-order P-v-T derivatives
+
+    @abstractmethod
+    def d2P_dT2_v(self, T: float, v: float) -> float:
+        """
+        Second derivative of pressure with respect to temperature at
+        constant volume.
+
+        Should be derived from the equation of state.
+
+        Args:
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂²P/∂T² at constant volume [Pa/K²]
+        """
+        ...
+
     # Additional first-order derivatives
 
     def du_dv_T(self, T: float, v: float) -> float:
@@ -374,13 +393,17 @@ class PurePREOS(PExplicitEOS):
         self._C_a = 0.45724 * R ** 2 * Tc ** 2 / Pc
         self._b = 0.0778 * R * Tc / Pc
 
-    def _a(self, T: float):
+    def _a(self, T: float) -> float:
         Tr = T / self._Tc
         return self._C_a * (1 + self._C_alpha * (1 - Tr ** 0.5)) ** 2
 
-    def _da_dT(self, T: float):
+    def _da_dT(self, T: float) -> float:
         sqrt_Tr = (T / self._Tc) ** 0.5
         return -self._C_a * self._C_alpha * sqrt_Tr * (1 + self._C_alpha * (1 - sqrt_Tr)) / T
+
+    def _d2a_dT2(self, T: float) -> float:
+        sqrt_Tr = (T / self._Tc) ** 0.5
+        return 0.5 * self._C_a * self._C_alpha * sqrt_Tr * (1 + self._C_alpha) / T**2
 
     def P(self, T: float, v: float) -> float:
         return R*T/(v-self._b) - self._a(T)/(v*(v+self._b) + self._b*(v-self._b))
@@ -392,10 +415,10 @@ class PurePREOS(PExplicitEOS):
 
         .. math::
             \\left(\\frac{∂P}{∂T}\\right)_v = \\frac{R}{v-b} -
-            \\frac{\\left(∂a(T)/∂T\\right)_v}{\\left[ v \\left( v + b \\right) + b \\left( v - b \\right) \\right]^2}
+            \\frac{\\left(∂a(T)/∂T\\right)_v}{v \\left( v + b \\right) + b \\left( v - b \\right)}
 
             \\left(∂a(T)/∂T\\right)_v =
-            \\frac{C_a C_α T_r^0.5 \\left[1 + C_α \\left(1-T_r^0.5\\right) \\right]}{T}
+            \\frac{C_a C_α T_r^{0.5} \\left[1 + C_α \\left(1-T_r^{0.5}\\right) \\right]}{T}
 
         Args:
             T: Temperature [K]
@@ -413,7 +436,7 @@ class PurePREOS(PExplicitEOS):
 
         .. math::
             \\left(\\frac{∂P}{∂v}\\right)_T = - \\frac{RT}{(v-b)^2} +
-            \\frac{2a(T) (v+b)}{b \\left( v + b \\right) + b \\left( v - b \\right)}
+            \\frac{2a(T) (v+b)}{\\left[ v \\left( v + b \\right) + b \\left( v - b \\right) \\right]^2}
 
         Args:
             T: Temperature [K]
@@ -424,3 +447,24 @@ class PurePREOS(PExplicitEOS):
         """
         return -R * T / (v - self._b) ** 2 + \
             2 * self._a(T) * (v+self._b) / (v*(v+self._b) + self._b*(v-self._b)) ** 2
+
+    def d2P_dT2_v(self, T: float, v: float) -> float:
+        """
+        Second derivative of pressure with respect to temperature at
+        constant volume.
+
+        .. math::
+            \\left(\\frac{∂^2 P}{∂T^2}\\right)_v =
+            - \\frac{\\left(∂^2 a(T)/∂T^2\\right)_v}{v \\left( v + b \\right) + b \\left( v - b \\right)}
+
+            \\left(∂^2 a(T)/∂T^2\\right)_v =
+            \\frac{C_a C_α T_r^{0.5} \\left(1 + C_α\\right)}{2T^2}
+
+        Args:
+            T: Temperature [K]
+            v: Specific Volume [m^3/mol]
+
+        Returns:
+            ∂²P/∂T² at constant volume [Pa/K²]
+        """
+        return -self._d2a_dT2(T) / (v * (v + self._b) + self._b * (v - self._b))

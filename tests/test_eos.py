@@ -124,15 +124,27 @@ from pytherm.eos import R
 
 
 class TestPurePREOS:
-    @pytest.mark.parametrize('Pc, Tc, omega, T, a', [
-        (22064000.0, 647.096, 0.3443, 493.15, 0.740404951803127),
-        (22064000.0, 647.096, 0.3443, 300.0, 0.9809878826615795),
-        (22064000.0, 647.096, 0.3, 493.15, 0.7301777410707092),
-        (22064000.0, 700.0, 0.3443, 493.15, 0.9128609548797745),
-        (25000000.0, 700.0, 0.3443, 493.15, 0.8056545643386938)])
-    def test_a_examples(self, Pc, Tc, omega, T, a):
-        example_eos = eos.PurePREOS(Pc=Pc, Tc=Tc, omega=omega)
+    a_test_cases = 'example_eos, T, a', [
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3443), 493.15, 0.740404951803127),
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3443), 300.0, 0.9809878826615795),
+        (eos.PurePREOS(Pc=22064000.0, Tc=647.096, omega=0.3), 493.15, 0.7301777410707092),
+        (eos.PurePREOS(Pc=22064000.0, Tc=700.0, omega=0.3443), 493.15, 0.9128609548797745),
+        (eos.PurePREOS(Pc=25000000.0, Tc=700.0, omega=0.3443), 493.15, 0.8056545643386938)
+    ]
+
+    @pytest.mark.parametrize(*a_test_cases)
+    def test_a_examples(self, example_eos, T, a):
         assert example_eos._a(T) == pytest.approx(a)
+
+    @pytest.mark.parametrize(*a_test_cases)
+    def test_da_dT_examples(self, example_eos, T, a):
+        assert example_eos._da_dT(T=T) == \
+               pytest.approx(derivative(example_eos._a, x0=T, dx=T*1e-6))
+
+    @pytest.mark.parametrize(*a_test_cases)
+    def test_d2a_dT2_examples(self, example_eos, T, a):
+        assert example_eos._d2a_dT2(T=T) == \
+               pytest.approx(derivative(example_eos._da_dT, x0=T, dx=T*1e-6))
 
     @pytest.mark.parametrize('Pc, Tc, omega, b', [
         (22064000.0, 647.096, 0.3443, 1.897134957540787e-05),
@@ -172,6 +184,11 @@ class TestPurePREOS:
     def test_dP_dT_v_examples(self, example_eos, P, T, v):
         assert example_eos.dP_dT_v(T=T, v=v) == \
                pytest.approx(derivative(lambda T_est: example_eos.P(T=T_est, v=v), x0=T, dx=T*1e-6))
+
+    @pytest.mark.parametrize(*PTv_test_cases)
+    def test_d2P_dT2_v_examples(self, example_eos, P, T, v):
+        assert example_eos.d2P_dT2_v(T=T, v=v) == \
+               pytest.approx(derivative(lambda T_est: example_eos.dP_dT_v(T=T_est, v=v), x0=T, dx=T * 1e-6))
 
     @pytest.mark.parametrize(*PTv_test_cases)
     def test_dP_dv_T_examples(self, example_eos, P, T, v):
