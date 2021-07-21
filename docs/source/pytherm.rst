@@ -12,6 +12,14 @@ pytherm.eos module
    :undoc-members:
    :show-inheritance:
 
+pytherm.prop module
+-------------------
+
+.. automodule:: pytherm.prop
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pytherm.state module
 --------------------
 
