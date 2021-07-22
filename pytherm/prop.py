@@ -1,7 +1,7 @@
 import abc
 from dataclasses import dataclass
 from math import exp, sinh, cosh
-from .const import R
+from .data import R
 
 
 @dataclass

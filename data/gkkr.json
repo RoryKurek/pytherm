@@ -1,0 +1,7222 @@
+{
+  "Water": {
+    "Formula": "H2O",
+    "Tc": 647.096,
+    "Pc": 220.64,
+    "vc": 55.947,
+    "M": 18.015,
+    "omega": 0.3443,
+    "Tb": 373.13,
+    "Tm": 273.15,
+    "Dhm": 333.1,
+    "Dhf0": -241820,
+    "Dgf0": -228590,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.870154,
+          "B": 1.906774,
+          "C": -2.31033,
+          "D": -2.06339,
+          "T_min": 274,
+          "T_max": 647.096,
+          "T_verify": 393.15,
+          "prop_verify": 1.9859,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 6.853064,
+          "B": 7.43794,
+          "C": -2.937398,
+          "D": -3.282184,
+          "E": 8.396833,
+          "T_min": 273,
+          "T_max": 647.096,
+          "T_verify": 323.15,
+          "prop_verify": 2380.25,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.25598,
+          "B": 12.54595,
+          "C": -31.40896,
+          "D": 97.7665,
+          "E": -145.4236,
+          "F": 87.0185,
+          "T_min": 273,
+          "T_max": 586,
+          "T_verify": 343.15,
+          "prop_verify": 4.1875,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 1.023096,
+          "B": 0.669483,
+          "C": 640.884,
+          "D": 124.8677,
+          "E": 4.694832e-05,
+          "T_min": 274,
+          "T_max": 638,
+          "T_verify": 333.15,
+          "prop_verify": 0.4645,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 5.01246e-07,
+          "B": 0.709247,
+          "C": 869.465599,
+          "D": -90063.891,
+          "T_min": 278,
+          "T_max": 1173,
+          "T_verify": 353.15,
+          "prop_verify": 11.7342,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 2.000796,
+          "B": 14.169449,
+          "C": 5.237322,
+          "D": -2.01303,
+          "T_min": 278,
+          "T_max": 1073,
+          "T_verify": 353.15,
+          "prop_verify": 0.0223,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.15899,
+          "B": 1.800132,
+          "C": -1.17874,
+          "D": -0.4107,
+          "E": 0.964067,
+          "T_min": 273,
+          "T_max": 608,
+          "T_verify": 292.85,
+          "prop_verify": 73.8843,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 33484.75,
+          "B": 9275.3,
+          "C": 1218.48,
+          "D": 20241.42,
+          "Type": "Aly-Lee",
+          "E": 2919.59,
+          "T_min": 278,
+          "T_max": 1273,
+          "T_verify": 373.15,
+          "prop_verify": 1.8909
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Polynomial",
+          "A": -2.4148846,
+          "B": 0.024516,
+          "C": -7.312129e-05,
+          "D": 9.949215e-08,
+          "E": -5.373019e-11,
+          "T_min": 275,
+          "T_max": 623,
+          "T_verify": 403.15,
+          "prop_verify": 0.6843
+        }
+      ]
+    }
+  },
+  "Ammonia": {
+    "Formula": "NH3",
+    "Tc": 405.5,
+    "Pc": 113.592,
+    "vc": 75.768,
+    "M": 17.031,
+    "omega": 0.256,
+    "Tb": 239.82,
+    "Tm": 195.45,
+    "Dhm": 332.2,
+    "Dhf0": -45773,
+    "Dgf0": -16150,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.303825,
+          "B": 1.649953,
+          "C": -2.021615,
+          "D": -1.960295,
+          "T_min": 196,
+          "T_max": 405.5,
+          "T_verify": 275.15,
+          "prop_verify": 4.6237,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 224.78,
+          "A": 533.0864,
+          "B": -39.199,
+          "C": 271.407,
+          "D": -72.5196,
+          "T_min": 196.0,
+          "T_max": 647.096,
+          "T_verify": 310.15,
+          "prop_verify": 584.33,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.74477,
+          "B": 7.282878,
+          "C": -2.428749,
+          "D": -2.261923,
+          "E": 2.909393,
+          "T_min": 196,
+          "T_max": 405.5,
+          "T_verify": 300.15,
+          "prop_verify": 1157.7,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.51838,
+          "B": 8.111677,
+          "C": -3.922537,
+          "D": 16.08084,
+          "E": -18.078723,
+          "F": -4.26508,
+          "T_min": 205,
+          "T_max": 355,
+          "T_verify": 265.15,
+          "prop_verify": 4.573,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.08158,
+          "B": 0.637466,
+          "C": 409.229,
+          "D": 29.3262,
+          "E": 2.29033e-05,
+          "T_min": 196,
+          "T_max": 400,
+          "T_verify": 278.65,
+          "prop_verify": 0.1605,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.113854e-06,
+          "B": 0.573628,
+          "C": 695.164458,
+          "D": -39937.499,
+          "T_min": 196,
+          "T_max": 1000,
+          "T_verify": 280.15,
+          "prop_verify": 9.4972,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 1.771596,
+          "B": 25.648577,
+          "C": -2.26318,
+          "D": 1.120586,
+          "T_min": 203,
+          "T_max": 1000,
+          "T_verify": 279.75,
+          "prop_verify": 0.0221,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.103258,
+          "B": 1.320142,
+          "C": -0.300843,
+          "D": 0.350729,
+          "E": -0.154149,
+          "T_min": 196,
+          "T_max": 395,
+          "T_verify": 239.65,
+          "prop_verify": 34.2903,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 34083.18,
+          "B": 26087.0,
+          "C": 990.77,
+          "D": 33100.02,
+          "Type": "Aly-Lee",
+          "E": 2905.6,
+          "T_min": 196,
+          "T_max": 1500,
+          "T_verify": 394.75,
+          "prop_verify": 2.2598
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.458126,
+          "B": -3.407603,
+          "C": 7.363882,
+          "D": -3.110926,
+          "T_min": 203,
+          "T_max": 383,
+          "T_verify": 303.15,
+          "prop_verify": 0.4592
+        }
+      ]
+    }
+  },
+  "Hydrogen chloride": {
+    "Formula": "HCl",
+    "Tc": 324.55,
+    "Pc": 82.631,
+    "vc": 88.719,
+    "M": 36.461,
+    "omega": 0.128,
+    "Tb": 188.2,
+    "Tm": 158.95,
+    "Dhm": 54.9,
+    "Dhf0": -92310,
+    "Dgf0": -95300,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.454142,
+          "B": 0.934797,
+          "C": -0.636477,
+          "D": -1.704349,
+          "T_min": 134,
+          "T_max": 324.55,
+          "T_verify": 243.15,
+          "prop_verify": 10.8202,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 410.97,
+          "A": 981.8765,
+          "B": -441.4813,
+          "C": 1121.7449,
+          "D": -553.3618,
+          "T_min": 134.0,
+          "T_max": 405.5,
+          "T_verify": 248.15,
+          "prop_verify": 1018.11,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.385594,
+          "B": 3.577607,
+          "C": 1.70222,
+          "D": -4.769082,
+          "E": 5.095527,
+          "T_min": 134,
+          "T_max": 324.55,
+          "T_verify": 203.15,
+          "prop_verify": 423.41,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.428824,
+          "B": 7.229828,
+          "C": -9.908417,
+          "D": 35.977597,
+          "E": -73.966366,
+          "F": 63.001991,
+          "T_min": 134,
+          "T_max": 308,
+          "T_verify": 273.15,
+          "prop_verify": 2.0561,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 1.468422,
+          "B": 0.001303,
+          "C": 321.378,
+          "D": 150.8633,
+          "E": 3.640612e-05,
+          "T_min": 183,
+          "T_max": 313,
+          "T_verify": 233.15,
+          "prop_verify": 0.1639,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.397649e-06,
+          "B": 0.539111,
+          "C": 339.417194,
+          "D": -6791.666,
+          "T_min": 200,
+          "T_max": 1000,
+          "T_verify": 284.25,
+          "prop_verify": 13.9293,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 21.129515,
+          "B": 59.593899,
+          "C": -21.37243,
+          "D": 3.61711,
+          "T_min": 159,
+          "T_max": 1000,
+          "T_verify": 373.15,
+          "prop_verify": 0.0181,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.084865,
+          "B": 1.29288,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 159,
+          "T_max": 316,
+          "T_verify": 246.15,
+          "prop_verify": 13.5228,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 432.77152,
+          "B": 3.42841,
+          "C": 3.54436,
+          "D": -10.49775,
+          "Type": "PPDS Ideal cp",
+          "E": -77.37691,
+          "F": 403.95083,
+          "G": -442.34632,
+          "T_min": 134,
+          "T_max": 1773,
+          "T_verify": 473.15,
+          "prop_verify": 0.8019
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Polynomial",
+          "A": 0.80453743,
+          "B": -0.002102,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 273,
+          "T_max": 323,
+          "T_verify": 294.25,
+          "prop_verify": 0.186
+        }
+      ]
+    }
+  },
+  "Chlorine": {
+    "Formula": "Cl2",
+    "Tc": 416.958,
+    "Pc": 79.911,
+    "vc": 122.927,
+    "M": 70.906,
+    "omega": 0.0874,
+    "Tb": 239.17,
+    "Tm": 172.15,
+    "Dhm": 90.3,
+    "Dhf0": 0,
+    "Dgf0": 0,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.442452,
+          "B": 1.492841,
+          "C": -1.225096,
+          "D": -2.015398,
+          "T_min": 174,
+          "T_max": 416.958,
+          "T_verify": 273.15,
+          "prop_verify": 3.6877,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 576.81,
+          "A": 908.9017,
+          "B": 948.0483,
+          "C": -1353.2687,
+          "D": 1093.5252,
+          "T_min": 173.0,
+          "T_max": 324.55,
+          "T_verify": 273.15,
+          "prop_verify": 1467.02,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.11396,
+          "B": 5.494794,
+          "C": -1.63973,
+          "D": -2.193617,
+          "E": 4.356455,
+          "T_min": 173,
+          "T_max": 416.958,
+          "T_verify": 273.15,
+          "prop_verify": 267.42,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.348448,
+          "B": 9.581768,
+          "C": -35.823396,
+          "D": 198.970547,
+          "E": -456.440234,
+          "F": 365.477124,
+          "T_min": 173,
+          "T_max": 383,
+          "T_verify": 273.15,
+          "prop_verify": 0.9791,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 0.48563,
+          "B": 1.344777,
+          "C": 439.888,
+          "D": -109.3797,
+          "E": 0.0001713583,
+          "T_min": 173,
+          "T_max": 416,
+          "T_verify": 223.15,
+          "prop_verify": 0.5582,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.64926e-07,
+          "B": 0.801668,
+          "C": 42.635734,
+          "D": 3223.277,
+          "T_min": 200,
+          "T_max": 1000,
+          "T_verify": 273.15,
+          "prop_verify": 12.3467,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 35.164546,
+          "B": 37.25461,
+          "C": 6.665306,
+          "D": -1.77501,
+          "T_min": 200,
+          "T_max": 1000,
+          "T_verify": 373.15,
+          "prop_verify": 0.0114,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.06966,
+          "B": 1.290711,
+          "C": -0.5953,
+          "D": 0.68953,
+          "E": -0.297926,
+          "T_min": 173,
+          "T_max": 404,
+          "T_verify": 273.15,
+          "prop_verify": 21.305,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 29197.65,
+          "B": 8502.8,
+          "C": 405.49,
+          "D": -3253.99,
+          "Type": "Aly-Lee",
+          "E": 3892.43,
+          "T_min": 173,
+          "T_max": 1123,
+          "T_verify": 273.15,
+          "prop_verify": 0.4721
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.08364446,
+          "B": -2.244378,
+          "C": 6.000759,
+          "D": -1.768471,
+          "T_min": 173,
+          "T_max": 410,
+          "T_verify": 273.15,
+          "prop_verify": 0.1478
+        }
+      ]
+    }
+  },
+  "Nitrogen": {
+    "Formula": "N2",
+    "Tc": 126.192,
+    "Pc": 33.958,
+    "vc": 89.416,
+    "M": 28.014,
+    "omega": 0.0372,
+    "Tb": 77.36,
+    "Tm": 63.15,
+    "Dhm": 25.7,
+    "Dhf0": 0,
+    "Dgf0": 0,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.12368,
+          "B": 1.26061,
+          "C": -0.760446,
+          "D": -1.794726,
+          "T_min": 65,
+          "T_max": 126.192,
+          "T_verify": 103.15,
+          "prop_verify": 9.6198,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 313.3,
+          "A": 471.2169,
+          "B": 492.8646,
+          "C": -561.5971,
+          "D": 391.1454,
+          "T_min": 68.0,
+          "T_max": 416.958,
+          "T_verify": 123.15,
+          "prop_verify": 471.54,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.063172,
+          "B": 5.518154,
+          "C": -2.645913,
+          "D": -1.981109,
+          "E": 5.333368,
+          "T_min": 65,
+          "T_max": 126.192,
+          "T_verify": 93.15,
+          "prop_verify": 174.93,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.468003,
+          "B": 5.859125,
+          "C": -3.294471,
+          "D": 10.94939,
+          "E": -10.931129,
+          "F": 3.52105,
+          "T_min": 68,
+          "T_max": 113,
+          "T_verify": 103.15,
+          "prop_verify": 2.4109,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.238583,
+          "B": 0.018882,
+          "C": 127.141,
+          "D": 36.1391,
+          "E": 1.343698e-05,
+          "T_min": 68,
+          "T_max": 123,
+          "T_verify": 113.15,
+          "prop_verify": 0.0478,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 8.47662e-07,
+          "B": 0.574033,
+          "C": 75.437536,
+          "D": 56.771,
+          "T_min": 73,
+          "T_max": 1773,
+          "T_verify": 313.15,
+          "prop_verify": 18.4896,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 30.51644,
+          "B": 100.761278,
+          "C": -84.097324,
+          "D": 35.705221,
+          "T_min": 93,
+          "T_max": 1223,
+          "T_verify": 323.15,
+          "prop_verify": 0.027,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.029512,
+          "B": 1.27829,
+          "C": 0.044647,
+          "D": -0.157933,
+          "E": 0.089708,
+          "T_min": 63,
+          "T_max": 123,
+          "T_verify": 112.95,
+          "prop_verify": 1.7387,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 29108.79,
+          "B": 8526.28,
+          "C": 1678.41,
+          "D": 66784.83,
+          "Type": "Aly-Lee",
+          "E": 10672.63,
+          "T_min": 73,
+          "T_max": 1773,
+          "T_verify": 313.15,
+          "prop_verify": 1.0399
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.037237,
+          "B": 0.819379,
+          "C": 1.54683,
+          "D": 2.95617,
+          "T_min": 73,
+          "T_max": 123,
+          "T_verify": 113.15,
+          "prop_verify": 0.0756
+        }
+      ]
+    }
+  },
+  "Oxygen": {
+    "Formula": "O2",
+    "Tc": 154.599,
+    "Pc": 50.464,
+    "vc": 74.948,
+    "M": 31.999,
+    "omega": 0.0221,
+    "Tb": 90.19,
+    "Tm": 54.35,
+    "Dhm": 13.9,
+    "Dhf0": 0,
+    "Dgf0": 0,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.051465,
+          "B": 1.234823,
+          "C": -0.628118,
+          "D": -1.61418,
+          "T_min": 64,
+          "T_max": 154.599,
+          "T_verify": 123.15,
+          "prop_verify": 12.2153,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 426.95,
+          "A": 748.3728,
+          "B": 396.2376,
+          "C": -416.2389,
+          "D": 372.6904,
+          "T_min": 58.0,
+          "T_max": 126.192,
+          "T_verify": 123.15,
+          "prop_verify": 952.52,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 4.969617,
+          "B": 5.305319,
+          "C": -2.42609,
+          "D": -2.151263,
+          "E": 3.466285,
+          "T_min": 58,
+          "T_max": 154.599,
+          "T_verify": 123.15,
+          "prop_verify": 167.73,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.491044,
+          "B": 4.971189,
+          "C": 3.165818,
+          "D": -15.73023,
+          "E": 35.129358,
+          "F": -24.4504,
+          "T_min": 58,
+          "T_max": 138,
+          "T_verify": 103.15,
+          "prop_verify": 1.7546,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.14855,
+          "B": 0.000532,
+          "C": 157.422,
+          "D": 36.1141,
+          "E": 1.839315e-05,
+          "T_min": 73,
+          "T_max": 148,
+          "T_verify": 113.15,
+          "prop_verify": 0.1098,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.102259e-06,
+          "B": 0.563255,
+          "C": 96.45018,
+          "D": -3.515,
+          "T_min": 54,
+          "T_max": 1500,
+          "T_verify": 358.65,
+          "prop_verify": 23.8665,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 25.097426,
+          "B": 69.251077,
+          "C": -35.32623,
+          "D": 10.740183,
+          "T_min": 80,
+          "T_max": 1495,
+          "T_verify": 284.4,
+          "prop_verify": 0.0251,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.037848,
+          "B": 1.200264,
+          "C": -0.019308,
+          "D": 0.080429,
+          "E": -0.050479,
+          "T_min": 54,
+          "T_max": 149,
+          "T_verify": 73.15,
+          "prop_verify": 17.4984,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 29116.9,
+          "B": 10437.46,
+          "C": 2565.44,
+          "D": 9338.84,
+          "Type": "Aly-Lee",
+          "E": 1149.97,
+          "T_min": 63,
+          "T_max": 1773,
+          "T_verify": 1200.0,
+          "prop_verify": 1.115
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.04849099,
+          "B": 0.66225,
+          "C": -0.157473,
+          "D": 4.180248,
+          "T_min": 73,
+          "T_max": 148,
+          "T_verify": 133.15,
+          "prop_verify": 0.0912
+        }
+      ]
+    }
+  },
+  "Hydrogen": {
+    "Formula": "H2",
+    "Tc": 33.19,
+    "Pc": 13.15,
+    "vc": 66.938,
+    "M": 2.016,
+    "omega": -0.2187,
+    "Tb": 20.38,
+    "Tm": 13.95,
+    "Dhm": 58.1,
+    "Dhf0": 0,
+    "Dgf0": 0,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -4.836839,
+          "B": 0.943915,
+          "C": 0.76388,
+          "D": -0.467794,
+          "T_min": 15,
+          "T_max": 33.19,
+          "T_verify": 18.05,
+          "prop_verify": 0.4651,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 30.12,
+          "A": 52.8201,
+          "B": 2.712,
+          "C": 6.2764,
+          "D": -4.0288,
+          "T_min": 15.0,
+          "T_max": 154.599,
+          "T_verify": 18.05,
+          "prop_verify": 73.3,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 4.115256,
+          "B": 2.511597,
+          "C": -1.539154,
+          "D": -2.578672,
+          "E": 2.165454,
+          "T_min": 15,
+          "T_max": 33.19,
+          "T_verify": 20.05,
+          "prop_verify": 461.39,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.412752,
+          "B": 1.939203,
+          "C": -0.676502,
+          "D": 2.161263,
+          "E": -9.684044,
+          "F": 14.410197,
+          "T_min": 16,
+          "T_max": 28,
+          "T_verify": 18.75,
+          "prop_verify": 11.2238,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 1.525476,
+          "B": 1e-06,
+          "C": 33.246,
+          "D": 7.49,
+          "E": 2.85192e-06,
+          "T_min": 14,
+          "T_max": 33,
+          "T_verify": 18.2,
+          "prop_verify": 0.0157,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.69104e-07,
+          "B": 0.692485,
+          "C": -7.634394,
+          "D": 467.12,
+          "T_min": 78,
+          "T_max": 3000,
+          "T_verify": 328.25,
+          "prop_verify": 9.5254,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 9.355729,
+          "B": 86.604301,
+          "C": -163.421012,
+          "D": 81.498903,
+          "T_min": 22,
+          "T_max": 1600,
+          "T_verify": 271.15,
+          "prop_verify": 0.1619,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.005631,
+          "B": 1.201187,
+          "C": 0.02438,
+          "D": -0.439855,
+          "E": 0.30361,
+          "T_min": 14,
+          "T_max": 32,
+          "T_verify": 18.05,
+          "prop_verify": 2.3136,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 20463.61,
+          "B": 9591.19,
+          "C": 216.79,
+          "D": 16524.83,
+          "Type": "Aly-Lee",
+          "E": 3955.44,
+          "T_min": 24,
+          "T_max": 2273,
+          "T_verify": 513.15,
+          "prop_verify": 14.6353
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.31257102,
+          "B": -4.480248,
+          "C": 8.85252,
+          "D": -5.476372,
+          "T_min": 14,
+          "T_max": 31,
+          "T_verify": 22.05,
+          "prop_verify": 0.1012
+        }
+      ]
+    }
+  },
+  "Sulfur dioxide": {
+    "Formula": "SO2",
+    "Tc": 430.643,
+    "Pc": 78.757,
+    "vc": 122.087,
+    "M": 64.062,
+    "omega": 0.2552,
+    "Tb": 263.13,
+    "Tm": 200.0,
+    "Dhm": 115.5,
+    "Dhf0": -296850,
+    "Dgf0": -300150,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.278016,
+          "B": 1.726871,
+          "C": -2.371926,
+          "D": -2.70875,
+          "T_min": 203,
+          "T_max": 430.643,
+          "T_verify": 303.15,
+          "prop_verify": 4.6239,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 524.72,
+          "A": 1026.4147,
+          "B": 287.9415,
+          "C": -59.1833,
+          "D": 242.7178,
+          "T_min": 203.0,
+          "T_max": 33.19,
+          "T_verify": 273.15,
+          "prop_verify": 1435.62,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 6.43138,
+          "B": 6.40586,
+          "C": -2.656015,
+          "D": -0.900937,
+          "E": 6.502211,
+          "T_min": 203,
+          "T_max": 430.643,
+          "T_verify": 323.15,
+          "prop_verify": 328.16,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.49203,
+          "B": 9.88245,
+          "C": -5.73671,
+          "D": 12.99129,
+          "E": -7.898405,
+          "F": 4.251653,
+          "T_min": 203,
+          "T_max": 413,
+          "T_verify": 303.15,
+          "prop_verify": 1.4033,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 12.38361,
+          "B": 10.06009,
+          "C": 598.154,
+          "D": -1525.699,
+          "E": 1.2008e-07,
+          "T_min": 225,
+          "T_max": 400,
+          "T_verify": 280.25,
+          "prop_verify": 0.3347,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 4.46529e-06,
+          "B": 0.379352,
+          "C": 600.54652,
+          "D": -469.44,
+          "T_min": 198,
+          "T_max": 1000,
+          "T_verify": 493.25,
+          "prop_verify": 21.1826,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 27.05861,
+          "B": -3.31505,
+          "C": 54.0972,
+          "D": -15.76424,
+          "T_min": 250,
+          "T_max": 900,
+          "T_verify": 386.85,
+          "prop_verify": 0.0138,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.088735,
+          "B": 1.32949,
+          "C": -0.475261,
+          "D": 0.585308,
+          "E": -0.258743,
+          "T_min": 198,
+          "T_max": 406,
+          "T_verify": 295.85,
+          "prop_verify": 22.1365,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 904.53351,
+          "B": 3.98118,
+          "C": 5.66358,
+          "D": 3.21967,
+          "Type": "PPDS Ideal cp",
+          "E": -88.88144,
+          "F": 186.92401,
+          "G": -121.55529,
+          "T_min": 203,
+          "T_max": 1773,
+          "T_verify": 343.15,
+          "prop_verify": 0.6483
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.11179,
+          "B": 0.049672,
+          "C": -0.083144,
+          "D": 2.454405,
+          "T_min": 198,
+          "T_max": 400,
+          "T_verify": 304.15,
+          "prop_verify": 0.192
+        }
+      ]
+    }
+  },
+  "Carbon monoxide": {
+    "Formula": "CO",
+    "Tc": 132.86,
+    "Pc": 34.982,
+    "vc": 92.088,
+    "M": 28.01,
+    "omega": 0.0503,
+    "Tb": 81.64,
+    "Tm": 68.15,
+    "Dhm": 30.0,
+    "Dhf0": -110540,
+    "Dgf0": -137270,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.194175,
+          "B": 1.319639,
+          "C": -0.943212,
+          "D": -2.001545,
+          "T_min": 68,
+          "T_max": 132.86,
+          "T_verify": 101.15,
+          "prop_verify": 5.9215,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 304.17,
+          "A": 571.9312,
+          "B": -67.0962,
+          "C": 387.1504,
+          "D": -121.732,
+          "T_min": 68.0,
+          "T_max": 430.643,
+          "T_verify": 113.15,
+          "prop_verify": 626.53,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.36516,
+          "B": 4.61563,
+          "C": -1.50262,
+          "D": -2.360346,
+          "E": 7.214583,
+          "T_min": 68,
+          "T_max": 132.86,
+          "T_verify": 101.15,
+          "prop_verify": 181.89,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.434226,
+          "B": 6.85227,
+          "C": -7.82624,
+          "D": 25.69357,
+          "E": -39.2193,
+          "F": 31.50626,
+          "T_min": 68,
+          "T_max": 125,
+          "T_verify": 101.15,
+          "prop_verify": 2.3261,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 1.03741,
+          "B": 1.39189,
+          "C": 169.937,
+          "D": -43.9656,
+          "E": 2.893372e-05,
+          "T_min": 68,
+          "T_max": 131,
+          "T_verify": 88.15,
+          "prop_verify": 0.146,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 7.34306e-07,
+          "B": 0.588574,
+          "C": 52.31866,
+          "D": 1018.822,
+          "T_min": 68,
+          "T_max": 1473,
+          "T_verify": 379.15,
+          "prop_verify": 21.1283,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 32.98768,
+          "B": 73.91942,
+          "C": -28.84902,
+          "D": 4.39812,
+          "T_min": 70,
+          "T_max": 1500,
+          "T_verify": 973.15,
+          "prop_verify": 0.0636,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.040422,
+          "B": 2.716037,
+          "C": -3.185805,
+          "D": 2.537085,
+          "E": -0.839567,
+          "T_min": 68,
+          "T_max": 123,
+          "T_verify": 85.15,
+          "prop_verify": 8.74,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 29104.6,
+          "B": 8665.81,
+          "C": 3043.79,
+          "D": 8336.18,
+          "Type": "Aly-Lee",
+          "E": 1531.93,
+          "T_min": 73,
+          "T_max": 1773,
+          "T_verify": 313.15,
+          "prop_verify": 1.0407
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.04654,
+          "B": 0.258036,
+          "C": -0.4955,
+          "D": 5.39429,
+          "T_min": 68,
+          "T_max": 125,
+          "T_verify": 83.15,
+          "prop_verify": 0.1372
+        }
+      ]
+    }
+  },
+  "Carbon dioxide": {
+    "Formula": "CO2",
+    "Tc": 304.128,
+    "Pc": 73.773,
+    "vc": 94.117,
+    "M": 44.009,
+    "omega": 0.2236,
+    "Tb": NaN,
+    "Tm": 216.55,
+    "Dhm": 204.9,
+    "Dhf0": -393500,
+    "Dgf0": -394380,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.026565,
+          "B": 1.527245,
+          "C": -2.246311,
+          "D": -2.63003,
+          "T_min": 218,
+          "T_max": 304.128,
+          "T_verify": 253.15,
+          "prop_verify": 19.6972,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 467.6,
+          "A": 897.8433,
+          "B": 170.0655,
+          "C": 169.2649,
+          "D": 37.6341,
+          "T_min": 218.0,
+          "T_max": 132.86,
+          "T_verify": 253.15,
+          "prop_verify": 1031.67,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 6.285898,
+          "B": 5.640077,
+          "C": -1.240625,
+          "D": -2.040365,
+          "E": 26.542058,
+          "T_min": 218,
+          "T_max": 304.128,
+          "T_verify": 253.15,
+          "prop_verify": 282.44,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.500361,
+          "B": 8.830377,
+          "C": -3.868837,
+          "D": 10.324592,
+          "E": 0.675891,
+          "F": 1.845183,
+          "T_min": 218,
+          "T_max": 283,
+          "T_verify": 253.15,
+          "prop_verify": 2.1654,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.701205,
+          "B": 4.821786,
+          "C": 304.972,
+          "D": -219.7839,
+          "E": 2.9658e-05,
+          "T_min": 218,
+          "T_max": 298,
+          "T_verify": 221.15,
+          "prop_verify": 0.2374,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 4.719875e-06,
+          "B": 0.373279,
+          "C": 512.6863,
+          "D": -6119.961,
+          "T_min": 223,
+          "T_max": 1473,
+          "T_verify": 233.15,
+          "prop_verify": 11.7023,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 18.890387,
+          "B": 11.895399,
+          "C": 40.897183,
+          "D": -13.03562,
+          "T_min": 223,
+          "T_max": 973,
+          "T_verify": 373.15,
+          "prop_verify": 0.0227,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.081563,
+          "B": 1.527091,
+          "C": -0.836249,
+          "D": 0.92452,
+          "E": -0.348195,
+          "T_min": 216,
+          "T_max": 299,
+          "T_verify": 239.65,
+          "prop_verify": 11.3432,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 188.27392,
+          "B": 3.50426,
+          "C": 8.29771,
+          "D": 4.71883,
+          "Type": "PPDS Ideal cp",
+          "E": -11.75109,
+          "F": 13.94035,
+          "G": -6.73002,
+          "T_min": 223,
+          "T_max": 1273,
+          "T_verify": 373.15,
+          "prop_verify": 0.9158
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.11094,
+          "B": -2.381636,
+          "C": 4.90213,
+          "D": 0.184516,
+          "T_min": 218,
+          "T_max": 293,
+          "T_verify": 273.15,
+          "prop_verify": 0.1082
+        }
+      ]
+    }
+  },
+  "Methane": {
+    "Formula": "CH4",
+    "Tc": 190.564,
+    "Pc": 45.992,
+    "vc": 98.629,
+    "M": 16.043,
+    "omega": 0.0114,
+    "Tb": 111.67,
+    "Tm": 90.65,
+    "Dhm": 58.7,
+    "Dhf0": -74850,
+    "Dgf0": -50835,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.024057,
+          "B": 1.26869,
+          "C": -0.570278,
+          "D": -1.37536,
+          "T_min": 93,
+          "T_max": 190.564,
+          "T_verify": 173.15,
+          "prop_verify": 26.039,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 162.66,
+          "A": 267.8594,
+          "B": 129.3958,
+          "C": -73.607,
+          "D": 69.9714,
+          "T_min": 93.0,
+          "T_max": 304.128,
+          "T_verify": 133.15,
+          "prop_verify": 388.78,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 4.990555,
+          "B": 5.035151,
+          "C": -2.283393,
+          "D": -2.460933,
+          "E": 4.378278,
+          "T_min": 93,
+          "T_max": 190.564,
+          "T_verify": 183.15,
+          "prop_verify": 214.96,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.407112,
+          "B": 7.061365,
+          "C": -11.142546,
+          "D": 37.881423,
+          "E": -60.945893,
+          "F": 38.02482,
+          "T_min": 93,
+          "T_max": 168,
+          "T_verify": 123.15,
+          "prop_verify": 3.5803,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.313648,
+          "B": 0.66803,
+          "C": 200.211,
+          "D": -19.1784,
+          "E": 1.039192e-05,
+          "T_min": 93,
+          "T_max": 178,
+          "T_verify": 123.15,
+          "prop_verify": 0.092,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.119178e-06,
+          "B": 0.493234,
+          "C": 214.6272,
+          "D": -3952.087,
+          "T_min": 93,
+          "T_max": 1000,
+          "T_verify": 233.15,
+          "prop_verify": 8.9131,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 0.826598,
+          "B": 71.37413,
+          "C": -29.0346,
+          "D": 6.10706,
+          "T_min": 93,
+          "T_max": 1000,
+          "T_verify": 273.15,
+          "prop_verify": 0.031,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.033795,
+          "B": 0.837809,
+          "C": 0.524994,
+          "D": -0.287428,
+          "E": 0.048288,
+          "T_min": 91,
+          "T_max": 185,
+          "T_verify": 153.75,
+          "prop_verify": 5.5421,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 33356.35,
+          "B": 45763.85,
+          "C": 1025.42,
+          "D": 48699.01,
+          "Type": "Aly-Lee",
+          "E": 2664.97,
+          "T_min": 93,
+          "T_max": 1823,
+          "T_verify": 293.15,
+          "prop_verify": 2.2073
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.092227,
+          "B": -1.46668,
+          "C": 2.95152,
+          "D": 1.06958,
+          "T_min": 93,
+          "T_max": 188,
+          "T_verify": 143.15,
+          "prop_verify": 0.1394
+        }
+      ]
+    }
+  },
+  "Ethane": {
+    "Formula": "C2H6",
+    "Tc": 305.322,
+    "Pc": 48.722,
+    "vc": 145.843,
+    "M": 30.07,
+    "omega": 0.0995,
+    "Tb": 184.57,
+    "Tm": 90.35,
+    "Dhm": 95.1,
+    "Dhf0": -84680,
+    "Dgf0": -32930,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.461277,
+          "B": 1.353559,
+          "C": -1.04336,
+          "D": -2.044654,
+          "T_min": 123,
+          "T_max": 305.322,
+          "T_verify": 243.15,
+          "prop_verify": 10.6417,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 206.18,
+          "A": 339.3617,
+          "B": 278.2759,
+          "C": -326.5676,
+          "D": 246.499,
+          "T_min": 93.0,
+          "T_max": 190.564,
+          "T_verify": 213.15,
+          "prop_verify": 505.9,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.24057,
+          "B": 7.195872,
+          "C": -4.63536,
+          "D": -0.641593,
+          "E": 2.27141,
+          "T_min": 93,
+          "T_max": 305.322,
+          "T_verify": 243.15,
+          "prop_verify": 388.62,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.428053,
+          "B": 10.459037,
+          "C": -18.182884,
+          "D": 51.7115,
+          "E": -75.88447,
+          "F": 44.50054,
+          "T_min": 93,
+          "T_max": 283,
+          "T_verify": 213.15,
+          "prop_verify": 2.5942,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.43591,
+          "B": 0.097102,
+          "C": 309.734,
+          "D": 33.4667,
+          "E": 1.55418e-05,
+          "T_min": 103,
+          "T_max": 293,
+          "T_verify": 213.15,
+          "prop_verify": 0.1175,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 6.12179e-07,
+          "B": 0.567691,
+          "C": 199.802139,
+          "D": 799.607,
+          "T_min": 103,
+          "T_max": 973,
+          "T_verify": 233.15,
+          "prop_verify": 7.2233,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 3.233358,
+          "B": 19.029493,
+          "C": 27.80538,
+          "D": -4.717205,
+          "T_min": 113,
+          "T_max": 1000,
+          "T_verify": 313.35,
+          "prop_verify": 0.0231,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.048339,
+          "B": 1.181172,
+          "C": -0.012966,
+          "D": 0.082275,
+          "E": -0.055848,
+          "T_min": 90,
+          "T_max": 294,
+          "T_verify": 282.65,
+          "prop_verify": 2.1598,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 903.41135,
+          "B": 4.48148,
+          "C": 11.69046,
+          "D": 8.47923,
+          "Type": "PPDS Ideal cp",
+          "E": -77.02151,
+          "F": 122.97656,
+          "G": -74.05999,
+          "T_min": 123,
+          "T_max": 1500,
+          "T_verify": 273.15,
+          "prop_verify": 1.6518
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.0326356,
+          "B": 5.68998,
+          "C": -11.845846,
+          "D": 15.965704,
+          "T_min": 103,
+          "T_max": 303,
+          "T_verify": 243.15,
+          "prop_verify": 0.1142
+        }
+      ]
+    }
+  },
+  "Propane": {
+    "Formula": "C3H8",
+    "Tc": 369.825,
+    "Pc": 42.477,
+    "vc": 200.004,
+    "M": 44.097,
+    "omega": 0.1524,
+    "Tb": 231.03,
+    "Tm": 85.45,
+    "Dhm": 79.9,
+    "Dhf0": -103840,
+    "Dgf0": -23470,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.715816,
+          "B": 1.387038,
+          "C": -1.311343,
+          "D": -2.563166,
+          "T_min": 160,
+          "T_max": 369.825,
+          "T_verify": 260.15,
+          "prop_verify": 3.122,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 220.48,
+          "A": 372.1807,
+          "B": 329.3106,
+          "C": -439.7196,
+          "D": 331.6824,
+          "T_min": 90.0,
+          "T_max": 305.322,
+          "T_verify": 280.15,
+          "prop_verify": 518.73,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.532218,
+          "B": 7.865983,
+          "C": -5.298339,
+          "D": 0.075567,
+          "E": 2.154822,
+          "T_min": 90,
+          "T_max": 369.825,
+          "T_verify": 280.15,
+          "prop_verify": 364.59,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.55868,
+          "B": 12.802352,
+          "C": -5.738203,
+          "D": -9.551125,
+          "E": 26.702477,
+          "F": -15.775134,
+          "T_min": 81,
+          "T_max": 330,
+          "T_verify": 280.15,
+          "prop_verify": 2.5415,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.56344,
+          "B": 0.161368,
+          "C": 372.533,
+          "D": 38.0331,
+          "E": 1.75114e-05,
+          "T_min": 90,
+          "T_max": 350,
+          "T_verify": 280.15,
+          "prop_verify": 0.1175,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.73966e-07,
+          "B": 0.734798,
+          "C": 143.20706,
+          "D": -7147.859,
+          "T_min": 85,
+          "T_max": 1000,
+          "T_verify": 313.15,
+          "prop_verify": 8.5718,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 1.35141,
+          "B": 19.98385,
+          "C": 20.026,
+          "D": -3.55393,
+          "T_min": 203,
+          "T_max": 1000,
+          "T_verify": 352.55,
+          "prop_verify": 0.0243,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.050936,
+          "B": 1.225863,
+          "C": -0.031551,
+          "D": 0.052927,
+          "E": -0.027713,
+          "T_min": 85,
+          "T_max": 355,
+          "T_verify": 280.05,
+          "prop_verify": 9.052,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 1222.85277,
+          "B": 4.63428,
+          "C": 6.17777,
+          "D": -31.84476,
+          "Type": "PPDS Ideal cp",
+          "E": -487.58918,
+          "F": 1216.90986,
+          "G": -972.09252,
+          "T_min": 123,
+          "T_max": 1500,
+          "T_verify": 373.15,
+          "prop_verify": 2.008
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.0482198,
+          "B": 1.815034,
+          "C": -4.45646,
+          "D": 7.13812,
+          "T_min": 85,
+          "T_max": 360,
+          "T_verify": 290.15,
+          "prop_verify": 0.0976
+        }
+      ]
+    }
+  },
+  "n-Butane": {
+    "Formula": "C4H10",
+    "Tc": 425.125,
+    "Pc": 37.96,
+    "vc": 254.93,
+    "M": 58.124,
+    "omega": 0.2008,
+    "Tb": 272.66,
+    "Tm": 134.85,
+    "Dhm": 80.2,
+    "Dhf0": -126150,
+    "Dgf0": -17154,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.084375,
+          "B": 1.789499,
+          "C": -1.994745,
+          "D": -2.325711,
+          "T_min": 180,
+          "T_max": 425.125,
+          "T_verify": 280.15,
+          "prop_verify": 1.3356,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 228.0,
+          "A": 418.6984,
+          "B": 246.8435,
+          "C": -317.6268,
+          "D": 274.8872,
+          "T_min": 140.0,
+          "T_max": 369.825,
+          "T_verify": 280.15,
+          "prop_verify": 592.99,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.89459,
+          "B": 7.87769,
+          "C": -5.041876,
+          "D": -0.151283,
+          "E": 3.790784,
+          "T_min": 140,
+          "T_max": 425.125,
+          "T_verify": 280.15,
+          "prop_verify": 379.0,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.494221,
+          "B": 19.195325,
+          "C": -11.646233,
+          "D": -13.06358,
+          "E": 37.552637,
+          "F": -18.50897,
+          "T_min": 140,
+          "T_max": 400,
+          "T_verify": 280.15,
+          "prop_verify": 2.3449,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.629043,
+          "B": 0.237324,
+          "C": 428.065,
+          "D": 37.0486,
+          "E": 1.801085e-05,
+          "T_min": 140,
+          "T_max": 420,
+          "T_verify": 272.65,
+          "prop_verify": 0.2035,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 7.5828e-08,
+          "B": 0.837082,
+          "C": 67.618677,
+          "D": -2141.762,
+          "T_min": 143,
+          "T_max": 963,
+          "T_verify": 313.15,
+          "prop_verify": 7.7972,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 3.215504,
+          "B": 10.073633,
+          "C": 21.826312,
+          "D": -3.621102,
+          "T_min": 203,
+          "T_max": 1000,
+          "T_verify": 387.45,
+          "prop_verify": 0.0267,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.051625,
+          "B": 1.214678,
+          "C": -0.063855,
+          "D": 0.120511,
+          "E": -0.05345,
+          "T_min": 135,
+          "T_max": 355,
+          "T_verify": 273.3,
+          "prop_verify": 14.8635,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 668.64918,
+          "B": 8.9081,
+          "C": 14.2467,
+          "D": 41.04664,
+          "Type": "PPDS Ideal cp",
+          "E": -258.18297,
+          "F": 411.82384,
+          "G": -258.68803,
+          "T_min": 163,
+          "T_max": 1500,
+          "T_verify": 373.15,
+          "prop_verify": 2.0314
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.03328196,
+          "B": 6.417034,
+          "C": -14.997547,
+          "D": 15.44315,
+          "T_min": 135,
+          "T_max": 420,
+          "T_verify": 358.15,
+          "prop_verify": 0.084
+        }
+      ]
+    }
+  },
+  "Isobutane": {
+    "Formula": "C4H10",
+    "Tc": 407.81,
+    "Pc": 36.29,
+    "vc": 257.756,
+    "M": 58.124,
+    "omega": 0.1835,
+    "Tb": 261.4,
+    "Tm": 113.55,
+    "Dhm": 78.1,
+    "Dhf0": -134510,
+    "Dgf0": -20878,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.907184,
+          "B": 1.578704,
+          "C": -1.803286,
+          "D": -2.427186,
+          "T_min": 180,
+          "T_max": 407.81,
+          "T_verify": 300.15,
+          "prop_verify": 3.7173,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 225.5,
+          "A": 383.578,
+          "B": 363.7638,
+          "C": -483.8143,
+          "D": 353.4964,
+          "T_min": 120.0,
+          "T_max": 425.125,
+          "T_verify": 280.15,
+          "prop_verify": 572.34,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.985358,
+          "B": 6.87017,
+          "C": -3.95794,
+          "D": -0.356806,
+          "E": 2.95743,
+          "T_min": 120,
+          "T_max": 407.81,
+          "T_verify": 280.15,
+          "prop_verify": 347.69,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.49733,
+          "B": 18.773678,
+          "C": -14.55216,
+          "D": -0.254646,
+          "E": 19.35904,
+          "F": -15.881925,
+          "T_min": 120,
+          "T_max": 380,
+          "T_verify": 280.15,
+          "prop_verify": 2.3207,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.794999,
+          "B": 0.373353,
+          "C": 419.617,
+          "D": 28.0546,
+          "E": 1.56757e-05,
+          "T_min": 130,
+          "T_max": 390,
+          "T_verify": 250.15,
+          "prop_verify": 0.2615,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.21656e-07,
+          "B": 0.767652,
+          "C": 92.14758,
+          "D": -2356.256,
+          "T_min": 131,
+          "T_max": 1000,
+          "T_verify": 284.25,
+          "prop_verify": 7.1853,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 9.03815,
+          "B": -1.39552,
+          "C": 32.30963,
+          "D": -5.57784,
+          "T_min": 203,
+          "T_max": 1000,
+          "T_verify": 273.15,
+          "prop_verify": 0.0135,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.058431,
+          "B": 2.186481,
+          "C": -2.691774,
+          "D": 3.09705,
+          "E": -1.323847,
+          "T_min": 114,
+          "T_max": 377,
+          "T_verify": 283.95,
+          "prop_verify": 11.4621,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 2084.48334,
+          "B": 5.07542,
+          "C": 7.06198,
+          "D": -264.30218,
+          "Type": "PPDS Ideal cp",
+          "E": -47.27861,
+          "F": 2309.95342,
+          "G": -3524.85868,
+          "T_min": 143,
+          "T_max": 1223,
+          "T_verify": 373.15,
+          "prop_verify": 2.0137
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.01668096,
+          "B": 15.527922,
+          "C": -36.061721,
+          "D": 35.162423,
+          "T_min": 203,
+          "T_max": 373,
+          "T_verify": 293.15,
+          "prop_verify": 0.0931
+        }
+      ]
+    }
+  },
+  "n-Pentane": {
+    "Formula": "C5H12",
+    "Tc": 469.659,
+    "Pc": 33.689,
+    "vc": 306.766,
+    "M": 72.151,
+    "omega": 0.2517,
+    "Tb": 309.21,
+    "Tm": 143.4,
+    "Dhm": 116.4,
+    "Dhf0": -146760,
+    "Dgf0": -8813,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.363978,
+          "B": 1.943238,
+          "C": -2.471007,
+          "D": -2.349144,
+          "T_min": 213,
+          "T_max": 469.659,
+          "T_verify": 343.15,
+          "prop_verify": 2.8355,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 235.2,
+          "A": 331.1728,
+          "B": 680.8988,
+          "C": -965.2019,
+          "D": 602.3687,
+          "T_min": 153.0,
+          "T_max": 407.81,
+          "T_verify": 293.15,
+          "prop_verify": 625.55,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.75259,
+          "B": 9.973145,
+          "C": -6.8966,
+          "D": 0.534831,
+          "E": 4.463225,
+          "T_min": 153,
+          "T_max": 469.659,
+          "T_verify": 273.15,
+          "prop_verify": 385.0,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.493157,
+          "B": 25.40326,
+          "C": -18.57115,
+          "D": -8.455922,
+          "E": 27.38311,
+          "F": -5.18679,
+          "T_min": 153,
+          "T_max": 443,
+          "T_verify": 273.15,
+          "prop_verify": 2.21,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.803312,
+          "B": 0.250738,
+          "C": 474.455,
+          "D": 32.8562,
+          "E": 1.6526e-05,
+          "T_min": 163,
+          "T_max": 463,
+          "T_verify": 273.15,
+          "prop_verify": 0.283,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 2.08109e-07,
+          "B": 0.692504,
+          "C": 209.35531,
+          "D": -9032.643,
+          "T_min": 153,
+          "T_max": 1173,
+          "T_verify": 323.15,
+          "prop_verify": 7.2872,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -1.175174,
+          "B": 22.56061,
+          "C": 10.12588,
+          "D": -1.65354,
+          "T_min": 273,
+          "T_max": 1000,
+          "T_verify": 273.15,
+          "prop_verify": 0.0129,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.052049,
+          "B": 1.20844,
+          "C": -0.014871,
+          "D": 0.019269,
+          "E": -0.008941,
+          "T_min": 143,
+          "T_max": 435,
+          "T_verify": 280.85,
+          "prop_verify": 17.3662,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 1074.7418,
+          "B": 8.97762,
+          "C": 11.92509,
+          "D": 31.16797,
+          "Type": "PPDS Ideal cp",
+          "E": -592.50351,
+          "F": 1201.64991,
+          "G": -830.3272,
+          "T_min": 183,
+          "T_max": 1673,
+          "T_verify": 323.15,
+          "prop_verify": 1.7761
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.01128515,
+          "B": 26.817246,
+          "C": -55.053399,
+          "D": 47.844687,
+          "T_min": 193,
+          "T_max": 443,
+          "T_verify": 293.15,
+          "prop_verify": 0.109
+        }
+      ]
+    }
+  },
+  "n-Hexane": {
+    "Formula": "C6H14",
+    "Tc": 507.795,
+    "Pc": 30.416,
+    "vc": 386.753,
+    "M": 86.178,
+    "omega": 0.3002,
+    "Tb": 341.87,
+    "Tm": 177.85,
+    "Dhm": 151.8,
+    "Dhf0": -167190,
+    "Dgf0": -250,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.611393,
+          "B": 2.007192,
+          "C": -2.744096,
+          "D": -2.825408,
+          "T_min": 233,
+          "T_max": 507.795,
+          "T_verify": 303.15,
+          "prop_verify": 0.2498,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 222.82,
+          "A": 537.4149,
+          "B": 87.8736,
+          "C": -283.5449,
+          "D": 344.6594,
+          "T_min": 183.0,
+          "T_max": 469.659,
+          "T_verify": 293.15,
+          "prop_verify": 659.38,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.823448,
+          "B": 11.201235,
+          "C": -8.07144,
+          "D": 1.34838,
+          "E": 3.456936,
+          "T_min": 183,
+          "T_max": 507.795,
+          "T_verify": 343.15,
+          "prop_verify": 333.92,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.503827,
+          "B": 30.695832,
+          "C": -16.437834,
+          "D": -28.145485,
+          "E": 50.31271,
+          "F": -18.04465,
+          "T_min": 183,
+          "T_max": 463,
+          "T_verify": 333.15,
+          "prop_verify": 2.4093,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 0.654192,
+          "B": 0.364412,
+          "C": 902.902,
+          "D": 18.8312,
+          "E": 4.603184e-05,
+          "T_min": 175,
+          "T_max": 343,
+          "T_verify": 256.15,
+          "prop_verify": 0.4596,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 8.29617e-07,
+          "B": 0.524075,
+          "C": 548.53742,
+          "D": -19506.1,
+          "T_min": 183,
+          "T_max": 1223,
+          "T_verify": 283.15,
+          "prop_verify": 5.9364,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -1.521446,
+          "B": 21.520796,
+          "C": 9.432466,
+          "D": -1.14161,
+          "T_min": 339,
+          "T_max": 1000,
+          "T_verify": 478.25,
+          "prop_verify": 0.0317,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.054521,
+          "B": 1.260288,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 175,
+          "T_max": 456,
+          "T_verify": 299.35,
+          "prop_verify": 17.7507,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 918.01459,
+          "B": 11.29386,
+          "C": 18.05869,
+          "D": 29.33969,
+          "Type": "PPDS Ideal cp",
+          "E": -307.72814,
+          "F": 556.38463,
+          "G": -356.7216,
+          "T_min": 193,
+          "T_max": 1773,
+          "T_verify": 313.15,
+          "prop_verify": 1.7239
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.04551534,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 3.9417,
+          "T_min": 178,
+          "T_max": 370,
+          "T_verify": 309.35,
+          "prop_verify": 0.1156
+        }
+      ]
+    }
+  },
+  "Cyclohexane": {
+    "Formula": "C6H12",
+    "Tc": 553.6,
+    "Pc": 40.75,
+    "vc": 308.263,
+    "M": 84.162,
+    "omega": 0.2092,
+    "Tb": 353.86,
+    "Tm": 279.65,
+    "Dhm": 32.6,
+    "Dhf0": -123300,
+    "Dgf0": 31910,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.009954,
+          "B": 1.575242,
+          "C": -1.968888,
+          "D": -3.260142,
+          "T_min": 283,
+          "T_max": 553.6,
+          "T_verify": 373.15,
+          "prop_verify": 1.7462,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 273.02,
+          "A": 370.9435,
+          "B": 865.3421,
+          "C": -1291.8141,
+          "D": 834.1977,
+          "T_min": 283.0,
+          "T_max": 507.795,
+          "T_verify": 353.15,
+          "prop_verify": 720.11,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 3.43791,
+          "B": 14.06151,
+          "C": -8.730995,
+          "D": 0.67173,
+          "E": 0.025579,
+          "T_min": 283,
+          "T_max": 553.6,
+          "T_verify": 294.15,
+          "prop_verify": 394.34,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.452602,
+          "B": 29.0405,
+          "C": -17.26065,
+          "D": -69.50897,
+          "E": 254.38142,
+          "F": -307.04712,
+          "T_min": 283,
+          "T_max": 523,
+          "T_verify": 298.65,
+          "prop_verify": 1.8145,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.88956,
+          "B": 0.000853,
+          "C": 4884.23,
+          "D": 115.5702,
+          "E": 1.7677e-07,
+          "T_min": 280,
+          "T_max": 553,
+          "T_verify": 303.15,
+          "prop_verify": 0.8214,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.707204e-06,
+          "B": 0.444162,
+          "C": 797.90485,
+          "D": -55646.9,
+          "T_min": 280,
+          "T_max": 900,
+          "T_verify": 377.65,
+          "prop_verify": 8.7486,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -1.927981,
+          "B": 16.082202,
+          "C": 6.833899,
+          "D": 2.209833,
+          "T_min": 323,
+          "T_max": 1000,
+          "T_verify": 467.15,
+          "prop_verify": 0.0302,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.065637,
+          "B": 1.266746,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 273,
+          "T_max": 524,
+          "T_verify": 332.15,
+          "prop_verify": 20.563,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 671.99039,
+          "B": 4.04945,
+          "C": 5.43698,
+          "D": 67.17766,
+          "Type": "PPDS Ideal cp",
+          "E": -795.75587,
+          "F": 1090.93493,
+          "G": -701.78714,
+          "T_min": 283,
+          "T_max": 1273,
+          "T_verify": 373.15,
+          "prop_verify": 1.6512
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": -0.0162948,
+          "B": -36.93316,
+          "C": 73.65263,
+          "D": -52.00413,
+          "T_min": 280,
+          "T_max": 354,
+          "T_verify": 287.45,
+          "prop_verify": 0.126
+        }
+      ]
+    }
+  },
+  "n-Heptane": {
+    "Formula": "C7H16",
+    "Tc": 541.226,
+    "Pc": 27.738,
+    "vc": 445.551,
+    "M": 100.205,
+    "omega": 0.346,
+    "Tb": 371.53,
+    "Tm": 182.55,
+    "Dhm": 140.2,
+    "Dhf0": -187650,
+    "Dgf0": 8165,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.754461,
+          "B": 1.847289,
+          "C": -2.802496,
+          "D": -3.625021,
+          "T_min": 263,
+          "T_max": 541.226,
+          "T_verify": 373.15,
+          "prop_verify": 1.0619,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 224.9,
+          "A": 308.6265,
+          "B": 1070.989,
+          "C": -1663.6827,
+          "D": 989.8326,
+          "T_min": 183.0,
+          "T_max": 553.6,
+          "T_verify": 293.15,
+          "prop_verify": 683.72,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 3.31664,
+          "B": 21.99282,
+          "C": -18.80816,
+          "D": 5.534334,
+          "E": 2.93102,
+          "T_min": 183,
+          "T_max": 541.226,
+          "T_verify": 303.15,
+          "prop_verify": 362.02,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.274131,
+          "B": 39.690828,
+          "C": -38.327579,
+          "D": 48.53563,
+          "E": -116.903726,
+          "F": 115.685562,
+          "T_min": 183,
+          "T_max": 523,
+          "T_verify": 393.15,
+          "prop_verify": 2.6629,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.96002,
+          "B": 0.247153,
+          "C": 553.942,
+          "D": 62.1719,
+          "E": 1.424064e-05,
+          "T_min": 203,
+          "T_max": 513,
+          "T_verify": 263.15,
+          "prop_verify": 0.607,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 8.93462e-07,
+          "B": 0.523746,
+          "C": 800.55409,
+          "D": -50014.75,
+          "T_min": 213,
+          "T_max": 973,
+          "T_verify": 303.15,
+          "prop_verify": 5.7538,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 0.059077,
+          "B": 15.93462,
+          "C": 11.44614,
+          "D": -1.120901,
+          "T_min": 273,
+          "T_max": 1000,
+          "T_verify": 373.95,
+          "prop_verify": 0.019,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.054835,
+          "B": 1.269376,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 183,
+          "T_max": 521,
+          "T_verify": 314.35,
+          "prop_verify": 18.1866,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 751.21484,
+          "B": 14.78843,
+          "C": 17.82902,
+          "D": 121.15456,
+          "Type": "PPDS Ideal cp",
+          "E": -843.82591,
+          "F": 1360.01383,
+          "G": -824.87302,
+          "T_min": 183,
+          "T_max": 1773,
+          "T_verify": 303.15,
+          "prop_verify": 1.6734
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.00554613,
+          "B": 30.52826,
+          "C": -38.79276,
+          "D": 45.69808,
+          "T_min": 190,
+          "T_max": 370,
+          "T_verify": 260.0,
+          "prop_verify": 0.1343
+        }
+      ]
+    }
+  },
+  "n-Octane": {
+    "Formula": "C8H18",
+    "Tc": 569.57,
+    "Pc": 25.067,
+    "vc": 501.835,
+    "M": 114.231,
+    "omega": 0.3943,
+    "Tb": 398.78,
+    "Tm": 216.35,
+    "Dhm": 181.6,
+    "Dhf0": -208750,
+    "Dgf0": 16000,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -8.010138,
+          "B": 1.984728,
+          "C": -3.259138,
+          "D": -4.00358,
+          "T_min": 283,
+          "T_max": 569.57,
+          "T_verify": 343.15,
+          "prop_verify": 0.1583,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 227.63,
+          "A": 314.933,
+          "B": 1030.8629,
+          "C": -1576.001,
+          "D": 939.7454,
+          "T_min": 223.0,
+          "T_max": 541.226,
+          "T_verify": 293.15,
+          "prop_verify": 702.33,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 4.46423,
+          "B": 19.78326,
+          "C": -16.8393,
+          "D": 5.36049,
+          "E": 3.9566,
+          "T_min": 223,
+          "T_max": 569.57,
+          "T_verify": 303.15,
+          "prop_verify": 361.66,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.615215,
+          "B": 42.7536,
+          "C": -27.390185,
+          "D": 8.22851,
+          "E": -58.65269,
+          "F": 79.11617,
+          "T_min": 223,
+          "T_max": 533,
+          "T_verify": 293.15,
+          "prop_verify": 2.2091,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.87088,
+          "B": 0.35483,
+          "C": 577.534,
+          "D": 48.983,
+          "E": 1.721664e-05,
+          "T_min": 223,
+          "T_max": 553,
+          "T_verify": 283.15,
+          "prop_verify": 0.6176,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 6.47995e-07,
+          "B": 0.558004,
+          "C": 678.9816,
+          "D": -35397.49,
+          "T_min": 223,
+          "T_max": 1273,
+          "T_verify": 303.15,
+          "prop_verify": 5.5056,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -1.585376,
+          "B": 18.85726,
+          "C": 9.328904,
+          "D": -1.062463,
+          "T_min": 339,
+          "T_max": 1000,
+          "T_verify": 443.35,
+          "prop_verify": 0.0247,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.05306,
+          "B": 1.241357,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 216,
+          "T_max": 532,
+          "T_verify": 290.55,
+          "prop_verify": 21.8806,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 580.69298,
+          "B": 22.7885,
+          "C": 32.50664,
+          "D": 73.77537,
+          "Type": "PPDS Ideal cp",
+          "E": -348.56358,
+          "F": 493.58782,
+          "G": -270.29141,
+          "T_min": 233,
+          "T_max": 1773,
+          "T_verify": 303.15,
+          "prop_verify": 1.6663
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.0060992,
+          "B": 28.13787,
+          "C": -38.82316,
+          "D": 45.582,
+          "T_min": 216,
+          "T_max": 399,
+          "T_verify": 273.95,
+          "prop_verify": 0.1354
+        }
+      ]
+    }
+  },
+  "Ethylene": {
+    "Formula": "CH2=CH2",
+    "Tc": 282.35,
+    "Pc": 50.418,
+    "vc": 130.947,
+    "M": 28.054,
+    "omega": 0.0866,
+    "Tb": 169.38,
+    "Tm": 104.05,
+    "Dhm": 119.4,
+    "Dhf0": 52300,
+    "Dgf0": 68110,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.412447,
+          "B": 1.452364,
+          "C": -1.239075,
+          "D": -1.996814,
+          "T_min": 110,
+          "T_max": 282.35,
+          "T_verify": 260.15,
+          "prop_verify": 30.131,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 214.24,
+          "A": 364.8832,
+          "B": 208.8422,
+          "C": -198.1499,
+          "D": 185.2595,
+          "T_min": 120.0,
+          "T_max": 569.57,
+          "T_verify": 280.15,
+          "prop_verify": 287.91,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.143747,
+          "B": 6.934186,
+          "C": -4.268831,
+          "D": -0.58489,
+          "E": 3.213931,
+          "T_min": 110,
+          "T_max": 282.35,
+          "T_verify": 250.15,
+          "prop_verify": 303.81,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.475969,
+          "B": 7.565091,
+          "C": -3.361502,
+          "D": -1.602014,
+          "E": 24.541197,
+          "F": -22.072075,
+          "T_min": 110,
+          "T_max": 260,
+          "T_verify": 250.15,
+          "prop_verify": 3.3689,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.098284,
+          "B": 0.09154,
+          "C": 281.461,
+          "D": 47.5527,
+          "E": 2.107291e-05,
+          "T_min": 110,
+          "T_max": 270,
+          "T_verify": 250.15,
+          "prop_verify": 0.0655,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.503552e-06,
+          "B": 0.45614,
+          "C": 288.342422,
+          "D": 73.362,
+          "T_min": 170,
+          "T_max": 1000,
+          "T_verify": 300.55,
+          "prop_verify": 10.3537,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 0.284146,
+          "B": 33.66105,
+          "C": 29.235217,
+          "D": -10.510851,
+          "T_min": 169,
+          "T_max": 900,
+          "T_verify": 323.25,
+          "prop_verify": 0.0238,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.052923,
+          "B": 1.278061,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 104,
+          "T_max": 273,
+          "T_verify": 272.95,
+          "prop_verify": 0.6841,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 100.67955,
+          "B": 3.46632,
+          "C": 18.86798,
+          "D": -1.58496,
+          "Type": "PPDS Ideal cp",
+          "E": 6.37008,
+          "F": 5e-05,
+          "G": -3e-05,
+          "T_min": 143,
+          "T_max": 1273,
+          "T_verify": 473.15,
+          "prop_verify": 2.1337
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.00553668,
+          "B": 76.084404,
+          "C": -153.166503,
+          "D": 150.029799,
+          "T_min": 111,
+          "T_max": 270,
+          "T_verify": 230.15,
+          "prop_verify": 0.1239
+        }
+      ]
+    }
+  },
+  "Propylene": {
+    "Formula": "C3H6",
+    "Tc": 364.211,
+    "Pc": 45.55,
+    "vc": 183.247,
+    "M": 42.081,
+    "omega": 0.1461,
+    "Tb": 225.53,
+    "Tm": 87.85,
+    "Dhm": 71.4,
+    "Dhf0": 19170,
+    "Dgf0": 62150,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.721402,
+          "B": 1.517651,
+          "C": -1.508872,
+          "D": -2.369565,
+          "T_min": 143,
+          "T_max": 364.211,
+          "T_verify": 273.15,
+          "prop_verify": 5.8421,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 229.64,
+          "A": 428.3852,
+          "B": 156.2079,
+          "C": -176.3127,
+          "D": 217.3514,
+          "T_min": 93.0,
+          "T_max": 282.35,
+          "T_verify": 280.15,
+          "prop_verify": 534.92,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.296574,
+          "B": 8.539701,
+          "C": -6.058919,
+          "D": 0.507597,
+          "E": 2.793165,
+          "T_min": 93,
+          "T_max": 364.211,
+          "T_verify": 263.15,
+          "prop_verify": 391.95,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.468895,
+          "B": 12.677647,
+          "C": -12.484029,
+          "D": 18.370277,
+          "E": -19.006378,
+          "F": 15.198619,
+          "T_min": 93,
+          "T_max": 343,
+          "T_verify": 263.15,
+          "prop_verify": 2.3713,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 1.426559,
+          "B": 0.272156,
+          "C": 853.047,
+          "D": -15.3792,
+          "E": 9.30606e-06,
+          "T_min": 88,
+          "T_max": 320,
+          "T_verify": 263.15,
+          "prop_verify": 0.1219,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 8.76767e-07,
+          "B": 0.520871,
+          "C": 293.61865,
+          "D": -182.857,
+          "T_min": 88,
+          "T_max": 1000,
+          "T_verify": 375.95,
+          "prop_verify": 10.8105,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 3.228482,
+          "B": 20.323902,
+          "C": 19.300065,
+          "D": -2.045617,
+          "T_min": 225,
+          "T_max": 1000,
+          "T_verify": 306.95,
+          "prop_verify": 0.018,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.053708,
+          "B": 1.311841,
+          "C": -0.572144,
+          "D": 1.013464,
+          "E": -0.58168,
+          "T_min": 88,
+          "T_max": 351,
+          "T_verify": 307.15,
+          "prop_verify": 5.7947,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 1178.93725,
+          "B": 4.27276,
+          "C": 4.78834,
+          "D": -97.58307,
+          "Type": "PPDS Ideal cp",
+          "E": -915.4059,
+          "F": 2188.95215,
+          "G": -1706.12569,
+          "T_min": 93,
+          "T_max": 1773,
+          "T_verify": 373.15,
+          "prop_verify": 1.811
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Polynomial",
+          "A": 0.25547896,
+          "B": -0.000515,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 253,
+          "T_max": 330,
+          "T_verify": 253.15,
+          "prop_verify": 0.1252
+        }
+      ]
+    }
+  },
+  "1-Butene": {
+    "Formula": "C4H8",
+    "Tc": 419.29,
+    "Pc": 40.057,
+    "vc": 235.802,
+    "M": 56.108,
+    "omega": 0.1919,
+    "Tb": 266.84,
+    "Tm": 87.85,
+    "Dhm": 68.6,
+    "Dhf0": -540,
+    "Dgf0": 70270,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.078279,
+          "B": 1.876157,
+          "C": -2.01994,
+          "D": -2.651169,
+          "T_min": 183,
+          "T_max": 419.29,
+          "T_verify": 293.15,
+          "prop_verify": 2.5462,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 237.95,
+          "A": 374.9006,
+          "B": 532.7375,
+          "C": -823.2356,
+          "D": 585.6584,
+          "T_min": 93.0,
+          "T_max": 364.211,
+          "T_verify": 283.15,
+          "prop_verify": 605.9,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.495498,
+          "B": 9.245589,
+          "C": -6.920092,
+          "D": 1.448008,
+          "E": 2.307289,
+          "T_min": 93,
+          "T_max": 419.29,
+          "T_verify": 303.15,
+          "prop_verify": 354.54,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.474628,
+          "B": 17.4441,
+          "C": -16.144424,
+          "D": 18.56336,
+          "E": -20.820925,
+          "F": 16.654776,
+          "T_min": 93,
+          "T_max": 383,
+          "T_verify": 243.15,
+          "prop_verify": 2.0809,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 1.122814,
+          "B": 1.464498,
+          "C": 431.564,
+          "D": -78.5456,
+          "E": 4.506029e-05,
+          "T_min": 120,
+          "T_max": 413,
+          "T_verify": 259.15,
+          "prop_verify": 0.2009,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.59001e-06,
+          "B": 0.435591,
+          "C": 427.6773,
+          "D": 1432.659,
+          "T_min": 175,
+          "T_max": 1000,
+          "T_verify": 348.65,
+          "prop_verify": 9.0969,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -1.734943,
+          "B": 28.50883,
+          "C": 10.98612,
+          "D": -1.53622,
+          "T_min": 225,
+          "T_max": 800,
+          "T_verify": 376.35,
+          "prop_verify": 0.0228,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.056424,
+          "B": 1.34966,
+          "C": -0.561878,
+          "D": 0.987326,
+          "E": -0.561644,
+          "T_min": 88,
+          "T_max": 402,
+          "T_verify": 297.55,
+          "prop_verify": 12.0642,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 444.42742,
+          "B": 4.00215,
+          "C": 4.77657,
+          "D": -103.78383,
+          "Type": "PPDS Ideal cp",
+          "E": 269.01469,
+          "F": -545.25186,
+          "G": 27.15311,
+          "T_min": 93,
+          "T_max": 1273,
+          "T_verify": 293.15,
+          "prop_verify": 1.4991
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.06673001,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 2.200248,
+          "T_min": 88,
+          "T_max": 267,
+          "T_verify": 248.05,
+          "prop_verify": 0.1267
+        }
+      ]
+    }
+  },
+  "Methanol": {
+    "Formula": "CH3OH",
+    "Tc": 513.38,
+    "Pc": 82.159,
+    "vc": 113.828,
+    "M": 32.042,
+    "omega": 0.5625,
+    "Tb": 337.63,
+    "Tm": 175.5,
+    "Dhm": 100.3,
+    "Dhf0": -201160,
+    "Dgf0": -162500,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -8.72698,
+          "B": 1.45005,
+          "C": -2.77177,
+          "D": -0.723874,
+          "T_min": 233,
+          "T_max": 513.38,
+          "T_verify": 343.15,
+          "prop_verify": 1.2545,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 281.49,
+          "A": 164.7427,
+          "B": 2257.8517,
+          "C": -3545.8257,
+          "D": 1929.8087,
+          "T_min": 183.0,
+          "T_max": 419.29,
+          "T_verify": 273.15,
+          "prop_verify": 810.52,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.465579,
+          "B": 15.61685,
+          "C": -7.676416,
+          "D": -4.9266,
+          "E": 6.334842,
+          "T_min": 183,
+          "T_max": 513.38,
+          "T_verify": 373.15,
+          "prop_verify": 1020.27,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.612632,
+          "B": 13.19554,
+          "C": -5.20887,
+          "D": -45.76212,
+          "E": 91.19027,
+          "F": -44.45618,
+          "T_min": 183,
+          "T_max": 463,
+          "T_verify": 323.15,
+          "prop_verify": 2.7082,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 3.74871,
+          "B": 0.213107,
+          "C": 546.888,
+          "D": 82.9003,
+          "E": 8.1834e-06,
+          "T_min": 176,
+          "T_max": 483,
+          "T_verify": 303.65,
+          "prop_verify": 0.501,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 4.77915e-07,
+          "B": 0.641076,
+          "C": 284.838034,
+          "D": -3230.713,
+          "T_min": 240,
+          "T_max": 1000,
+          "T_verify": 400.05,
+          "prop_verify": 13.1568,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -2.097847,
+          "B": 17.979169,
+          "C": 12.828005,
+          "D": -3.546304,
+          "T_min": 273,
+          "T_max": 1000,
+          "T_verify": 324.38,
+          "prop_verify": 0.0179,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.071115,
+          "B": 2.452836,
+          "C": -1.961439,
+          "D": -0.637268,
+          "E": 1.248386,
+          "T_min": 226,
+          "T_max": 467,
+          "T_verify": 285.25,
+          "prop_verify": 23.2116,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 72.32165,
+          "B": -43.806,
+          "C": 18.04246,
+          "D": -8.74148,
+          "Type": "PPDS Ideal cp",
+          "E": 10.3778,
+          "F": -0.33156,
+          "G": -1.059,
+          "T_min": 183,
+          "T_max": 2023,
+          "T_verify": 303.15,
+          "prop_verify": 1.384
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.13951266,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 1.033317,
+          "T_min": 176,
+          "T_max": 338,
+          "T_verify": 298.15,
+          "prop_verify": 0.2
+        }
+      ]
+    }
+  },
+  "Ethanol": {
+    "Formula": "C2H5OH",
+    "Tc": 513.9,
+    "Pc": 61.48,
+    "vc": 166.917,
+    "M": 46.069,
+    "omega": 0.6441,
+    "Tb": 351.41,
+    "Tm": 159.05,
+    "Dhm": 107.0,
+    "Dhf0": -234800,
+    "Dgf0": -168280,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -8.338015,
+          "B": 0.087185,
+          "C": -3.305779,
+          "D": -0.259857,
+          "T_min": 253,
+          "T_max": 513.9,
+          "T_verify": 353.15,
+          "prop_verify": 1.0845,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 276.0,
+          "A": 748.619,
+          "B": -412.3645,
+          "C": 776.4385,
+          "D": -436.6754,
+          "T_min": 253.0,
+          "T_max": 513.38,
+          "T_verify": 343.15,
+          "prop_verify": 744.74,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 14.687649,
+          "B": -15.271194,
+          "C": 26.062303,
+          "D": -20.049661,
+          "E": 15.816495,
+          "T_min": 253,
+          "T_max": 513.9,
+          "T_verify": 293.15,
+          "prop_verify": 925.91,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.503568,
+          "B": 22.442022,
+          "C": -36.783235,
+          "D": 160.373246,
+          "E": -466.432673,
+          "F": 396.027992,
+          "T_min": 253,
+          "T_max": 473,
+          "T_verify": 343.15,
+          "prop_verify": 3.0966,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 6.168237,
+          "B": -0.0012,
+          "C": 740.289,
+          "D": 90.7653,
+          "E": 3.8125e-07,
+          "T_min": 169,
+          "T_max": 516,
+          "T_verify": 326.35,
+          "prop_verify": 0.6496,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.06484e-07,
+          "B": 0.806176,
+          "C": 53.133947,
+          "D": -19.624,
+          "T_min": 200,
+          "T_max": 1000,
+          "T_verify": 284.25,
+          "prop_verify": 8.5323,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -2.259996,
+          "B": 21.881454,
+          "C": 5.488168,
+          "D": -0.304888,
+          "T_min": 293,
+          "T_max": 1000,
+          "T_verify": 293.15,
+          "prop_verify": 0.0147,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.063735,
+          "B": 2.466253,
+          "C": -3.218905,
+          "D": 1.914451,
+          "E": -0.100171,
+          "T_min": 273,
+          "T_max": 479,
+          "T_verify": 285.25,
+          "prop_verify": 23.1181,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 1165.86482,
+          "B": 4.70209,
+          "C": 9.77865,
+          "D": -1.17688,
+          "Type": "PPDS Ideal cp",
+          "E": -135.76765,
+          "F": 322.75959,
+          "G": -247.73488,
+          "T_min": 100,
+          "T_max": 1500,
+          "T_verify": 373.15,
+          "prop_verify": 1.6635
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.11124054,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 1.217548,
+          "T_min": 160,
+          "T_max": 353,
+          "T_verify": 312.25,
+          "prop_verify": 0.1644
+        }
+      ]
+    }
+  },
+  "n-Propanol": {
+    "Formula": "C3H7OH",
+    "Tc": 536.75,
+    "Pc": 51.75,
+    "vc": 218.99,
+    "M": 60.096,
+    "omega": 0.6211,
+    "Tb": 370.31,
+    "Tm": 146.95,
+    "Dhm": 89.4,
+    "Dhf0": -255200,
+    "Dgf0": -159900,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -8.606755,
+          "B": 2.173634,
+          "C": -8.046856,
+          "D": 3.691766,
+          "T_min": 290,
+          "T_max": 536.75,
+          "T_verify": 364.18,
+          "prop_verify": 0.799,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 274.42,
+          "A": 816.271,
+          "B": -549.2099,
+          "C": 696.9837,
+          "D": -232.0819,
+          "T_min": 147.0,
+          "T_max": 513.9,
+          "T_verify": 290.55,
+          "prop_verify": 806.76,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.890074,
+          "B": 16.292544,
+          "C": -5.777913,
+          "D": -2.767181,
+          "E": -8.575518,
+          "T_min": 293,
+          "T_max": 536.75,
+          "T_verify": 343.65,
+          "prop_verify": 740.74,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.313992,
+          "B": 42.598117,
+          "C": -78.40126,
+          "D": 30.612206,
+          "E": 40.102166,
+          "F": -16.588491,
+          "T_min": 147,
+          "T_max": 400,
+          "T_verify": 293.45,
+          "prop_verify": 2.3626,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 6.140716,
+          "B": 0.001411,
+          "C": 571.434,
+          "D": 133.6983,
+          "E": 1.35184e-06,
+          "T_min": 217,
+          "T_max": 370,
+          "T_verify": 276.25,
+          "prop_verify": 3.4021,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.842372e-06,
+          "B": 0.446996,
+          "C": 622.5756,
+          "D": 1735.926,
+          "T_min": 200,
+          "T_max": 1000,
+          "T_verify": 284.25,
+          "prop_verify": 7.1686,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -1.658351,
+          "B": 19.595786,
+          "C": 6.903138,
+          "D": -0.755881,
+          "T_min": 372,
+          "T_max": 720,
+          "T_verify": 372.15,
+          "prop_verify": 0.0215,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.044017,
+          "B": 0.781202,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 153,
+          "T_max": 473,
+          "T_verify": 323.15,
+          "prop_verify": 21.429,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 61723.88,
+          "B": 203342.08,
+          "C": 757.27,
+          "D": -96727.69,
+          "Type": "Aly-Lee",
+          "E": 880.13,
+          "T_min": 200,
+          "T_max": 1773,
+          "T_verify": 473.65,
+          "prop_verify": 2.0484
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.10464898,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 1.104913,
+          "T_min": 201,
+          "T_max": 535,
+          "T_verify": 372.15,
+          "prop_verify": 0.1401
+        }
+      ]
+    }
+  },
+  "n-Butanol": {
+    "Formula": "C4H9OH",
+    "Tc": 563.05,
+    "Pc": 44.23,
+    "vc": 274.996,
+    "M": 74.123,
+    "omega": 0.5905,
+    "Tb": 390.9,
+    "Tm": 183.85,
+    "Dhm": 126.4,
+    "Dhf0": -274600,
+    "Dgf0": -150300,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -8.330857,
+          "B": 2.054134,
+          "C": -8.175663,
+          "D": 0.190068,
+          "T_min": 275,
+          "T_max": 563.05,
+          "T_verify": 418.85,
+          "prop_verify": 2.4959,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 269.54,
+          "A": 777.2536,
+          "B": -446.8411,
+          "C": 578.8807,
+          "D": -172.9552,
+          "T_min": 185.0,
+          "T_max": 536.75,
+          "T_verify": 284.15,
+          "prop_verify": 816.58,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 3.925226,
+          "B": 18.801993,
+          "C": -5.348588,
+          "D": -2.937749,
+          "E": -0.181003,
+          "T_min": 224,
+          "T_max": 563.05,
+          "T_verify": 343.85,
+          "prop_verify": 654.47,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 1.203976,
+          "B": 50.595314,
+          "C": -91.331488,
+          "D": 37.897784,
+          "E": 28.225069,
+          "F": -2.351873,
+          "T_min": 185,
+          "T_max": 391,
+          "T_verify": 303.95,
+          "prop_verify": 2.4513,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 4.364716,
+          "B": 1.005752,
+          "C": 743.418,
+          "D": 27.0658,
+          "E": 2.11208e-06,
+          "T_min": 190,
+          "T_max": 562,
+          "T_verify": 327.35,
+          "prop_verify": 1.2962,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.26193e-06,
+          "B": 0.473919,
+          "C": 510.29735,
+          "D": -143.068,
+          "T_min": 185,
+          "T_max": 1000,
+          "T_verify": 313.25,
+          "prop_verify": 7.3169,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -22.98202,
+          "B": 69.128385,
+          "C": -28.20903,
+          "D": 5.678522,
+          "T_min": 370,
+          "T_max": 800,
+          "T_verify": 573.65,
+          "prop_verify": 0.0438,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.049406,
+          "B": 0.925929,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 273,
+          "T_max": 523,
+          "T_verify": 323.15,
+          "prop_verify": 22.4239,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 74802.09,
+          "B": 167505.02,
+          "C": -711.59,
+          "D": 130880.37,
+          "Type": "Aly-Lee",
+          "E": 2223.47,
+          "T_min": 200,
+          "T_max": 1773,
+          "T_verify": 473.65,
+          "prop_verify": 2.1413
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.0990517,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 1.156703,
+          "T_min": 185,
+          "T_max": 553,
+          "T_verify": 303.95,
+          "prop_verify": 0.1518
+        }
+      ]
+    }
+  },
+  "Ethylene glycol": {
+    "Formula": "C2H4(OH)2",
+    "Tc": 719.15,
+    "Pc": 82.0,
+    "vc": 190.983,
+    "M": 62.068,
+    "omega": 0.5129,
+    "Tb": 470.22,
+    "Tm": 260.15,
+    "Dhm": 160.4,
+    "Dhf0": -392200,
+    "Dgf0": -301800,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.807002,
+          "B": 0.915488,
+          "C": -4.927491,
+          "D": -1.926135,
+          "T_min": 333,
+          "T_max": 719.15,
+          "T_verify": 453.75,
+          "prop_verify": 0.6057,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 324.99,
+          "A": 1305.6439,
+          "B": -1374.3218,
+          "C": 1690.8786,
+          "D": -664.8168,
+          "T_min": 261.0,
+          "T_max": 563.05,
+          "T_verify": 381.15,
+          "prop_verify": 1048.42,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 7.079169,
+          "B": 8.721527,
+          "C": 1.013498,
+          "D": -5.214016,
+          "E": 4.441808,
+          "T_min": 333,
+          "T_max": 719.15,
+          "T_verify": 333.15,
+          "prop_verify": 1027.05,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": -0.106462,
+          "B": 32.547745,
+          "C": -27.00019,
+          "D": 22.166665,
+          "E": -43.223418,
+          "F": 21.074136,
+          "T_min": 261,
+          "T_max": 493,
+          "T_verify": 284.65,
+          "prop_verify": 2.3342,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": -0.443561,
+          "B": 1.318848,
+          "C": 895.794,
+          "D": 79.3616,
+          "E": 0.00020317761,
+          "T_min": 261,
+          "T_max": 450,
+          "T_verify": 320.15,
+          "prop_verify": 7.6071,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.49939e-07,
+          "B": 0.770025,
+          "C": 161.702296,
+          "D": -7162.27,
+          "T_min": 260,
+          "T_max": 1000,
+          "T_verify": 376.95,
+          "prop_verify": 10.4782,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -2.986535,
+          "B": 18.296988,
+          "C": 3.589649,
+          "D": -0.321265,
+          "T_min": 470,
+          "T_max": 1000,
+          "T_verify": 470.45,
+          "prop_verify": 0.0251,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.075776,
+          "B": 1.134073,
+          "C": -0.434579,
+          "D": -1.570191,
+          "E": 2.33481,
+          "T_min": 263,
+          "T_max": 471,
+          "T_verify": 453.15,
+          "prop_verify": 33.492,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 316.79019,
+          "B": 3.05241,
+          "C": 3.58464,
+          "D": -152.76283,
+          "Type": "PPDS Ideal cp",
+          "E": 212.94465,
+          "F": 84.60646,
+          "G": -662.81134,
+          "T_min": 100,
+          "T_max": 1000,
+          "T_verify": 373.15,
+          "prop_verify": 1.5568
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.00135174,
+          "B": -1170.50402,
+          "C": 3868.88659,
+          "D": -2632.07239,
+          "T_min": 260,
+          "T_max": 593,
+          "T_verify": 326.55,
+          "prop_verify": 0.2592
+        }
+      ]
+    }
+  },
+  "Isopropanol": {
+    "Formula": "C3H7OH",
+    "Tc": 508.25,
+    "Pc": 47.62,
+    "vc": 220.011,
+    "M": 60.096,
+    "omega": 0.6631,
+    "Tb": 355.36,
+    "Tm": 185.25,
+    "Dhm": 90.0,
+    "Dhf0": -272700,
+    "Dgf0": -173470,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -8.439864,
+          "B": 1.14922,
+          "C": -6.938392,
+          "D": 0.615959,
+          "T_min": 276,
+          "T_max": 508.25,
+          "T_verify": 373.7,
+          "prop_verify": 2.0101,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 273.15,
+          "A": 865.9179,
+          "B": -744.0946,
+          "C": 975.9034,
+          "D": -381.128,
+          "T_min": 186.0,
+          "T_max": 719.15,
+          "T_verify": 304.25,
+          "prop_verify": 776.23,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 13.846539,
+          "B": -16.693668,
+          "C": 32.098404,
+          "D": -19.900215,
+          "E": -9.894509,
+          "T_min": 253,
+          "T_max": 508.25,
+          "T_verify": 304.25,
+          "prop_verify": 757.07,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": -0.028011,
+          "B": 37.272721,
+          "C": -60.212901,
+          "D": 145.141653,
+          "E": -415.612074,
+          "F": 383.532117,
+          "T_min": 185,
+          "T_max": 480,
+          "T_verify": 293.85,
+          "prop_verify": 2.5706,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 0.536067,
+          "B": 1.881026,
+          "C": 1143.342,
+          "D": -77.3655,
+          "E": 3.8692e-06,
+          "T_min": 188,
+          "T_max": 363,
+          "T_verify": 293.45,
+          "prop_verify": 2.3078,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.97482e-07,
+          "B": 0.724489,
+          "C": 176.811793,
+          "D": 13.775,
+          "T_min": 185,
+          "T_max": 1000,
+          "T_verify": 313.95,
+          "prop_verify": 8.1363,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 0.670345,
+          "B": 9.78242,
+          "C": 20.43852,
+          "D": -5.08133,
+          "T_min": 304,
+          "T_max": 1000,
+          "T_verify": 473.15,
+          "prop_verify": 0.0339,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.046935,
+          "B": 0.908095,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 287,
+          "T_max": 353,
+          "T_verify": 323.15,
+          "prop_verify": 18.7562,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 313.10693,
+          "B": 8.96218,
+          "C": 9.41683,
+          "D": 702.9447,
+          "Type": "PPDS Ideal cp",
+          "E": -3295.08198,
+          "F": 5345.62488,
+          "G": -3435.86066,
+          "T_min": 100,
+          "T_max": 1500,
+          "T_verify": 573.15,
+          "prop_verify": 2.3965
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.0659152,
+          "B": 5.104116,
+          "C": -12.12086,
+          "D": 9.63419,
+          "T_min": 186,
+          "T_max": 507,
+          "T_verify": 403.15,
+          "prop_verify": 0.1168
+        }
+      ]
+    }
+  },
+  "Acetic acid": {
+    "Formula": "CH3COOH",
+    "Tc": 591.95,
+    "Pc": 57.86,
+    "vc": 179.676,
+    "M": 60.052,
+    "omega": 0.463,
+    "Tb": 391.04,
+    "Tm": 289.85,
+    "Dhm": 195.3,
+    "Dhf0": -434830,
+    "Dgf0": -376680,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -9.345421,
+          "B": 3.78498,
+          "C": -3.602383,
+          "D": -1.553062,
+          "T_min": 290,
+          "T_max": 591.95,
+          "T_verify": 364.64,
+          "prop_verify": 0.4227,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 334.22,
+          "A": 925.3877,
+          "B": -312.7976,
+          "C": 340.0648,
+          "D": 29.7201,
+          "T_min": 290.0,
+          "T_max": 508.25,
+          "T_verify": 337.55,
+          "prop_verify": 1000.46,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 6.68664,
+          "B": 15.014483,
+          "C": -22.086618,
+          "D": 3.077698,
+          "E": 17.354972,
+          "T_min": 290,
+          "T_max": 591.95,
+          "T_verify": 369.35,
+          "prop_verify": 395.64,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.129079,
+          "B": 23.227878,
+          "C": -19.035099,
+          "D": 11.172422,
+          "E": -32.20965,
+          "F": 32.222624,
+          "T_min": 290,
+          "T_max": 413,
+          "T_verify": 332.23,
+          "prop_verify": 2.1868,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.230867,
+          "B": 0.715487,
+          "C": 527.102,
+          "D": 77.2313,
+          "E": 5.567007e-05,
+          "T_min": 288,
+          "T_max": 393,
+          "T_verify": 327.15,
+          "prop_verify": 0.7514,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 2.181432e-06,
+          "B": 0.47985,
+          "C": 1126.89779,
+          "D": -76689.777,
+          "T_min": 290,
+          "T_max": 800,
+          "T_verify": 343.55,
+          "prop_verify": 9.9011,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 0.704143,
+          "B": 7.249838,
+          "C": 22.437444,
+          "D": -4.751947,
+          "T_min": 295,
+          "T_max": 687,
+          "T_verify": 294.75,
+          "prop_verify": 0.0105,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.057531,
+          "B": 1.077013,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 290,
+          "T_max": 576,
+          "T_verify": 353.45,
+          "prop_verify": 21.6121,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 589.88417,
+          "B": 5.10642,
+          "C": 5.52776,
+          "D": 211.48957,
+          "Type": "PPDS Ideal cp",
+          "E": -1404.10912,
+          "F": 2057.41805,
+          "G": -1317.64721,
+          "T_min": 50,
+          "T_max": 1195,
+          "T_verify": 373.15,
+          "prop_verify": 1.254
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.10546986,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 1.028583,
+          "T_min": 292,
+          "T_max": 573,
+          "T_verify": 300.45,
+          "prop_verify": 0.1589
+        }
+      ]
+    }
+  },
+  "Methyl acetate": {
+    "Formula": "CH3COOCH3",
+    "Tc": 506.55,
+    "Pc": 47.5,
+    "vc": 228.015,
+    "M": 74.079,
+    "omega": 0.3306,
+    "Tb": 330.08,
+    "Tm": 175.15,
+    "Dhm": 107.6,
+    "Dhf0": -411900,
+    "Dgf0": -324200,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -8.574704,
+          "B": 4.224264,
+          "C": -5.368114,
+          "D": -0.827557,
+          "T_min": 227,
+          "T_max": 506.55,
+          "T_verify": 332.15,
+          "prop_verify": 1.0881,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 324.89,
+          "A": 735.4603,
+          "B": -131.494,
+          "C": 371.8328,
+          "D": -53.9224,
+          "T_min": 176.0,
+          "T_max": 591.95,
+          "T_verify": 297.25,
+          "prop_verify": 928.75,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 6.398833,
+          "B": 13.125464,
+          "C": -12.779956,
+          "D": 5.864096,
+          "E": -9.168706,
+          "T_min": 227,
+          "T_max": 506.55,
+          "T_verify": 297.25,
+          "prop_verify": 439.04,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": -3.270153,
+          "B": 54.948876,
+          "C": -110.92023,
+          "D": 73.069065,
+          "E": 86.15279,
+          "F": -91.36799,
+          "T_min": 177,
+          "T_max": 373,
+          "T_verify": 329.15,
+          "prop_verify": 2.0263,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.072517,
+          "B": 2.239494,
+          "C": 489.756,
+          "D": -176.4315,
+          "E": 3.96876e-05,
+          "T_min": 250,
+          "T_max": 425,
+          "T_verify": 277.65,
+          "prop_verify": 0.4462,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 2.515403e-06,
+          "B": 0.453254,
+          "C": 1231.78707,
+          "D": -82656.705,
+          "T_min": 250,
+          "T_max": 800,
+          "T_verify": 336.85,
+          "prop_verify": 8.953,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -3.52607,
+          "B": 24.686506,
+          "C": 11.814704,
+          "D": -1.450865,
+          "T_min": 273,
+          "T_max": 1000,
+          "T_verify": 330.05,
+          "prop_verify": 0.0142,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.06204,
+          "B": 1.045756,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 175,
+          "T_max": 489,
+          "T_verify": 279.85,
+          "prop_verify": 26.7625,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 54664.4,
+          "B": 179099.95,
+          "C": 595.63,
+          "D": -106514.52,
+          "Type": "Aly-Lee",
+          "E": 660.06,
+          "T_min": 298,
+          "T_max": 1773,
+          "T_verify": 424.55,
+          "prop_verify": 1.4729
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.06649329,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 3.175936,
+          "T_min": 176,
+          "T_max": 493,
+          "T_verify": 286.25,
+          "prop_verify": 0.1583
+        }
+      ]
+    }
+  },
+  "Ethyl acetate": {
+    "Formula": "CH3COOC2H5",
+    "Tc": 523.2,
+    "Pc": 38.301,
+    "vc": 285.992,
+    "M": 88.106,
+    "omega": 0.3606,
+    "Tb": 350.27,
+    "Tm": 189.65,
+    "Dhm": 118.9,
+    "Dhf0": -442910,
+    "Dgf0": -327390,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.897191,
+          "B": 2.167535,
+          "C": -3.523305,
+          "D": -3.107122,
+          "T_min": 242,
+          "T_max": 523.2,
+          "T_verify": 330.15,
+          "prop_verify": 0.4977,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 308.07,
+          "A": 660.3749,
+          "B": 8.8513,
+          "C": 207.1687,
+          "D": 1.5101,
+          "T_min": 207.0,
+          "T_max": 506.55,
+          "T_verify": 277.45,
+          "prop_verify": 918.19,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 8.568302,
+          "B": 3.691585,
+          "C": -0.614594,
+          "D": -0.635779,
+          "E": 0.817636,
+          "T_min": 190,
+          "T_max": 523.2,
+          "T_verify": 330.15,
+          "prop_verify": 381.82,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 1.55866,
+          "B": 24.189499,
+          "C": -26.451003,
+          "D": 27.644553,
+          "E": -25.493382,
+          "F": 29.857034,
+          "T_min": 190,
+          "T_max": 350,
+          "T_verify": 316.35,
+          "prop_verify": 1.9958,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.233189,
+          "B": 5.921434,
+          "C": 608.986,
+          "D": -574.6203,
+          "E": 1.981913e-05,
+          "T_min": 220,
+          "T_max": 473,
+          "T_verify": 286.65,
+          "prop_verify": 0.4893,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.845324e-06,
+          "B": 0.424328,
+          "C": 522.47164,
+          "D": -2316.919,
+          "T_min": 190,
+          "T_max": 1000,
+          "T_verify": 360.25,
+          "prop_verify": 9.2229,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -1.48171,
+          "B": 15.774236,
+          "C": 24.3225,
+          "D": -5.597174,
+          "T_min": 273,
+          "T_max": 1000,
+          "T_verify": 311.45,
+          "prop_verify": 0.0115,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.061747,
+          "B": 1.332643,
+          "C": -0.60484,
+          "D": 0.690144,
+          "E": -0.292236,
+          "T_min": 190,
+          "T_max": 506,
+          "T_verify": 294.95,
+          "prop_verify": 23.616,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 99847.16,
+          "B": 210798.73,
+          "C": -947.39,
+          "D": -52228.85,
+          "Type": "Aly-Lee",
+          "E": 1203.35,
+          "T_min": 268,
+          "T_max": 1273,
+          "T_verify": 473.65,
+          "prop_verify": 1.7668
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 8.142e-05,
+          "B": 4414.597964,
+          "C": -7292.83987,
+          "D": 6016.9067,
+          "T_min": 190,
+          "T_max": 493,
+          "T_verify": 282.55,
+          "prop_verify": 0.1491
+        }
+      ]
+    }
+  },
+  "Vinyl acetate": {
+    "Formula": "C4H6O2",
+    "Tc": 519.15,
+    "Pc": 39.58,
+    "vc": 269.978,
+    "M": 86.09,
+    "omega": 0.3526,
+    "Tb": 345.86,
+    "Tm": 180.35,
+    "Dhm": 62.4,
+    "Dhf0": -314900,
+    "Dgf0": -227900,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.554439,
+          "B": 1.364168,
+          "C": -2.656813,
+          "D": -2.993477,
+          "T_min": 252,
+          "T_max": 519.15,
+          "T_verify": 352.25,
+          "prop_verify": 1.2471,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 318.88,
+          "A": 752.038,
+          "B": -204.4664,
+          "C": 468.8042,
+          "D": -107.555,
+          "T_min": 181.0,
+          "T_max": 523.2,
+          "T_verify": 287.35,
+          "prop_verify": 939.17,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 7.959075,
+          "B": 5.923838,
+          "C": -2.473449,
+          "D": -1.445393,
+          "E": 4.013308,
+          "T_min": 273,
+          "T_max": 519.15,
+          "T_verify": 336.35,
+          "prop_verify": 377.62,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.532294,
+          "B": 28.920121,
+          "C": -26.329666,
+          "D": 18.066371,
+          "E": -41.778918,
+          "F": 48.998543,
+          "T_min": 260,
+          "T_max": 389,
+          "T_verify": 266.35,
+          "prop_verify": 1.8743,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": -0.076134,
+          "B": 1.103327,
+          "C": 668.129,
+          "D": -13.903,
+          "E": 0.0001099854,
+          "T_min": 225,
+          "T_max": 346,
+          "T_verify": 275.75,
+          "prop_verify": 0.5284,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.698675e-06,
+          "B": 0.447738,
+          "C": 583.23305,
+          "D": -17183.346,
+          "T_min": 180,
+          "T_max": 1000,
+          "T_verify": 352.95,
+          "prop_verify": 9.3404,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -2.302838,
+          "B": 18.466591,
+          "C": 16.70809,
+          "D": -2.785195,
+          "T_min": 346,
+          "T_max": 1000,
+          "T_verify": 345.65,
+          "prop_verify": 0.0152,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.065003,
+          "B": 1.218115,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 180,
+          "T_max": 501,
+          "T_verify": 305.15,
+          "prop_verify": 22.0854,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 339.00453,
+          "B": 10.85084,
+          "C": 11.20264,
+          "D": 1116.09686,
+          "Type": "PPDS Ideal cp",
+          "E": -5117.97374,
+          "F": 8086.03265,
+          "G": -5022.37492,
+          "T_min": 100,
+          "T_max": 1500,
+          "T_verify": 394.75,
+          "prop_verify": 1.4167
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.07232333,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 2.541833,
+          "T_min": 181,
+          "T_max": 513,
+          "T_verify": 313.35,
+          "prop_verify": 0.1452
+        }
+      ]
+    }
+  },
+  "Methyl-tert-butyl ether": {
+    "Formula": "C5H12O",
+    "Tc": 497.15,
+    "Pc": 34.3,
+    "vc": 328.976,
+    "M": 88.15,
+    "omega": 0.2662,
+    "Tb": 328.29,
+    "Tm": 164.55,
+    "Dhm": 86.2,
+    "Dhf0": -283500,
+    "Dgf0": -117500,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.565301,
+          "B": 2.57784,
+          "C": -3.917256,
+          "D": -0.671678,
+          "T_min": 217,
+          "T_max": 497.15,
+          "T_verify": 374.55,
+          "prop_verify": 3.7435,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 267.95,
+          "A": 615.1648,
+          "B": -332.9179,
+          "C": 716.5664,
+          "D": -284.8751,
+          "T_min": 165.0,
+          "T_max": 519.15,
+          "T_verify": 304.55,
+          "prop_verify": 729.6,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 7.677125,
+          "B": 3.101996,
+          "C": 0.388899,
+          "D": -1.67283,
+          "E": 0.763138,
+          "T_min": 217,
+          "T_max": 497.15,
+          "T_verify": 339.55,
+          "prop_verify": 311.02,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.681223,
+          "B": 28.641641,
+          "C": -26.276132,
+          "D": 26.982673,
+          "E": -34.177133,
+          "F": 22.912098,
+          "T_min": 165,
+          "T_max": 328,
+          "T_verify": 293.85,
+          "prop_verify": 2.1107,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 1.416944,
+          "B": 0.905146,
+          "C": 712.916,
+          "D": -42.5044,
+          "E": 2.260808e-05,
+          "T_min": 180,
+          "T_max": 450,
+          "T_verify": 293.65,
+          "prop_verify": 0.3503,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.6845e-07,
+          "B": 0.724727,
+          "C": 119.588355,
+          "D": -538.542,
+          "T_min": 165,
+          "T_max": 1000,
+          "T_verify": 340.45,
+          "prop_verify": 8.5561,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 5.121987,
+          "B": 17.774514,
+          "C": 6.213344,
+          "D": 0.976908,
+          "T_min": 273,
+          "T_max": 1000,
+          "T_verify": 349.55,
+          "prop_verify": 0.0183,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.059863,
+          "B": 1.236617,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 165,
+          "T_max": 480,
+          "T_verify": 304.55,
+          "prop_verify": 18.5303,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 100524.03,
+          "B": 206853.45,
+          "C": -807.44,
+          "D": 137641.68,
+          "Type": "Aly-Lee",
+          "E": 2358.16,
+          "T_min": 268,
+          "T_max": 1500,
+          "T_verify": 336.85,
+          "prop_verify": 1.5946
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.0362053,
+          "B": 2.747481,
+          "C": -3.4462,
+          "D": 5.939223,
+          "T_min": 165,
+          "T_max": 328,
+          "T_verify": 311.15,
+          "prop_verify": 0.1235
+        }
+      ]
+    }
+  },
+  "Acetone": {
+    "Formula": "C3H6O",
+    "Tc": 508.1,
+    "Pc": 46.924,
+    "vc": 212.299,
+    "M": 58.08,
+    "omega": 0.3064,
+    "Tb": 329.23,
+    "Tm": 178.45,
+    "Dhm": 99.4,
+    "Dhf0": -215700,
+    "Dgf0": -151300,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.670734,
+          "B": 1.965917,
+          "C": -2.445437,
+          "D": -2.899873,
+          "T_min": 213,
+          "T_max": 508.1,
+          "T_verify": 353.15,
+          "prop_verify": 2.1544,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 273.58,
+          "A": 548.0439,
+          "B": 205.2643,
+          "C": -197.7406,
+          "D": 250.6303,
+          "T_min": 183.0,
+          "T_max": 497.15,
+          "T_verify": 313.15,
+          "prop_verify": 767.89,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.731751,
+          "B": 9.17423,
+          "C": -4.934225,
+          "D": 0.048998,
+          "E": 3.735669,
+          "T_min": 183,
+          "T_max": 508.1,
+          "T_verify": 373.15,
+          "prop_verify": 448.73,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.440183,
+          "B": 17.6646,
+          "C": -8.866356,
+          "D": -11.726743,
+          "E": 34.19244,
+          "F": -17.424056,
+          "T_min": 183,
+          "T_max": 503,
+          "T_verify": 333.15,
+          "prop_verify": 2.2404,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 1.895877,
+          "B": 0.337109,
+          "C": 766.008,
+          "D": 21.4982,
+          "E": 1.613371e-05,
+          "T_min": 190,
+          "T_max": 333,
+          "T_verify": 298.15,
+          "prop_verify": 0.3046,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 6.0442e-08,
+          "B": 0.894053,
+          "C": 137.302579,
+          "D": -10508.844,
+          "T_min": 178,
+          "T_max": 1000,
+          "T_verify": 308.15,
+          "prop_verify": 7.6028,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -1.729843,
+          "B": 20.39048,
+          "C": 15.37078,
+          "D": -1.971064,
+          "T_min": 293,
+          "T_max": 1000,
+          "T_verify": 364.75,
+          "prop_verify": 0.0166,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.070273,
+          "B": 1.215138,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 178,
+          "T_max": 480,
+          "T_verify": 298.0,
+          "prop_verify": 24.0301,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 58083.25,
+          "B": 101389.15,
+          "C": -761.09,
+          "D": 84650.28,
+          "Type": "Aly-Lee",
+          "E": 2186.59,
+          "T_min": 183,
+          "T_max": 1773,
+          "T_verify": 313.15,
+          "prop_verify": 1.3247
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.07089878,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 3.058789,
+          "T_min": 179,
+          "T_max": 343,
+          "T_verify": 299.85,
+          "prop_verify": 0.1598
+        }
+      ]
+    }
+  },
+  "Benzene": {
+    "Formula": "C6H6",
+    "Tc": 562.014,
+    "Pc": 49.01,
+    "vc": 255.044,
+    "M": 78.114,
+    "omega": 0.2103,
+    "Tb": 353.24,
+    "Tm": 278.65,
+    "Dhm": 126.3,
+    "Dhf0": 82930,
+    "Dgf0": 129660,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.114987,
+          "B": 1.841409,
+          "C": -2.254156,
+          "D": -3.14745,
+          "T_min": 283,
+          "T_max": 562.014,
+          "T_verify": 373.15,
+          "prop_verify": 1.8014,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 306.28,
+          "A": 502.4341,
+          "B": 531.5958,
+          "C": -663.9853,
+          "D": 469.5977,
+          "T_min": 283.0,
+          "T_max": 508.1,
+          "T_verify": 343.15,
+          "prop_verify": 825.92,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.00747,
+          "B": 10.69081,
+          "C": -7.316719,
+          "D": 1.140714,
+          "E": 6.78671,
+          "T_min": 283,
+          "T_max": 562.014,
+          "T_verify": 333.15,
+          "prop_verify": 408.31,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.497842,
+          "B": 22.393654,
+          "C": -15.40794,
+          "D": 3.39177,
+          "E": -25.94845,
+          "F": 39.510594,
+          "T_min": 283,
+          "T_max": 523,
+          "T_verify": 343.15,
+          "prop_verify": 1.8693,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.4865,
+          "B": 2.19961,
+          "C": 787.253,
+          "D": -255.5922,
+          "E": 8.55545e-06,
+          "T_min": 279,
+          "T_max": 545,
+          "T_verify": 303.15,
+          "prop_verify": 0.5633,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 3.394485e-05,
+          "B": 0.17932,
+          "C": 3840.6058,
+          "D": -114442.65,
+          "T_min": 279,
+          "T_max": 1000,
+          "T_verify": 353.0,
+          "prop_verify": 8.8669,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 1.014925,
+          "B": 17.78147,
+          "C": 9.66199,
+          "D": -0.409016,
+          "T_min": 339,
+          "T_max": 1000,
+          "T_verify": 478.25,
+          "prop_verify": 0.0267,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.070259,
+          "B": 1.177885,
+          "C": 0.028702,
+          "D": 0.07884,
+          "E": -0.056076,
+          "T_min": 279,
+          "T_max": 547,
+          "T_verify": 368.15,
+          "prop_verify": 19.2833,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 560.93643,
+          "B": 4.00088,
+          "C": 6.20811,
+          "D": 22.19301,
+          "Type": "PPDS Ideal cp",
+          "E": -159.24845,
+          "F": -48.97058,
+          "G": 155.54132,
+          "T_min": 200,
+          "T_max": 1023,
+          "T_verify": 373.15,
+          "prop_verify": 1.3487
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.06389367,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 2.61035,
+          "T_min": 279,
+          "T_max": 413,
+          "T_verify": 363.55,
+          "prop_verify": 0.1228
+        }
+      ]
+    }
+  },
+  "Toluene": {
+    "Formula": "C6H5CH3",
+    "Tc": 591.749,
+    "Pc": 41.263,
+    "vc": 315.422,
+    "M": 92.141,
+    "omega": 0.2657,
+    "Tb": 383.75,
+    "Tm": 178.15,
+    "Dhm": 72.0,
+    "Dhf0": 50170,
+    "Dgf0": 122200,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.49889,
+          "B": 2.08428,
+          "C": -2.556275,
+          "D": -2.860135,
+          "T_min": 273,
+          "T_max": 591.749,
+          "T_verify": 333.15,
+          "prop_verify": 0.1853,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 292.12,
+          "A": 439.5835,
+          "B": 839.1558,
+          "C": -1234.8445,
+          "D": 797.8741,
+          "T_min": 183.0,
+          "T_max": 562.014,
+          "T_verify": 313.15,
+          "prop_verify": 848.53,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 4.60779,
+          "B": 13.96216,
+          "C": -10.579148,
+          "D": 2.112462,
+          "E": 4.28486,
+          "T_min": 183,
+          "T_max": 591.749,
+          "T_verify": 323.15,
+          "prop_verify": 398.25,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.472576,
+          "B": 28.7765,
+          "C": -29.76024,
+          "D": 48.79309,
+          "E": -113.29255,
+          "F": 94.20474,
+          "T_min": 183,
+          "T_max": 563,
+          "T_verify": 313.15,
+          "prop_verify": 1.7496,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.95435,
+          "B": -1e-05,
+          "C": 1047.179,
+          "D": 137.2255,
+          "E": 3.97694e-06,
+          "T_min": 221,
+          "T_max": 588,
+          "T_verify": 275.55,
+          "prop_verify": 0.75,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 2.63567e-05,
+          "B": 0.089851,
+          "C": 1411.9524,
+          "D": 49235.071,
+          "T_min": 178,
+          "T_max": 1000,
+          "T_verify": 351.15,
+          "prop_verify": 8.2336,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 0.631015,
+          "B": 17.1865,
+          "C": 6.139255,
+          "D": 0.177187,
+          "T_min": 384,
+          "T_max": 1000,
+          "T_verify": 383.75,
+          "prop_verify": 0.019,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.067024,
+          "B": 1.246125,
+          "C": 0.024241,
+          "D": -0.035845,
+          "E": 0.009383,
+          "T_min": 178,
+          "T_max": 570,
+          "T_verify": 308.75,
+          "prop_verify": 26.6487,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 1250.94941,
+          "B": 3.99957,
+          "C": 10.73366,
+          "D": -19.78047,
+          "Type": "PPDS Ideal cp",
+          "E": -218.24713,
+          "F": 677.5741,
+          "G": -595.41549,
+          "T_min": 183,
+          "T_max": 1273,
+          "T_verify": 313.15,
+          "prop_verify": 1.1858
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": -0.012006,
+          "B": -32.7022,
+          "C": 55.6255,
+          "D": -42.111,
+          "T_min": 178,
+          "T_max": 475,
+          "T_verify": 287.45,
+          "prop_verify": 0.1339
+        }
+      ]
+    }
+  },
+  "p-Xylene": {
+    "Formula": "C8H10",
+    "Tc": 616.25,
+    "Pc": 35.11,
+    "vc": 377.958,
+    "M": 106.168,
+    "omega": 0.3218,
+    "Tb": 411.51,
+    "Tm": 286.45,
+    "Dhm": 161.2,
+    "Dhf0": 18030,
+    "Dgf0": 121400,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.671695,
+          "B": 1.812883,
+          "C": -2.38796,
+          "D": -3.45669,
+          "T_min": 286,
+          "T_max": 616.25,
+          "T_verify": 373.15,
+          "prop_verify": 0.3206,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 280.9,
+          "A": 660.6612,
+          "B": -279.799,
+          "C": 602.9859,
+          "D": -192.8244,
+          "T_min": 287.0,
+          "T_max": 591.749,
+          "T_verify": 321.15,
+          "prop_verify": 836.72,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 8.707394,
+          "B": 1.081836,
+          "C": 2.571094,
+          "D": -3.435021,
+          "E": 9.405508,
+          "T_min": 287,
+          "T_max": 616.25,
+          "T_verify": 373.15,
+          "prop_verify": 361.13,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": -0.298962,
+          "B": 48.971447,
+          "C": -144.53912,
+          "D": 451.27984,
+          "E": -811.38669,
+          "F": 551.296903,
+          "T_min": 287,
+          "T_max": 567,
+          "T_verify": 335.95,
+          "prop_verify": 1.8151,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 0.809643,
+          "B": 1.371902,
+          "C": 638.509,
+          "D": -40.4018,
+          "E": 6.772298e-05,
+          "T_min": 282,
+          "T_max": 613,
+          "T_verify": 319.75,
+          "prop_verify": 0.4728,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 1.297141e-06,
+          "B": 0.436899,
+          "C": 446.549129,
+          "D": -1248.05,
+          "T_min": 286,
+          "T_max": 1000,
+          "T_verify": 323.95,
+          "prop_verify": 6.8501,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -1.261201,
+          "B": 36.20134,
+          "C": -26.431401,
+          "D": 14.075927,
+          "T_min": 320,
+          "T_max": 1000,
+          "T_verify": 391.55,
+          "prop_verify": 0.0177,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.064561,
+          "B": 1.268807,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0,
+          "T_min": 286,
+          "T_max": 599,
+          "T_verify": 373.15,
+          "prop_verify": 19.8339,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 1299.9128,
+          "B": 4.43091,
+          "C": 6.06047,
+          "D": -229.7391,
+          "Type": "PPDS Ideal cp",
+          "E": -186.84354,
+          "F": 1156.7835,
+          "G": -1164.5318,
+          "T_min": 200,
+          "T_max": 1500,
+          "T_verify": 336.85,
+          "prop_verify": 1.3369
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.06531592,
+          "B": 2.109022,
+          "C": -6.476927,
+          "D": 6.704619,
+          "T_min": 287,
+          "T_max": 413,
+          "T_verify": 333.05,
+          "prop_verify": 0.1209
+        }
+      ]
+    }
+  },
+  "R23": {
+    "Formula": "CHF3",
+    "Tc": 299.747,
+    "Pc": 48.69,
+    "vc": 133.115,
+    "M": 70.013,
+    "omega": 0.2584,
+    "Tb": 191.09,
+    "Tm": 117.95,
+    "Dhm": 58.0,
+    "Dhf0": -697050,
+    "Dgf0": -662610,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.285947,
+          "B": 1.636279,
+          "C": -2.135618,
+          "D": -2.481506,
+          "T_min": 158,
+          "T_max": 299.747,
+          "T_verify": 263.15,
+          "prop_verify": 18.8963,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 525.96,
+          "A": 640.0829,
+          "B": 2166.2973,
+          "C": -3069.2655,
+          "D": 1827.1404,
+          "T_min": 158.0,
+          "T_max": 616.25,
+          "T_verify": 283.15,
+          "prop_verify": 941.76,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.346016,
+          "B": 10.06509,
+          "C": -6.445266,
+          "D": 0.855815,
+          "E": 0.100753,
+          "T_min": 158,
+          "T_max": 299.747,
+          "T_verify": 253.15,
+          "prop_verify": 170.98,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.583673,
+          "B": 8.82546,
+          "C": 3.660254,
+          "D": -28.715384,
+          "E": 71.336899,
+          "F": -57.631705,
+          "T_min": 158,
+          "T_max": 288,
+          "T_verify": 263.15,
+          "prop_verify": 1.6319,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 1.720363,
+          "B": 0.385773,
+          "C": 288.676,
+          "D": 44.7211,
+          "E": 5.570377e-05,
+          "T_min": 118,
+          "T_max": 285,
+          "T_verify": 276.25,
+          "prop_verify": 0.1074,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 5.88485e-07,
+          "B": 0.620799,
+          "C": 76.10371,
+          "D": 10940.869,
+          "T_min": 191,
+          "T_max": 1000,
+          "T_verify": 318.75,
+          "prop_verify": 15.6563,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 21.179034,
+          "B": 15.915758,
+          "C": 49.016112,
+          "D": -13.336371,
+          "T_min": 191,
+          "T_max": 1000,
+          "T_verify": 318.75,
+          "prop_verify": 0.0151,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.062289,
+          "B": 1.570226,
+          "C": -0.795218,
+          "D": 0.739061,
+          "E": -0.251189,
+          "T_min": 118,
+          "T_max": 280,
+          "T_verify": 261.15,
+          "prop_verify": 4.5902,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 766.08865,
+          "B": 4.00055,
+          "C": 4.56857,
+          "D": 57.65285,
+          "Type": "PPDS Ideal cp",
+          "E": -767.99181,
+          "F": 1432.42397,
+          "G": -923.07484,
+          "T_min": 163,
+          "T_max": 1773,
+          "T_verify": 363.15,
+          "prop_verify": 0.8223
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.06626834,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 2.521323,
+          "T_min": 118,
+          "T_max": 243,
+          "T_verify": 216.75,
+          "prop_verify": 0.1125
+        }
+      ]
+    }
+  },
+  "R32": {
+    "Formula": "CH2F2",
+    "Tc": 351.255,
+    "Pc": 57.826,
+    "vc": 122.696,
+    "M": 52.023,
+    "omega": 0.277,
+    "Tb": 221.5,
+    "Tm": 137.05,
+    "Dhm": 99.2,
+    "Dhf0": -452710,
+    "Dgf0": -425160,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.4706,
+          "B": 1.75696,
+          "C": -2.015692,
+          "D": -2.61979,
+          "T_min": 158,
+          "T_max": 351.255,
+          "T_verify": 263.15,
+          "prop_verify": 5.8274,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 424.0,
+          "A": 895.2757,
+          "B": 224.1921,
+          "C": -50.923,
+          "D": 229.6594,
+          "T_min": 138.0,
+          "T_max": 299.747,
+          "T_verify": 273.15,
+          "prop_verify": 1054.86,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 6.30286,
+          "B": 6.63483,
+          "C": -2.530184,
+          "D": -1.546727,
+          "E": 4.892836,
+          "T_min": 138,
+          "T_max": 351.255,
+          "T_verify": 253.15,
+          "prop_verify": 344.12,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.482781,
+          "B": 9.73656,
+          "C": -7.74677,
+          "D": 18.994675,
+          "E": -22.694329,
+          "F": 16.23208,
+          "T_min": 138,
+          "T_max": 343,
+          "T_verify": 293.15,
+          "prop_verify": 1.8863,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.575043,
+          "B": -0.03532,
+          "C": 358.978,
+          "D": 117.8077,
+          "E": 2.372017e-05,
+          "T_min": 137,
+          "T_max": 287,
+          "T_verify": 279.35,
+          "prop_verify": 0.1789,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 2.505242e-06,
+          "B": 0.445997,
+          "C": 489.84088,
+          "D": -10877.245,
+          "T_min": 173,
+          "T_max": 513,
+          "T_verify": 303.15,
+          "prop_verify": 12.828,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -7.018654,
+          "B": 77.642855,
+          "C": -5.084861,
+          "D": -1.550638,
+          "T_min": 163,
+          "T_max": 473,
+          "T_verify": 283.15,
+          "prop_verify": 0.0114,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.07776,
+          "B": 1.41198,
+          "C": -0.405818,
+          "D": 0.513851,
+          "E": -0.242771,
+          "T_min": 137,
+          "T_max": 329,
+          "T_verify": 295.15,
+          "prop_verify": 7.2997,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 889.23598,
+          "B": 4.39579,
+          "C": 9.60005,
+          "D": 15.90687,
+          "Type": "PPDS Ideal cp",
+          "E": -111.31449,
+          "F": 190.11067,
+          "G": -112.69276,
+          "T_min": 143,
+          "T_max": 1773,
+          "T_verify": 373.15,
+          "prop_verify": 0.944
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.099119,
+          "B": 0.076417,
+          "C": 3.712623,
+          "D": -1.460831,
+          "T_min": 163,
+          "T_max": 348,
+          "T_verify": 263.15,
+          "prop_verify": 0.2139
+        }
+      ]
+    }
+  },
+  "R12": {
+    "Formula": "CCl2F2",
+    "Tc": 385.12,
+    "Pc": 41.361,
+    "vc": 214.006,
+    "M": 120.913,
+    "omega": 0.1795,
+    "Tb": 243.39,
+    "Tm": 115.15,
+    "Dhm": 34.2,
+    "Dhf0": -481160,
+    "Dgf0": -442250,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -6.919773,
+          "B": 1.622716,
+          "C": -1.734359,
+          "D": -2.589279,
+          "T_min": 168,
+          "T_max": 385.12,
+          "T_verify": 263.15,
+          "prop_verify": 2.1879,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 565.0,
+          "A": 914.8334,
+          "B": 994.9288,
+          "C": -1324.2838,
+          "D": 961.0109,
+          "T_min": 123.0,
+          "T_max": 351.255,
+          "T_verify": 273.15,
+          "prop_verify": 1395.42,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.672474,
+          "B": 8.015016,
+          "C": -5.135777,
+          "D": -0.186518,
+          "E": 4.616427,
+          "T_min": 123,
+          "T_max": 385.12,
+          "T_verify": 253.15,
+          "prop_verify": 162.07,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.469917,
+          "B": 14.3901,
+          "C": -17.00691,
+          "D": 53.67719,
+          "E": -104.511075,
+          "F": 78.21579,
+          "T_min": 123,
+          "T_max": 373,
+          "T_verify": 293.15,
+          "prop_verify": 0.9757,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.88686,
+          "B": -0.000216,
+          "C": 380.36,
+          "D": 53.1287,
+          "E": 2.553078e-05,
+          "T_min": 183,
+          "T_max": 373,
+          "T_verify": 253.15,
+          "prop_verify": 0.3056,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 2.04317e-06,
+          "B": 0.4832,
+          "C": 633.35664,
+          "D": -49455.239,
+          "T_min": 250,
+          "T_max": 575,
+          "T_verify": 284.25,
+          "prop_verify": 11.9751,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 1.04997,
+          "B": 67.1657,
+          "C": 3.157079,
+          "D": -0.843364,
+          "T_min": 243,
+          "T_max": 700,
+          "T_verify": 363.55,
+          "prop_verify": 0.013,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.06503,
+          "B": 1.746093,
+          "C": -0.990751,
+          "D": 0.852173,
+          "E": -0.289736,
+          "T_min": 243,
+          "T_max": 370,
+          "T_verify": 280.65,
+          "prop_verify": 10.964,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 722.38297,
+          "B": 3.13821,
+          "C": 3.33217,
+          "D": -818.72651,
+          "Type": "PPDS Ideal cp",
+          "E": 1463.34239,
+          "F": -979.86258,
+          "G": -188.05965,
+          "T_min": 123,
+          "T_max": 1773,
+          "T_verify": 373.15,
+          "prop_verify": 0.6677
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.0320212,
+          "B": 0.066322,
+          "C": -0.117768,
+          "D": 5.320465,
+          "T_min": 150,
+          "T_max": 363,
+          "T_verify": 273.45,
+          "prop_verify": 0.0812
+        }
+      ]
+    }
+  },
+  "R22": {
+    "Formula": "CHClF2",
+    "Tc": 369.28,
+    "Pc": 49.885,
+    "vc": 166.282,
+    "M": 86.468,
+    "omega": 0.2207,
+    "Tb": 232.35,
+    "Tm": 115.75,
+    "Dhm": 47.7,
+    "Dhf0": -481600,
+    "Dgf0": -450500,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.092406,
+          "B": 1.619996,
+          "C": -2.013516,
+          "D": -2.729725,
+          "T_min": 158,
+          "T_max": 369.28,
+          "T_verify": 263.15,
+          "prop_verify": 3.55,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 520.01,
+          "A": 904.0763,
+          "B": 874.3,
+          "C": -1176.1556,
+          "D": 880.9367,
+          "T_min": 123.0,
+          "T_max": 385.12,
+          "T_verify": 283.15,
+          "prop_verify": 1246.61,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.941889,
+          "B": 7.847445,
+          "C": -4.73681,
+          "D": 0.118054,
+          "E": 4.060834,
+          "T_min": 123,
+          "T_max": 369.28,
+          "T_verify": 253.15,
+          "prop_verify": 220.0,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.509972,
+          "B": 11.15402,
+          "C": -3.730131,
+          "D": -1.359015,
+          "E": 11.325878,
+          "F": -5.456086,
+          "T_min": 123,
+          "T_max": 353,
+          "T_verify": 293.15,
+          "prop_verify": 1.2395,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.50627,
+          "B": 0.001628,
+          "C": 369.199,
+          "D": 55.9635,
+          "E": 2.94826e-05,
+          "T_min": 178,
+          "T_max": 363,
+          "T_verify": 273.15,
+          "prop_verify": 0.1991,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 2.49658e-06,
+          "B": 0.445339,
+          "C": 480.1723,
+          "D": -10278.585,
+          "T_min": 173,
+          "T_max": 513,
+          "T_verify": 293.15,
+          "prop_verify": 12.4428,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 3.086424,
+          "B": 39.01833,
+          "C": 32.27613,
+          "D": -8.032932,
+          "T_min": 173,
+          "T_max": 473,
+          "T_verify": 313.15,
+          "prop_verify": 0.0114,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.065425,
+          "B": 1.549562,
+          "C": -0.847518,
+          "D": 0.922886,
+          "E": -0.374168,
+          "T_min": 116,
+          "T_max": 353,
+          "T_verify": 293.15,
+          "prop_verify": 8.7897,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 1036.65937,
+          "B": 3.60012,
+          "C": 4.64243,
+          "D": -89.43873,
+          "Type": "PPDS Ideal cp",
+          "E": 22.60799,
+          "F": 204.58845,
+          "G": -241.99955,
+          "T_min": 123,
+          "T_max": 1773,
+          "T_verify": 373.15,
+          "prop_verify": 0.7332
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.060644,
+          "B": -1.049875,
+          "C": 2.115769,
+          "D": 1.076857,
+          "T_min": 163,
+          "T_max": 363,
+          "T_verify": 263.15,
+          "prop_verify": 0.0933
+        }
+      ]
+    }
+  },
+  "R134a": {
+    "Formula": "CF3CH2F",
+    "Tc": 374.212,
+    "Pc": 40.593,
+    "vc": 199.299,
+    "M": 102.03,
+    "omega": 0.3268,
+    "Tb": 247.08,
+    "Tm": 172.15,
+    "Dhm": 63.5,
+    "Dhf0": -895790,
+    "Dgf0": -826900,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.649281,
+          "B": 1.79819,
+          "C": -2.660067,
+          "D": -3.320921,
+          "T_min": 173,
+          "T_max": 374.212,
+          "T_verify": 263.15,
+          "prop_verify": 2.0063,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 511.94,
+          "A": 1043.9503,
+          "B": 239.7177,
+          "C": -102.7633,
+          "D": 287.7073,
+          "T_min": 173.0,
+          "T_max": 369.28,
+          "T_verify": 283.15,
+          "prop_verify": 1260.67,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 7.25816,
+          "B": 4.942105,
+          "C": -0.155284,
+          "D": -2.76178,
+          "E": 12.45586,
+          "T_min": 173,
+          "T_max": 374.212,
+          "T_verify": 273.15,
+          "prop_verify": 198.76,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.509614,
+          "B": 17.0661,
+          "C": -15.83477,
+          "D": 39.39076,
+          "E": -69.727496,
+          "F": 53.4559,
+          "T_min": 173,
+          "T_max": 368,
+          "T_verify": 293.15,
+          "prop_verify": 1.4053,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.589129,
+          "B": 3.3e-05,
+          "C": 374.968,
+          "D": 127.0868,
+          "E": 2.718736e-05,
+          "T_min": 173,
+          "T_max": 373,
+          "T_verify": 243.15,
+          "prop_verify": 0.4051,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 2.535768e-06,
+          "B": 0.434922,
+          "C": 519.1958,
+          "D": -11741.298,
+          "T_min": 173,
+          "T_max": 493,
+          "T_verify": 293.15,
+          "prop_verify": 11.387,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": -1.346631,
+          "B": 67.78253,
+          "C": -34.25153,
+          "D": 19.287077,
+          "T_min": 193,
+          "T_max": 1000,
+          "T_verify": 313.15,
+          "prop_verify": 0.0144,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.058065,
+          "B": 1.400084,
+          "C": -0.682828,
+          "D": 0.922975,
+          "E": -0.408788,
+          "T_min": 172,
+          "T_max": 364,
+          "T_verify": 293.0,
+          "prop_verify": 8.7995,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 1108.39974,
+          "B": 4.00203,
+          "C": 6.01963,
+          "D": -138.01236,
+          "Type": "PPDS Ideal cp",
+          "E": 334.51996,
+          "F": -417.38313,
+          "G": -4.62768,
+          "T_min": 173,
+          "T_max": 1773,
+          "T_verify": 373.15,
+          "prop_verify": 0.9632
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.073646,
+          "B": -1.756262,
+          "C": 2.633737,
+          "D": 1.096548,
+          "T_min": 173,
+          "T_max": 373,
+          "T_verify": 293.15,
+          "prop_verify": 0.0834
+        }
+      ]
+    }
+  },
+  "R125": {
+    "Formula": "CF3CHF2",
+    "Tc": 340.229,
+    "Pc": 37.039,
+    "vc": 212.131,
+    "M": 120.02,
+    "omega": 0.3017,
+    "Tb": 225.04,
+    "Tm": 170.15,
+    "Dhm": 47.0,
+    "Dhf0": -1105000,
+    "Dgf0": -1030000,
+    "Source": "GKKR book",
+    "Correlations": {
+      "Vapor Pressure": [
+        {
+          "A": -7.537003,
+          "B": 1.837339,
+          "C": -2.67533,
+          "D": -2.78762,
+          "T_min": 173,
+          "T_max": 340.229,
+          "T_verify": 283.15,
+          "prop_verify": 9.0868,
+          "Type": "Wagner 2.5-5 Form",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Density": [
+        {
+          "rho_c": 565.78,
+          "A": 800.1882,
+          "B": 1917.3007,
+          "C": -2752.5653,
+          "D": 1696.7682,
+          "T_min": 173.0,
+          "T_max": 374.212,
+          "T_verify": 283.15,
+          "prop_verify": 1272.6,
+          "Type": "PPDS Liquid Density",
+          "Source": "GKKR book"
+        }
+      ],
+      "Heat of Vaporization": [
+        {
+          "A": 5.54365,
+          "B": 11.76144,
+          "C": -8.102561,
+          "D": 0.93226,
+          "E": 5.177319,
+          "T_min": 173,
+          "T_max": 340.229,
+          "T_verify": 273.15,
+          "prop_verify": 133.16,
+          "Type": "PPDS Heat of Vaporization",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid cp": [
+        {
+          "A": 0.619806,
+          "B": 15.4735,
+          "C": 2.39756,
+          "D": -32.9038,
+          "E": 33.24436,
+          "F": 22.72992,
+          "T_min": 173,
+          "T_max": 333,
+          "T_verify": 293.15,
+          "prop_verify": 1.3682,
+          "Type": "PPDS Liquid Heat Capacity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Liquid Viscosity": [
+        {
+          "A": 2.91337,
+          "B": 0.211906,
+          "C": 3895.012,
+          "D": -209.8739,
+          "E": 3.09e-08,
+          "T_min": 216,
+          "T_max": 298,
+          "T_verify": 293.13,
+          "prop_verify": 0.1581,
+          "Type": "PPDS Liquid Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor Viscosity": [
+        {
+          "A": 2.322973e-06,
+          "B": 0.450581,
+          "C": 419.7447,
+          "D": -7324.273,
+          "T_min": 173,
+          "T_max": 453,
+          "T_verify": 293.15,
+          "prop_verify": 12.8005,
+          "Type": "DIPPR Ideal Vapor Viscosity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Vapor Thermal Conductivity": [
+        {
+          "A": 15.88705,
+          "B": -7.77655,
+          "C": 75.40897,
+          "D": -25.48238,
+          "T_min": 225,
+          "T_max": 1000,
+          "T_verify": 333.15,
+          "prop_verify": 0.0166,
+          "Type": "PPDS Vapor Thermal Conductivity",
+          "Source": "GKKR book"
+        }
+      ],
+      "Surface Tension": [
+        {
+          "A": 0.080614,
+          "B": 2.46556,
+          "C": -1.58887,
+          "D": 0.445522,
+          "E": 0.057276,
+          "T_min": 233,
+          "T_max": 328,
+          "T_verify": 283.15,
+          "prop_verify": 5.6915,
+          "Type": "Watson",
+          "Source": "GKKR book"
+        }
+      ],
+      "Ideal Vapor cp": [
+        {
+          "Source": "GKKR book",
+          "A": 863.90053,
+          "B": 6.1141,
+          "C": 6.41788,
+          "D": -301.84855,
+          "Type": "PPDS Ideal cp",
+          "E": -423.46781,
+          "F": 1665.31109,
+          "G": -2612.24748,
+          "T_min": 173,
+          "T_max": 1773,
+          "T_verify": 373.15,
+          "prop_verify": 0.8932
+        }
+      ],
+      "Liquid Thermal Conductivity": [
+        {
+          "Source": "GKKR book",
+          "Type": "Jamieson",
+          "A": 0.066525,
+          "B": -2.316396,
+          "C": 5.01691,
+          "D": -1.260304,
+          "T_min": 173,
+          "T_max": 333,
+          "T_verify": 298.15,
+          "prop_verify": 0.0622
+        }
+      ]
+    }
+  }
+}

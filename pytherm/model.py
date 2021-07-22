@@ -1,7 +1,7 @@
 from .eos import PExplicitEOS
 from typing import Optional
 from .prop import TDepCorrelation
-from .const import R
+from .data import R
 
 
 class FluidModel:
