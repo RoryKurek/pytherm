@@ -1,4 +1,4 @@
-Substance,rho_c,A,B,C,D,T_min,T_max,T_verify,rho_L_verify
+Substance,rho_c,A,B,C,D,T_min,T_max,T_verify,prop_verify
 Ammonia,224.78,533.0864,-39.1990,271.4070,-72.5196,196,Tc,310.15,584.33
 Hydrogen chloride,410.97,981.8765,-441.4813,1121.7449,-553.3618,134,Tc,248.15,1018.11
 Chlorine,576.81,908.9017,948.0483,-1353.2687,1093.5252,173,Tc,273.15,1467.02

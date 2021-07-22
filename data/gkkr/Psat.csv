@@ -1,4 +1,4 @@
-Substance,A,B,C,D,T_min,T_max,T_verify,Ps_verify
+Substance,A,B,C,D,T_min,T_max,T_verify,prop_verify
 Water,-7.870154,1.906774,-2.310330,-2.063390,274,Tc,393.15,1.9859
 Ammonia,-7.303825,1.649953,-2.021615,-1.960295,196,Tc,275.15,4.6237
 Hydrogen chloride,-6.454142,0.934797,-0.636477,-1.704349,134,Tc,243.15,10.8202

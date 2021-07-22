@@ -69,13 +69,13 @@ class Wagner6Corr(TDepCorrelation):
 
 
 @dataclass
-class PPDScp0Corr(TDepCorrelation):
+class PPDScp_idCorr(TDepCorrelation):
     """
     Creates a correlation function using the PPDS equation for isobaric
-    ideal gas heat capacity (:math:`c_P^0`).
+    ideal gas heat capacity (:math:`c_{P,\\text{id}}`).
 
     .. math::
-        c_P^0 = R \\left\\{ B + (C-B)y^2 \\left[1 + (y-1) (D+Ey+Fy^2+Gy^3+Hy^4) \\right] \\right\\}
+        c_{P,\\text{id}} = R \\left\\{ B + (C-B)y^2 \\left[1 + (y-1) (D+Ey+Fy^2+Gy^3+Hy^4) \\right] \\right\\}
 
         y = \\frac{T}{A+T}
     """
@@ -99,9 +99,9 @@ class PPDScp0Corr(TDepCorrelation):
 class AlyLeeCorr(TDepCorrelation):
     """
     Creates a correlation function based on the Aly-Lee equation,
-    commonly used for isobaric ideal gas heat capacity (:math:`c_P^0`).
+    commonly used for isobaric ideal gas heat capacity (:math:`c_{P,\\text{id}}`).
 
-    .. math:: c_P^0 = A + B\\left(\\frac{C/T}{\\text{sinh}(C/T)}\\right)^2
+    .. math:: c_{P,\\text{id}} = A + B\\left(\\frac{C/T}{\\text{sinh}(C/T)}\\right)^2
                         + D\\left(\\frac{E/T}{\\text{cosh}(E/T)}\\right)^2
     """
     A: float = 0
