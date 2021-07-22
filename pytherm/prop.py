@@ -13,6 +13,7 @@ class TDepCorrelation(abc.ABC):
     def __call__(self, T: float) -> float:
         ...
 
+
 @dataclass
 class Wagner5Corr(TDepCorrelation):
     """
