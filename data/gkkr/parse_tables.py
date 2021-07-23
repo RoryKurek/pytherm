@@ -15,6 +15,8 @@ if __name__ == '__main__':
     main_table['Source'] = 'GKKR book'
     main_dict = main_table.to_dict(orient='index')
 
+    # TODO: Fix units in general properties
+
     add_corrs(main_dict, table_path='vapor_pressure.csv', corr_type='Wagner 2.5-5 Form', source='GKKR book', corr_name='Vapor Pressure')
     add_corrs(main_dict, table_path='liquid_density.csv', corr_type='PPDS Liquid Density', source='GKKR book', corr_name='Liquid Density')
     add_corrs(main_dict, table_path='heat_of_vaporization.csv', corr_type='PPDS Heat of Vaporization', source='GKKR book', corr_name='Heat of Vaporization')
