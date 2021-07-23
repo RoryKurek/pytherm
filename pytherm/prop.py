@@ -9,8 +9,14 @@ class TDepCorrelation(abc.ABC):
     T_min: float
     T_max: float
 
-    @abc.abstractmethod
     def __call__(self, T: float) -> float:
+        if T > self.T_max or T < self.T_min:
+            raise ValueError(f'Correlation not valid at temperature {T} K')
+        else:
+            return self._calc(T)
+
+    @abc.abstractmethod
+    def _calc(self, T: float) -> float:
         ...
 
 
@@ -34,7 +40,7 @@ class Wagner5Corr(TDepCorrelation):
     C: float = 0
     D: float = 0
 
-    def __call__(self, T: float) -> float:
+    def _calc(self, T: float) -> float:
         Tr = T / self.Tc
         tao = 1 - Tr
         return self.Pc * exp((self.A * tao + self.B * tao ** 1.5 +
@@ -61,7 +67,7 @@ class Wagner6Corr(TDepCorrelation):
     C: float = 0
     D: float = 0
 
-    def __call__(self, T: float) -> float:
+    def _calc(self, T: float) -> float:
         Tr = T / self.Tc
         tao = 1 - Tr
         return self.Pc * exp((self.A * tao + self.B * tao ** 1.5 +
@@ -88,7 +94,7 @@ class PPDScp_idCorr(TDepCorrelation):
     G: float = 0
     H: float = 0
 
-    def __call__(self, T: float) -> float:
+    def _calc(self, T: float) -> float:
         y = T / (self.A+T)
         return R * (self.B + (self.C - self.B)*y**2 *
                     (1 + (y-1) * (self.D + self.E*y + self.F*y**2 +
@@ -110,6 +116,6 @@ class AlyLeeCorr(TDepCorrelation):
     D: float = 0
     E: float = 0
 
-    def __call__(self, T: float) -> float:
+    def _calc(self, T: float) -> float:
         return self.A + self.B * (self.C/T / sinh(self.C/T))**2 + \
                self.D * (self.E/T / cosh(self.E/T))**2

@@ -48,3 +48,15 @@ class TestWagner5Corr:
     def test_D_defaults_to_zero(self):
         corr = Wagner5Corr(T_max=647.096, T_min=274, Tc=647.096, Pc=220.64, A=-7.870154, B=1.906774, C=-2.31033)
         assert corr.D == 0.0
+
+    @pytest.mark.parametrize('T_min, T_max, Tc, Pc, A, B, C, D, T', [
+        (274, 647.096, 647.096, 220.64, -7.870154, 1.906774, -2.31033, -2.06339, 700.0),
+        (196, 405.5, 405.5, 113.592, -7.303825, 1.649953, -2.021615, -1.960295, 500.0),
+        (134, 324.55, 324.55, 82.631, -6.454142, 0.934797, -0.636477, -1.704349, 100.0),
+        (174, 416.958, 416.958, 79.911, -6.442452, 1.492841, -1.225096, -2.015398, 150.0),
+    ])
+    def test_raises_error_when_extrapolating(self, T_min, T_max, Tc, Pc, A, B, C, D, T):
+        corr = Wagner5Corr(T_min=T_min, T_max=T_max, Pc=Pc, Tc=Tc, A=A, B=B, C=C, D=D)
+        with pytest.raises(ValueError):
+            corr(T)
+
