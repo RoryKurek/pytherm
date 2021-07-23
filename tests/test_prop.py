@@ -24,3 +24,27 @@ class TestWagner5Corr:
     def test_T_max_required(self):
         with pytest.raises(TypeError):
             Wagner5Corr(T_min=274, Tc=647.096, Pc=220.64, A=-7.870154, B=1.906774, C=-2.31033, D=-2.06339)
+
+    def test_Pc_required(self):
+        with pytest.raises(TypeError):
+            Wagner5Corr(T_max=647.096, T_min=274, Tc=647.096, A=-7.870154, B=1.906774, C=-2.31033, D=-2.06339)
+
+    def test_Tc_required(self):
+        with pytest.raises(TypeError):
+            Wagner5Corr(T_max=647.096, T_min=274, Pc=220.64, A=-7.870154, B=1.906774, C=-2.31033, D=-2.06339)
+
+    def test_A_defaults_to_zero(self):
+        corr = Wagner5Corr(T_max=647.096, T_min=274, Tc=647.096, Pc=220.64, B=1.906774, C=-2.31033, D=-2.06339)
+        assert corr.A == 0.0
+
+    def test_B_defaults_to_zero(self):
+        corr = Wagner5Corr(T_max=647.096, T_min=274, Tc=647.096, Pc=220.64, A=-7.870154, C=-2.31033, D=-2.06339)
+        assert corr.B == 0.0
+
+    def test_C_defaults_to_zero(self):
+        corr = Wagner5Corr(T_max=647.096, T_min=274, Tc=647.096, Pc=220.64, A=-7.870154, B=1.906774, D=-2.06339)
+        assert corr.C == 0.0
+
+    def test_D_defaults_to_zero(self):
+        corr = Wagner5Corr(T_max=647.096, T_min=274, Tc=647.096, Pc=220.64, A=-7.870154, B=1.906774, C=-2.31033)
+        assert corr.D == 0.0
