@@ -48,33 +48,6 @@ class Wagner5Corr(TDepCorrelation):
 
 
 @dataclass
-class Wagner6Corr(TDepCorrelation):
-    """
-    Correlation function using the Wagner equation in its
-    3-6 form, commonly used for saturation pressure.
-
-    .. math::
-        P_s = P_c \\times \\text{exp}\\left[\\left(A𝜏 + B𝜏^{1.5} + C𝜏^3 + D𝜏^6\\right) / T_r\\right]
-
-        T_r = \\frac{T}{T_c}
-
-        𝜏 = 1 - T_r
-    """
-    Pc: float
-    Tc: float
-    A: float = 0
-    B: float = 0
-    C: float = 0
-    D: float = 0
-
-    def _calc(self, T: float) -> float:
-        Tr = T / self.Tc
-        tao = 1 - Tr
-        return self.Pc * exp((self.A * tao + self.B * tao ** 1.5 +
-                              self.C * tao ** 3 + self.D * tao ** 6) / Tr)
-
-
-@dataclass
 class PPDScp_idCorr(TDepCorrelation):
     """
     Creates a correlation function using the PPDS equation for isobaric
