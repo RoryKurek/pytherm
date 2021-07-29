@@ -116,7 +116,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 33484.75,
@@ -128,7 +128,7 @@
           "T_min": 278,
           "T_max": 1273,
           "T_verify": 373.15,
-          "prop_verify": 1.8909
+          "prop_verify": 34.0645635
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -280,7 +280,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 34083.18,
@@ -292,7 +292,7 @@
           "T_min": 196,
           "T_max": 1500,
           "T_verify": 394.75,
-          "prop_verify": 2.2598
+          "prop_verify": 38.48665379999999
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -443,7 +443,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 432.77152,
@@ -457,7 +457,7 @@
           "T_min": 134,
           "T_max": 1773,
           "T_verify": 473.15,
-          "prop_verify": 0.8019
+          "prop_verify": 29.2380759
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -609,7 +609,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 29197.65,
@@ -621,7 +621,7 @@
           "T_min": 173,
           "T_max": 1123,
           "T_verify": 273.15,
-          "prop_verify": 0.4721
+          "prop_verify": 33.47472260000001
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -772,7 +772,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 29108.79,
@@ -784,7 +784,7 @@
           "T_min": 73,
           "T_max": 1773,
           "T_verify": 313.15,
-          "prop_verify": 1.0399
+          "prop_verify": 29.1317586
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -935,7 +935,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 29116.9,
@@ -947,7 +947,7 @@
           "T_min": 63,
           "T_max": 1773,
           "T_verify": 1200.0,
-          "prop_verify": 1.115
+          "prop_verify": 35.678885
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -1098,7 +1098,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 20463.61,
@@ -1110,7 +1110,7 @@
           "T_min": 24,
           "T_max": 2273,
           "T_verify": 513.15,
-          "prop_verify": 14.6353
+          "prop_verify": 29.5047648
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -1261,7 +1261,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 904.53351,
@@ -1275,7 +1275,7 @@
           "T_min": 203,
           "T_max": 1773,
           "T_verify": 343.15,
-          "prop_verify": 0.6483
+          "prop_verify": 41.5313946
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -1426,7 +1426,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 29104.6,
@@ -1438,7 +1438,7 @@
           "T_min": 73,
           "T_max": 1773,
           "T_verify": 313.15,
-          "prop_verify": 1.0407
+          "prop_verify": 29.150007000000002
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -1589,7 +1589,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 188.27392,
@@ -1603,7 +1603,7 @@
           "T_min": 223,
           "T_max": 1273,
           "T_verify": 373.15,
-          "prop_verify": 0.9158
+          "prop_verify": 40.3034422
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -1754,7 +1754,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 33356.35,
@@ -1766,7 +1766,7 @@
           "T_min": 93,
           "T_max": 1823,
           "T_verify": 293.15,
-          "prop_verify": 2.2073
+          "prop_verify": 35.4117139
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -1917,7 +1917,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 903.41135,
@@ -1931,7 +1931,7 @@
           "T_min": 123,
           "T_max": 1500,
           "T_verify": 273.15,
-          "prop_verify": 1.6518
+          "prop_verify": 49.669626
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -2082,7 +2082,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 1222.85277,
@@ -2096,7 +2096,7 @@
           "T_min": 123,
           "T_max": 1500,
           "T_verify": 373.15,
-          "prop_verify": 2.008
+          "prop_verify": 88.54677600000001
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -2247,7 +2247,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 668.64918,
@@ -2261,7 +2261,7 @@
           "T_min": 163,
           "T_max": 1500,
           "T_verify": 373.15,
-          "prop_verify": 2.0314
+          "prop_verify": 118.0730936
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -2412,7 +2412,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 2084.48334,
@@ -2426,7 +2426,7 @@
           "T_min": 143,
           "T_max": 1223,
           "T_verify": 373.15,
-          "prop_verify": 2.0137
+          "prop_verify": 117.0442988
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -2577,7 +2577,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 1074.7418,
@@ -2591,7 +2591,7 @@
           "T_min": 183,
           "T_max": 1673,
           "T_verify": 323.15,
-          "prop_verify": 1.7761
+          "prop_verify": 128.1473911
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -2742,7 +2742,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 918.01459,
@@ -2756,7 +2756,7 @@
           "T_min": 193,
           "T_max": 1773,
           "T_verify": 313.15,
-          "prop_verify": 1.7239
+          "prop_verify": 148.56225419999998
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -2907,7 +2907,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 671.99039,
@@ -2921,7 +2921,7 @@
           "T_min": 283,
           "T_max": 1273,
           "T_verify": 373.15,
-          "prop_verify": 1.6512
+          "prop_verify": 138.96829440000002
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -3072,7 +3072,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 751.21484,
@@ -3086,7 +3086,7 @@
           "T_min": 183,
           "T_max": 1773,
           "T_verify": 303.15,
-          "prop_verify": 1.6734
+          "prop_verify": 167.683047
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -3237,7 +3237,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 580.69298,
@@ -3251,7 +3251,7 @@
           "T_min": 233,
           "T_max": 1773,
           "T_verify": 303.15,
-          "prop_verify": 1.6663
+          "prop_verify": 190.34311529999997
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -3402,7 +3402,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 100.67955,
@@ -3416,7 +3416,7 @@
           "T_min": 143,
           "T_max": 1273,
           "T_verify": 473.15,
-          "prop_verify": 2.1337
+          "prop_verify": 59.8588198
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -3567,7 +3567,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 1178.93725,
@@ -3581,7 +3581,7 @@
           "T_min": 93,
           "T_max": 1773,
           "T_verify": 373.15,
-          "prop_verify": 1.811
+          "prop_verify": 76.208691
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -3733,7 +3733,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 444.42742,
@@ -3747,7 +3747,7 @@
           "T_min": 93,
           "T_max": 1273,
           "T_verify": 293.15,
-          "prop_verify": 1.4991
+          "prop_verify": 84.1115028
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -3898,7 +3898,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 72.32165,
@@ -3912,7 +3912,7 @@
           "T_min": 183,
           "T_max": 2023,
           "T_verify": 303.15,
-          "prop_verify": 1.384
+          "prop_verify": 44.346128
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -4063,7 +4063,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 1165.86482,
@@ -4077,7 +4077,7 @@
           "T_min": 100,
           "T_max": 1500,
           "T_verify": 373.15,
-          "prop_verify": 1.6635
+          "prop_verify": 76.63578150000001
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -4228,7 +4228,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 61723.88,
@@ -4240,7 +4240,7 @@
           "T_min": 200,
           "T_max": 1773,
           "T_verify": 473.65,
-          "prop_verify": 2.0484
+          "prop_verify": 123.10064639999999
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -4391,7 +4391,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 74802.09,
@@ -4403,7 +4403,7 @@
           "T_min": 200,
           "T_max": 1773,
           "T_verify": 473.65,
-          "prop_verify": 2.1413
+          "prop_verify": 158.7195799
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -4554,7 +4554,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 316.79019,
@@ -4568,7 +4568,7 @@
           "T_min": 100,
           "T_max": 1000,
           "T_verify": 373.15,
-          "prop_verify": 1.5568
+          "prop_verify": 96.6274624
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -4719,7 +4719,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 313.10693,
@@ -4733,7 +4733,7 @@
           "T_min": 100,
           "T_max": 1500,
           "T_verify": 573.15,
-          "prop_verify": 2.3965
+          "prop_verify": 144.020064
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -4884,7 +4884,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 589.88417,
@@ -4898,7 +4898,7 @@
           "T_min": 50,
           "T_max": 1195,
           "T_verify": 373.15,
-          "prop_verify": 1.254
+          "prop_verify": 75.305208
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -5049,7 +5049,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 54664.4,
@@ -5061,7 +5061,7 @@
           "T_min": 298,
           "T_max": 1773,
           "T_verify": 424.55,
-          "prop_verify": 1.4729
+          "prop_verify": 109.1109591
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -5212,7 +5212,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 99847.16,
@@ -5224,7 +5224,7 @@
           "T_min": 268,
           "T_max": 1273,
           "T_verify": 473.65,
-          "prop_verify": 1.7668
+          "prop_verify": 155.6656808
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -5375,7 +5375,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 339.00453,
@@ -5389,7 +5389,7 @@
           "T_min": 100,
           "T_max": 1500,
           "T_verify": 394.75,
-          "prop_verify": 1.4167
+          "prop_verify": 121.96370300000001
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -5540,7 +5540,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 100524.03,
@@ -5552,7 +5552,7 @@
           "T_min": 268,
           "T_max": 1500,
           "T_verify": 336.85,
-          "prop_verify": 1.5946
+          "prop_verify": 140.56399000000002
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -5703,7 +5703,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 58083.25,
@@ -5715,7 +5715,7 @@
           "T_min": 183,
           "T_max": 1773,
           "T_verify": 313.15,
-          "prop_verify": 1.3247
+          "prop_verify": 76.938576
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -5866,7 +5866,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 560.93643,
@@ -5880,7 +5880,7 @@
           "T_min": 200,
           "T_max": 1023,
           "T_verify": 373.15,
-          "prop_verify": 1.3487
+          "prop_verify": 105.35235180000001
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -6031,7 +6031,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 1250.94941,
@@ -6045,7 +6045,7 @@
           "T_min": 183,
           "T_max": 1273,
           "T_verify": 313.15,
-          "prop_verify": 1.1858
+          "prop_verify": 109.2607978
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -6196,7 +6196,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 1299.9128,
@@ -6210,7 +6210,7 @@
           "T_min": 200,
           "T_max": 1500,
           "T_verify": 336.85,
-          "prop_verify": 1.3369
+          "prop_verify": 141.9359992
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -6361,7 +6361,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 766.08865,
@@ -6375,7 +6375,7 @@
           "T_min": 163,
           "T_max": 1773,
           "T_verify": 363.15,
-          "prop_verify": 0.8223
+          "prop_verify": 57.57168990000001
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -6526,7 +6526,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 889.23598,
@@ -6540,7 +6540,7 @@
           "T_min": 143,
           "T_max": 1773,
           "T_verify": 373.15,
-          "prop_verify": 0.944
+          "prop_verify": 49.109712
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -6691,7 +6691,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 722.38297,
@@ -6705,7 +6705,7 @@
           "T_min": 123,
           "T_max": 1773,
           "T_verify": 373.15,
-          "prop_verify": 0.6677
+          "prop_verify": 80.73361009999999
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -6856,7 +6856,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 1036.65937,
@@ -6870,7 +6870,7 @@
           "T_min": 123,
           "T_max": 1773,
           "T_verify": 373.15,
-          "prop_verify": 0.7332
+          "prop_verify": 63.3983376
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -7021,7 +7021,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 1108.39974,
@@ -7035,7 +7035,7 @@
           "T_min": 173,
           "T_max": 1773,
           "T_verify": 373.15,
-          "prop_verify": 0.9632
+          "prop_verify": 98.275296
         }
       ],
       "Liquid Thermal Conductivity": [
@@ -7186,7 +7186,7 @@
           "Source": "GKKR book"
         }
       ],
-      "Ideal Vapor cp": [
+      "Ideal Gas cp": [
         {
           "Source": "GKKR book",
           "A": 863.90053,
@@ -7200,7 +7200,7 @@
           "T_min": 173,
           "T_max": 1773,
           "T_verify": 373.15,
-          "prop_verify": 0.8932
+          "prop_verify": 107.201864
         }
       ],
       "Liquid Thermal Conductivity": [

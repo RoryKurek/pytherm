@@ -41,7 +41,9 @@ if __name__ == '__main__':
             raise ValueError
 
         corr_dict.update(table_pt2.loc[substance][indices].to_dict())
-        main_dict[substance].setdefault('Correlations', {}).setdefault('Ideal Vapor cp', []).append(corr_dict)
+        # Convert property verification values from J/g/K to J/mol/K
+        corr_dict['prop_verify'] = corr_dict['prop_verify'] * main_dict[substance]['M']
+        main_dict[substance].setdefault('Correlations', {}).setdefault('Ideal Gas cp', []).append(corr_dict)
 
     table = pd.read_csv('liquid_thermal_conductivity.csv', index_col='Substance')
     for substance, row in table.iterrows():

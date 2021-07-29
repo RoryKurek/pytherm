@@ -57,6 +57,9 @@ class PPDScp_idCorr(TDepCorrelation):
         c_{P,\\text{id}} = R \\left\\{ B + (C-B)y^2 \\left[1 + (y-1) (D+Ey+Fy^2+Gy^3+Hy^4) \\right] \\right\\}
 
         y = \\frac{T}{A+T}
+
+    Returns:
+        Ideal heat capacity in J/mol/K.
     """
     A: float = 0
     B: float = 0
@@ -82,6 +85,9 @@ class AlyLeeCorr(TDepCorrelation):
 
     .. math:: c_{P,\\text{id}} = A + B\\left(\\frac{C/T}{\\text{sinh}(C/T)}\\right)^2
                         + D\\left(\\frac{E/T}{\\text{cosh}(E/T)}\\right)^2
+
+    Returns:
+        Ideal heat capacity in J/mol/K.
     """
     A: float = 0
     B: float = 0
@@ -90,5 +96,5 @@ class AlyLeeCorr(TDepCorrelation):
     E: float = 0
 
     def _calc(self, T: float) -> float:
-        return self.A + self.B * (self.C/T / sinh(self.C/T))**2 + \
-               self.D * (self.E/T / cosh(self.E/T))**2
+        return (self.A + self.B * (self.C/T / sinh(self.C/T))**2 + \
+                self.D * (self.E/T / cosh(self.E/T))**2) / 1000
